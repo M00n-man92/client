@@ -1,0 +1,64 @@
+import { useState } from 'react'
+import './login.scss'
+import { useDispatch, useSelector } from 'react-redux'
+import { login } from '../../redux/apiCall'
+import { useLocation,useHistory } from 'react-router'
+import { Link } from 'react-router-dom'
+import { Route, Switch, BrowserRouter as Router, Redirect } from 'react-router-dom'
+export default function Login() {
+    const [email, setUserName] = useState(null)
+    const [password, setPassport] = useState(null)
+    const { isFetching, error, currentUser } = useSelector(state => state.user)
+    const dispatch = useDispatch()
+    const userr = { email, password }
+    const history=useHistory()
+    const handler = (e) => {
+        e.preventDefault()
+        login(dispatch, userr)
+    }
+
+
+
+    return (
+        <>
+            <Router>
+                
+                    {currentUser ? <Redirect to="/" /> :
+                        <div className="login">
+                            <div className="logintitle">SignIn</div>
+                            <div className="noronoro">
+                                <form className="loginform" >
+
+                                    <div className="lael">
+                                        <label >Email</label>
+                                        <input type="email" placeholder="Email" onChange={(e) => setUserName(e.target.value)} />
+                                    </div>
+                                    <div className="lael">
+                                        <label >Password</label>
+                                        <input type="password" placeholder="Password" onChange={(e) => setPassport(e.target.value)} />
+                                    </div>
+                                    <div className="klill">
+                                        {error && <span>something went wrong</span>}
+                                        <button className="submitform" type="submit" onClick={handler} disabled={isFetching} >SignIn</button>
+
+                                    </div>
+                                </form>
+                            </div>
+
+
+                            {/* <div className="tio">
+                                <h5>OR</h5>
+                                <Link to="register" className='link'><button className="register" >Register</button></Link>
+                            </div> */}
+                            <div className="tio"><h4>or create an account?</h4>
+                <Link to="/login" className='link'><button  >Signup</button></Link></div>
+
+
+                        </div>}
+               
+            </Router>
+
+        </>
+
+    )
+}

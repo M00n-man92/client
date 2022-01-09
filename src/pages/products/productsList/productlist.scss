@@ -1,0 +1,81 @@
+@import '../../../global.scss';
+.productlist {
+  
+.con{
+   
+}
+    .tilte {
+        margin-top : 20px;
+        margin-left: 20px;
+margin-bottom: 40px;
+        h2 {
+            margin-left: 20px;
+            font-weight: 500;
+        }
+
+    }
+
+    .container {
+      
+        display        : flex;
+        justify-content: space-between;
+
+        .filter {
+            select{
+                padding: 10px;
+                margin-left: 10px;
+                border: 1px solid black;
+                height: 40px;
+                width: 90px;
+                border-radius: 5px;
+                @include mobile{
+                    height: 40px;
+                    width: 90px; 
+                }
+            }
+            
+            }
+            &.l {
+                font-size  : 20px;
+                margin-left: 20px;
+                span{
+                    @include mobile{
+                        font-size: 17px;
+    
+                    }
+                select{
+                    .birthday{
+                        @include mobile{
+                            margin-left: 20pxs;
+                        }
+                    }
+                }
+
+            }
+
+            &.r {
+                select{
+                   
+                    width: 120px;
+                    
+                    @include mobile{
+                        // font-size: 17px;
+                        width: 50px;
+                    }
+ 
+                }
+                font-size   : 20px;
+                margin-right: 200px;
+                span{
+                    @include mobile{
+                        font-size: 17px;
+                        width: 50px;
+                    }
+                }
+                @include mobile{
+                    margin-right:0px;
+                }
+            }
+        }
+    }
+}
