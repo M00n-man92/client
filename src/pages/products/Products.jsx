@@ -3,6 +3,7 @@ import axios from 'axios'
 import { filteredproducts } from '../../data'
 import Product from './product/Product'
 import { useEffect, useState } from 'react'
+import { publicRequest } from '../../requestMethods'
 
 export default function Products({ cat, sort, filter }) {
     const [products, setProducts] = useState([])
@@ -11,7 +12,7 @@ export default function Products({ cat, sort, filter }) {
     useEffect(() => {
         const fun = async () => {
             try {
-                const reply = await axios.get(cat ? `http://localhost:5000/api/product/find?catagory=${cat}` : 'http://localhost:5000/api/product/find')
+                const reply = await publicRequest.get(cat ? `product/find?catagory=${cat}` : 'product/find')
                 const res = reply.data
                 setProducts(res.data)
             }

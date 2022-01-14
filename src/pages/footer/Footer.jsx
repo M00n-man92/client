@@ -9,7 +9,7 @@ export default function Footer() {
                     <span>BANG.</span>
                 </div>
                 <div className="discrip">
-                    <p>yourenever gone ware niles.</p>
+                    <p>yourenever gone ware nikes.</p>
                 </div>
                 <div className="social">
                     <div className="container">
