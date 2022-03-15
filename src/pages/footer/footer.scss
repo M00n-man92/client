@@ -1,5 +1,5 @@
 @import '../../global.scss';
-
+@import '@fortawesome/fontawesome-free/css/all.css';
 .footer {
     display           : flex;
     justify-content   : center;
@@ -72,6 +72,11 @@
                     height: 50px;
 
 
+                }
+                img{
+                    object-fit: contain;
+                    height: 20px;
+                    width: 20px;
                 }
             }
         }

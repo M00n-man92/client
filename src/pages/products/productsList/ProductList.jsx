@@ -13,13 +13,13 @@ export default function ProductList() {
    const cata=location.pathname.split("/")[2]
     const [filters,setFilter]=useState({})
     const [sort,setSort]=useState("newest")
-   console.log(cata)
+//    console.log(cata)
     const changeHnadler=(e)=>{
         const value=e.target.value
         setFilter({
             ...filters,[e.target.name]:value})
     }
-   console.log(filters,sort)
+//    console.log(filters,sort)
 
     return (
         <div className="productlist">

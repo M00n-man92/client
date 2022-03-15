@@ -1,29 +1,41 @@
 import './register.scss'
 import { useState } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import { register } from '../../redux/apiCall'
 import { publicRequest } from '../../requestMethods'
 import { Link } from 'react-router-dom'
 export default function Register() {
     const [name, setName] = useState("")
     const [password, setPassword] = useState("")
     const [email, setEmail] = useState("")
-    console.log(name, email, password)
+    const { isFetching, error, currentUser } = useSelector(state => state.user)
+    
+
     const user = { name, email, password }
+    const dispatch = useDispatch()
     const [success, setSuccess] = useState(false)
-    const [msg, setMsg] = useState("false")
+    const [msg, setMsg] = useState("")
     const handler = async (e) => {
         e.preventDefault()
-        try {
-            const res = await publicRequest.post("/user/register", user)
-            const rep = res.data
-            console.log(rep)
-            setSuccess(rep.success)
-            setMsg(rep.msg)
-        }
-        catch (e) {
+       const res= await register(dispatch,user)
+      if(res){
+        // console.log(res)
+        setSuccess(res.success)
+              setMsg(res.msg)
+      }
+       
+        // try {
+        //     const res = await publicRequest.post("/user/register", user)
+        //     const rep = res.data
+        //     console.log(rep)
+        //     
+        // }
+        // catch (e) {
+        //     console.log(e)
 
-        }
+        // }
     }
-    console.log(success)
+    // console.log(msg)
     return (
         <div className="Register">
             <div className="registertitle">Register</div>
@@ -49,15 +61,16 @@ export default function Register() {
                     <div className="inside">
                         <span>By joining this platform you've agreed to our <b>Privacy Policy</b>  </span>
                     </div>
-                    <div className="klill"> <button type="submit" onClick={handler}>Register</button>
-                        {success ? <span>{msg}</span> : <span></span>}
+                    <div className="klill"> <button type="submit" disabled={isFetching} onClick={handler} >Register</button>
+                        {success===false ||error? <span className='downbad'>{msg}</span> : <span className="sucess">{msg}</span>}
+                        
                     </div>
 
                 </form>
             </div>
 
             <div className="tio"><h4>Do you have an account?</h4>
-                <Link to="/login" className='link'><button  >Login </button></Link></div>
+                <Link to="/login" className='link'><button >Login </button></Link></div>
 
 
 

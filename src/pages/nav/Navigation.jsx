@@ -44,10 +44,10 @@ export default function Nav() {
             // console.log("alegn")
             try {
                 const huluaynger = await publicRequest.get(`product/search?q=${chnke}`)
-                console.log(huluaynger)
+                // console.log(huluaynger)
                 setTadyaechilij(huluaynger.data.success)
                 setWeare(huluaynger.data.data.slice(0,8))
-                console.log(weare)
+                // console.log(weare)
             }
             catch (e) {
                 console.log(e)
@@ -67,7 +67,7 @@ export default function Nav() {
         // console.log(keepittrue)
         if (keepittrue !== null) {
             lovelokedown = keepittrue.success
-            console.log(lovelokedown)
+            // console.log(lovelokedown)
 
         }
         else if (keepittrue === null) {
@@ -89,7 +89,7 @@ export default function Nav() {
                     </div></Link>
             </div>
             <div className={`center ${alister ? "yetmbihon" : ""}`}>
-                <h3>Bang</h3>
+                <h3>Leyu Clothing</h3>
             </div>
             <div className={`right ${lovelokedown ? "take" : ""}`}>
                 <div className="container">
@@ -121,7 +121,7 @@ export default function Nav() {
                     <Link className="link" to="/cart">
                         <div className={`image ${lovelokedown ? "likeido" : ""}`}>
 
-                            <Badge className="badge" badgeContent={quantity} anchorOrigin={{ horizontal: 'left', vertical: "top" }} overlap="circular" color="primary" className="somethin"><ShoppingCartOutlined /></Badge>
+                            <Badge  badgeContent={quantity} anchorOrigin={{ horizontal: 'left', vertical: "top" }} overlap="circular" color="primary"  ><ShoppingCartOutlined /></Badge>
 
                         </div>
                     </Link>

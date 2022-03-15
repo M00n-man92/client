@@ -1,5 +1,5 @@
 .product {
-
+background-color: red;
     height          : 50vh;
     position        : relative;
     height          : 350px;
@@ -11,6 +11,7 @@
     justify-content : center;
     background-color: #f5fdfb;
     margin-right    : 10px;
+    margin-left: 20px;
 
     &:hover {
 

@@ -1,6 +1,15 @@
 import axios from 'axios'
-const baseUrl="https://damianmarley.herokuapp.com/api/"
+
+
+const path = require('path')
+const dotenv=require('dotenv').config()
+
+const baseUrl=process.env.REACT_APP_API_URL
+const otherUrl=process.env.REACT_APP_LOCAL_URL
+// console.log(require('dotenv').config())
+// console.log(process.env.REACT_APP_LOCAL_URL)
 var people=JSON.parse(localStorage.getItem("persist:root"))
+// console.log(people)
 var yolo
 var token
 var commonPeople

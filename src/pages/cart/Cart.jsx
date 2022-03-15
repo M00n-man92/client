@@ -17,7 +17,7 @@ export default function Cart() {
     const cart = useSelector(state => state.cart)
     const Key = 'pk_test_51JkB96G4aeogyTY8BarC9GXHT8gsGMeaYlVFyvX1kq4lO14pyTa0FEiMp50PELe8C8Fpf40XJB5sfQeqoe5iVtyc00THIuMYoi'
     // console.log(cart)
-    console.log(cart)
+    // console.log(cart)
     const pro = cart.products
     const dispatch = useDispatch()
     const dropzoneStyle = (isPreview) => ({
@@ -42,7 +42,7 @@ export default function Cart() {
                 if (pro_id === item._id) {
                     setQuantity(item.quantity - 1)
                     item.quantity = quantity
-                    console.log(item._id)
+                    // console.log(item._id)
                 }
                 if (item.quantity === 1) {
                     setQuantity(1)
@@ -55,7 +55,7 @@ export default function Cart() {
                 if (pro_id === item._id) {
                     setQuantity(item.quantity + 1)
                     item.quantity = quantity
-                    console.log(item._id)
+                    // console.log(item._id)
                 }
                 if (item.quantity === 5) {
                     setQuantity(5)
@@ -70,16 +70,16 @@ export default function Cart() {
     }
     const onToken = (token) => {
         setStripeToken(token)
-        console.log(setStripeToken)
+        // console.log(setStripeToken)
     }
     const makeRequest = async () => {
 
         try {
             const res = await publicRequest.post("stripe/payment", { tokenId: setStripeToken.id, amount: cart.total })
-            console.log(res.data)
+            // console.log(res.data)
         }
         catch (e) {
-            console.log("didnt work cuz " + e)
+            console.log( e.responce.data)
         }
 
     }
@@ -101,7 +101,7 @@ export default function Cart() {
         } */
 
 
-    console.log(pro)
+    // console.log(pro)
 
     return (
         <div>
@@ -144,7 +144,7 @@ export default function Cart() {
 
                                         </div>
                                         <div className="seze">
-                                            <span>Size : <b>{product.size}</b></span>
+                                            <span>Size : <b>{product.usedSize}</b></span>
                                         </div>
                                     </div>
                                 </div>

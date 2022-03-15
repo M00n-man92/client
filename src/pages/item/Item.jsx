@@ -19,12 +19,12 @@ export default function Item() {
     });
     const deispatch = useDispatch()
     const handleClick = () => {
-        setUsedColor(individualItem.color[0])
+        setUsedColor(individualItem.color)
         deispatch(addProduct({ ...individualItem, quantity, usedColor, usedSize }))
-        console.log(usedColor)
+        // console.log(usedColor)
     }
     const cart = useSelector(state => state.cart)
-    console.log(cart)
+    // console.log(cart)
     const location = useLocation()
     const id = location.pathname.split("/")[2]
     const [individualItem, setIndividualItem] = useState({})
@@ -48,7 +48,7 @@ export default function Item() {
                 const reply = await publicRequest.get(`/product/find/${id}`)
                 const real = reply.data
                 const data = real.data
-                console.log(data)
+                // console.log(data)
                 setIndividualItem(data)
                 // if(individualItem.color){
                 //     console.log("DR wesly")
@@ -59,7 +59,7 @@ export default function Item() {
                 //     setUsedColor(individualItem.color)
                 // }
                 // setUsedColor(individualItem.color[0]?individualItem.color[0]:individualItem.color)
-                console.log(usedColor)
+                // console.log(usedColor)
                 setImage("")
             }
             getProduct()
@@ -72,8 +72,8 @@ export default function Item() {
     const [usedColor, setUsedColor] = useState(null)
     const [usedSize, setUsedSize] = useState(null)
     //   setUsedColor(individualItem.price)
-    //   console.log(usedColor)
-    console.log(usedColor, usedSize, quantity)
+    //   console.log(individualItem.color)
+    // console.log(usedColor, usedSize, quantity)
     return (
         <div className="item">
             <div className="headers">
@@ -102,8 +102,8 @@ export default function Item() {
                     <div className="selectt">
                         <div className="color">
                             <span>Colour :</span>
-                            {individualItem.color ? <div className="ohhellnahh" style={dropzoneStyle(individualItem.color)}></div> : <span></span>}
-                            {individualItem.associate_color ? individualItem.associate_color.map(r => (<Link to={`/product/${r.id}`}><div className="ohhellnah" style={dropzoneStyle(r.coloring)}></div></Link>)) : <span></span>}
+                            {individualItem.color ?individualItem.color==="multicolor"?<div className="ohhellnahh" ><img src={individualItem.img[0]} alt="" className="jk" /></div>:<div className="ohhellnahh" style={dropzoneStyle(individualItem.color)}></div>: <span></span>}
+                            {individualItem.associate_color ?individualItem.color==="multicolor"? individualItem.associate_color.map((item,i)=>(<Link to={item.id}><div className="ohhellnahh" key={i} ><img src={item.img} alt="" className="jk" /></div></Link>)): individualItem.associate_color.map((r,op) => (<Link to={`/product/${r.id}`}><div className="ohhellnah" key={op} style={dropzoneStyle(r.coloring)}></div></Link>)) : <span></span>}
                             {/* <select name="Color" id="" onClick={(e)=>{setUsedColor(e.target.value)}}> */}
 
 

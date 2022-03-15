@@ -8,6 +8,19 @@ const userSlice = createSlice(
             error: false
         },
         reducers: {
+            registerStart:(state)=>{
+                state.isFetching=true;
+                state.currentUser=null
+            },
+            registerSuccess:(state)=>{
+                state.isFetching=false;
+                
+            },
+            registerError:(state)=>{
+state.isFetching=false;
+state.error=true;
+            },
+
             loginStart:(state)=>{
                 state.isFetching=true;
                 state.currentUser=null
@@ -25,8 +38,22 @@ const userSlice = createSlice(
                 state.error=false;
 
             }
+            ,updateStart:(state)=>{
+                state.isFetching=true;
+               
+                state.error=false;
+            },updateSuccess:(state)=>{
+                state.isFetching=false;
+               
+                state.error=false;
+            },
+            updateError:(state)=>{
+                state.isFetching=false;
+               
+                state.error=true;
+            }
 
         },
     })
-export const { loginError,loginStart,loginSuccess,logoutSuccess } = userSlice.actions
+export const { loginError,loginStart,loginSuccess,logoutSuccess,registerStart,registerSuccess ,registerError,updateStart,updateSuccess,updateError} = userSlice.actions
 export default userSlice.reducer

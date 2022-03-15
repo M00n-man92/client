@@ -175,6 +175,20 @@
                     cursor          : pointer;
 
                 }
+                button.disabled,button[disabled]{
+                    background-color: red;
+                    cursor: no-drop;
+                }
+                .sucess{
+                    font-size: 15px;
+                    color: rgb(28, 241, 28);
+
+                }
+                .downbad{
+                    font-size: 15px;
+                    color: red;
+
+                }
             }
 
 
