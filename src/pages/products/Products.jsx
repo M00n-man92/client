@@ -10,16 +10,16 @@ export default function Products({ cat, sort, filter }) {
     const [filters, setFilters] = useState([])
 
     const socartis = {
-        g: ["/assets/cant/“Living In China I See The Most Ridiculous Things, Like These People Who Have No Idea What They’re Wearing” (30 New Pics).jpg",
-            "/assets/cant/@ailsalarsen.jpg ",
-            "/assets/cant/10 Cheap Ways To Hang Out With Your Friends - Society19.jpg"
+        g: ["/assets/logo.jpg","/assets/kanye1.jpg",
+            "/assets/kanye2.jpg",
+            "/assets/kanye3.jpg"
         ]
-        , h: ["/assets/cant/black work tattoo.jpg",
-            "/assets/cant/Gone and Forgotten.jpg",
-            "/assets/cant/jasmineloren.jpg"],
-        i: ["/assets/cant/Ocean Floor (2019) Oil on canvas (36'' x 24'') _ Surreal art, Aesthetic art, Underwater painting.jpg",
-            "/assets/cant/On May 18th 1980 Richard Lasher took this picture of Mount St. Helens erupting with his Ford pinto in the foreground. - ).jpg"
-            , "/assets/cant/Picture this...jpg"],
+        , h: ["/assets/kanye10.jpg","/assets/kanye4.jpg",
+            "/assets/kanye5.jpg",
+            "/assets/kanye6.jpg"],
+        i: ["/assets/kanye11.jpg","/assets/kanye7.jpg",
+            "/assets/kanye8.jpg"
+            , "/assets/kany9.jpg"],
         key: function (n) {
             return this[Object.keys(this)[n]];
         }
@@ -50,7 +50,7 @@ export default function Products({ cat, sort, filter }) {
             autoPlay.current()
         }
         // andle()
-        const interval = setInterval(andle, 2000)
+        const interval = setInterval(andle, 4000)
 
     }, [])
     
