@@ -89,7 +89,7 @@ export default function Nav() {
                     </div></Link>
             </div>
             <div className={`center ${alister ? "yetmbihon" : ""}`}>
-                <h3>LEYU CLOTHING</h3>
+                <h3>Leyu Clothing</h3>
             </div>
             <div className={`right ${lovelokedown ? "take" : ""}`}>
                 <div className="container">
