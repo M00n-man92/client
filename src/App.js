@@ -11,6 +11,7 @@ import Login from './pages/signin/Login';
 import Register from './pages/signup/Register';
 import Cart from './pages/cart/Cart';
 import Home from './pages/home/Home';
+import Message from './pages/message/Message'
 import Forgot from './pages/forgot/Forgot'
 import Stripe from './pages/stripe/Stripe';
 import { Route, Switch, BrowserRouter as Router, Redirect } from 'react-router-dom'
@@ -55,6 +56,9 @@ function App() {
         <Route path="/login">
         {commonPeople?<Redirect to="/"/>:<Login/>}
        <Login/>
+        </Route>
+        <Route path="/message">
+          <Message />
         </Route>
     </Switch>
     </Router>

@@ -1,5 +1,5 @@
 import './navi.scss'
-import { Person, FavoriteBorder, ShoppingCartOutlined, SearchOutlined } from '@mui/icons-material';
+import { Person, FavoriteBorder, ShoppingCartOutlined, SearchOutlined, MessageOutlined } from '@mui/icons-material';
 import { Badge } from '@mui/material';
 import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
@@ -34,27 +34,27 @@ export default function Nav() {
     const [tadyaechilij, setTadyaechilij] = useState(true)
     const wegesha = async (chnke) => {
         // console.log("fiker alrgn " +chnke.length)
-        
-    if(chnke.length==0){
+
+        if (chnke.length == 0) {
             // console.log("lemr ynegen maenger")
             setWeare([])
             setTadyaechilij(true)
-            }
-        else if (chnke.length>=0){
+        }
+        else if (chnke.length >= 0) {
             // console.log("alegn")
             try {
                 const huluaynger = await publicRequest.get(`product/search?q=${chnke}`)
                 // console.log(huluaynger)
                 setTadyaechilij(huluaynger.data.success)
-                setWeare(huluaynger.data.data.slice(0,8))
+                setWeare(huluaynger.data.data.slice(0, 8))
                 // console.log(weare)
             }
             catch (e) {
                 console.log(e)
             }
         }
-        
-        
+
+
 
     }
     useEffect(() => {
@@ -105,15 +105,15 @@ export default function Nav() {
 
                         </div>
                         <div className="tellmewhaturwaitnfor">
-                           
-                                {tadyaechilij?weare?weare.map((item, i) => ( <div className="alegineneeye" key={i}><Link to={`/product/${item._id}`}  className="link" key={i}>{item.title}</Link></div>)):<span></span>:
+
+                            {tadyaechilij ? weare ? weare.map((item, i) => (<div className="alegineneeye" key={i}><Link to={`/product/${item._id}`} className="link" key={i}>{item.title}</Link></div>)) : <span></span> :
                                 <div className="alegineneeye">
-                                <span>No search results</span>
+                                    <span>No search results</span>
                                 </div>
-                                
-                                }
-                               
-                            
+
+                            }
+
+
                         </div>
 
 
@@ -121,7 +121,7 @@ export default function Nav() {
                     <Link className="link" to="/cart">
                         <div className={`image ${lovelokedown ? "likeido" : ""}`}>
 
-                            <Badge  badgeContent={quantity} anchorOrigin={{ horizontal: 'left', vertical: "top" }} overlap="circular" color="primary"  ><ShoppingCartOutlined /></Badge>
+                            <Badge badgeContent={quantity} anchorOrigin={{ horizontal: 'left', vertical: "top" }} overlap="circular" color="primary" className='image' ><div className="star"><ShoppingCartOutlined /></div></Badge>
 
                         </div>
                     </Link>
@@ -131,8 +131,12 @@ export default function Nav() {
                         </div> */}
 
                     {lovelokedown ? <div className="image">
-                        <LogoutOutlined onClick={lbetenestwal} className="belhidatenager" />
-
+                        {/* <div className="star">
+                            <Link className="link" to="/message"><MessageOutlined className="belhidatenager" /></Link>
+                        </div> */}
+                        <div className="star">
+                            <LogoutOutlined onClick={lbetenestwal} className="belhidatenager" />
+                        </div>
                     </div> : <>
                         <div className="ereesey">
                             <Link className="link" to="/login">  <span>Login</span>

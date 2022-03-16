@@ -19,7 +19,7 @@ export default function Products({ cat, sort, filter }) {
             "/assets/kanye6.jpg"],
         i: ["/assets/kanye11.jpg","/assets/kanye7.jpg",
             "/assets/kanye8.jpg"
-            , "/assets/kany9.jpg"],
+            , "/assets/kanye9.jpg"],
         key: function (n) {
             return this[Object.keys(this)[n]];
         }
@@ -57,7 +57,7 @@ export default function Products({ cat, sort, filter }) {
 const heandler = () => {
 
     // else if (digits == "r") {
-    itemm != 2 ? setitemm(itemm + 1) : setitemm(0)
+    itemm != 3 ? setitemm(itemm + 1) : setitemm(0)
     // console.log(itemm)
     // }
 }
