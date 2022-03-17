@@ -15,8 +15,9 @@ var token
 var commonPeople
 if(people){
     commonPeople=people.user
-    yolo=commonPeople.currentUser
+    yolo=JSON.parse(commonPeople).currentUser
     if(yolo){token=yolo.data.token}
+    // console.log(yolo)
     
      
 }

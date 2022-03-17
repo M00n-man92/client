@@ -131,9 +131,9 @@ export default function Nav() {
                         </div> */}
 
                     {lovelokedown ? <div className="image">
-                        {/* <div className="star">
+                        <div className="star">
                             <Link className="link" to="/message"><MessageOutlined className="belhidatenager" /></Link>
-                        </div> */}
+                        </div>
                         <div className="star">
                             <LogoutOutlined onClick={lbetenestwal} className="belhidatenager" />
                         </div>

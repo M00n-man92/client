@@ -58,7 +58,8 @@ function App() {
        <Login/>
         </Route>
         <Route path="/message">
-          <Message />
+        {commonPeople?<Message />:<Redirect to="/login"/>}
+         
         </Route>
     </Switch>
     </Router>
