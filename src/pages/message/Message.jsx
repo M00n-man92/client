@@ -23,7 +23,7 @@ export default function Message({ own }) {
     const [newcurrent, setNewcurrent] = useState()
     // const [socket, setSocket] = useState(null)
     const scrollref = useRef()
-    const socket=useRef()
+    const socket = useRef()
     var people = localStorage.getItem("persist:root")
     var its_my_jam
     var keepittrue
@@ -51,28 +51,44 @@ export default function Message({ own }) {
         }
 
     }
+    const headers = {
+        // 'Content-Type': 'application/json;charset=UTF-8',
+        "Access-Control-Expose-Headers": " Content-Length, X-JSON",
+        "Access-Control-Allow-Origin": "*",
+        'Access-Control-Allow-Methods': 'GET, PUT, POST, DELETE, OPTIONS',
+        'Access-Control-Allow-Headers': '*',
+        " Access-Control-Allow-Credentials": true
+    };
     useEffect(() => {
-        socket.current=io("https://chatrendering.herokuapp.com/")
-        socket.current.on("getMessage",data=>{
+        // https://chatrendering.herokuapp.com/
+        socket.current = io("https://idkanymoree.herokuapp.com",{ withCredentials: true,extraHeaders: headers })
+        // {
+        //     extraHeaders: {
+        //         "Access-Control-Allow-Credentials": true,
+        //             "Access-Control-Allow-Origin": "*",
+        //       }
+        // }
+
+        socket.current.on("getMessage", data => {
             setArrivalmessage({
-                sender:data.senderId,
-                text:data.text,
-                createdAt:Date.now()
+                sender: data.senderId,
+                text: data.text,
+                createdAt: Date.now()
             })
         })
     }, [])
 
 
     useEffect(() => {
-        socket.current.emit("addUser",id) 
+        socket.current.emit("addUser", id)
         // console.log(socket)
-        socket.current.on("getUsers",users=>{})
+        socket.current.on("getUsers", users => { console.log(users) })
     }, [id])
 
-useEffect(()=>{
-    arrivalmessage&&newcurrent?.members.includes(arrivalmessage.sender)&&
-    setMessage((prev)=>[...prev,arrivalmessage])
-},[arrivalmessage,newcurrent])
+    useEffect(() => {
+        arrivalmessage && newcurrent?.members.includes(arrivalmessage.sender) &&
+            setMessage((prev) => [...prev, arrivalmessage])
+    }, [arrivalmessage, newcurrent])
     // console.log(socket)
     useEffect(async () => {
         const getconvo = async () => {
@@ -124,11 +140,11 @@ useEffect(()=>{
         }
         getmessages()
     }, [current])
-// console.log(newcurrent)
+    // console.log(newcurrent)
     const handlesending = async (e) => {
         e.preventDefault()
         try {
-            socket.current.emit("sendMessage",{senderId:id,reciverId:otheruserid,text:newmessage})
+            socket.current.emit("sendMessage", { senderId: id, reciverId: otheruserid, text: newmessage })
             const bruhh = { conversationId: current, sender: id, text: newmessage }
             // console.log(bruhh)
             const hola = await userRequest.post(`message/newmessage/${id}/`, bruhh)
@@ -153,7 +169,7 @@ useEffect(()=>{
             <div className="wrapper">
                 <div className="goodmornin">
                     <div className="wutang">
-                        {convo.map((item, i) => (<div className="rollinwiththisone" key={i} onClick={(e) => {setCurrent(item._id); setNewcurrent(item)}}>
+                        {convo.map((item, i) => (<div className="rollinwiththisone" key={i} onClick={(e) => { setCurrent(item._id); setNewcurrent(item) }}>
                             <Conversation conver={item} user={id} />
                         </div>))}
 
@@ -180,7 +196,7 @@ useEffect(()=>{
                 </div>}
 
                 <div className="somethinelse">
-                  {/* <snap>this be the way</snap>   */}
+                    {/* <snap>this be the way</snap>   */}
                 </div>
 
             </div>
