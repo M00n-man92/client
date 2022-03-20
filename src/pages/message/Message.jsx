@@ -11,7 +11,7 @@ import { publicRequest } from '../../requestMethods'
 import Conversation from '../conversation/Conversation'
 import { userRequest } from '../../requestMethods'
 import { io } from 'socket.io-client'
-// import 
+
 export default function Message({ own }) {
     const [convo, setConvo] = useState([])
     const [newmessage, setNewMessage] = useState("")
@@ -63,7 +63,7 @@ export default function Message({ own }) {
         // https://chatrendering.herokuapp.com/
         // https://idkanymoree.herokuapp.com
         // https://idkanymoree.herokuapp.com
-        socket.current = io(process.env.REACT_APP_SOCKET_URL, {})
+        socket.current = io("https://idkanymoree.herokuapp.com", {})
         // transportOptions: {
         // polling: {
         // extraHeaders: headers
@@ -86,7 +86,7 @@ export default function Message({ own }) {
         })
     }, [])
 
-console.log(process.env.REACT_APP__LOCAL_URL)
+
     useEffect(() => {
         socket.current.emit("addUser", id)
         // console.log(socket)
