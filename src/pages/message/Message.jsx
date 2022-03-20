@@ -90,7 +90,7 @@ export default function Message({ own }) {
     useEffect(() => {
         socket.current.emit("addUser", id)
         // console.log(socket)
-        socket.current.on("getUsers", users => { console.log(users)})
+        socket.current.on("getUsers", users => {})
     }, [id])
 
     useEffect(() => {
