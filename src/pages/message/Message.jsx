@@ -54,14 +54,21 @@ export default function Message({ own }) {
     const headers = {
         // 'Content-Type': 'application/json;charset=UTF-8',
         "Access-Control-Expose-Headers": " Content-Length, X-JSON",
-        "Access-Control-Allow-Origin": "*",
+        "Access-Control-Allow-Origin": "http://localhost:3000",
         'Access-Control-Allow-Methods': 'GET, PUT, POST, DELETE, OPTIONS',
-        'Access-Control-Allow-Headers': '*',
+       ' Access-Control-Allow-Headers': 'Accept',
         " Access-Control-Allow-Credentials": true
     };
     useEffect(() => {
         // https://chatrendering.herokuapp.com/
-        socket.current = io("https://idkanymoree.herokuapp.com",{ withCredentials: true,extraHeaders: headers })
+        // https://idkanymoree.herokuapp.com
+        socket.current = io("https://idkanymoree.herokuapp.com",{ })
+        // transportOptions: {
+            // polling: {
+                // extraHeaders: headers
+            //  }
+            // },
+        // {  transports: [ 'polling','websocket', 'flashsocket'],extraHeaders:headers}
         // {
         //     extraHeaders: {
         //         "Access-Control-Allow-Credentials": true,
