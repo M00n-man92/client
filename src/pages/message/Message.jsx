@@ -56,18 +56,18 @@ export default function Message({ own }) {
         "Access-Control-Expose-Headers": " Content-Length, X-JSON",
         "Access-Control-Allow-Origin": "http://localhost:3000",
         'Access-Control-Allow-Methods': 'GET, PUT, POST, DELETE, OPTIONS',
-       ' Access-Control-Allow-Headers': 'Accept',
+        ' Access-Control-Allow-Headers': 'Accept',
         " Access-Control-Allow-Credentials": true
     };
     useEffect(() => {
         // https://chatrendering.herokuapp.com/
         // https://idkanymoree.herokuapp.com
-        socket.current = io("https://idkanymoree.herokuapp.com",{ })
+        socket.current = io("https://idkanymoree.herokuapp.com", {})
         // transportOptions: {
-            // polling: {
-                // extraHeaders: headers
-            //  }
-            // },
+        // polling: {
+        // extraHeaders: headers
+        //  }
+        // },
         // {  transports: [ 'polling','websocket', 'flashsocket'],extraHeaders:headers}
         // {
         //     extraHeaders: {
@@ -89,7 +89,7 @@ export default function Message({ own }) {
     useEffect(() => {
         socket.current.emit("addUser", id)
         // console.log(socket)
-        socket.current.on("getUsers", users)
+        socket.current.on("getUsers", users => { })
     }, [id])
 
     useEffect(() => {
@@ -203,8 +203,13 @@ export default function Message({ own }) {
                 </div>}
 
                 <div className="somethinelse">
-                    {/* <snap>this be the way</snap>   */}
+                    <span>Chat Room Rules</span>
+                    <div className="rules">
+                    <li>Do not verbally abuse, attack, embarrass, or threaten anyone else in the chat room.</li>
+                <li>Do not use obscene, offensive, or sexually explicit language.</li>
                 </div>
+                </div>
+                
 
             </div>
             <div className="fotter">
