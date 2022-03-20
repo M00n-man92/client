@@ -11,7 +11,7 @@ import { publicRequest } from '../../requestMethods'
 import Conversation from '../conversation/Conversation'
 import { userRequest } from '../../requestMethods'
 import { io } from 'socket.io-client'
-
+// import 
 export default function Message({ own }) {
     const [convo, setConvo] = useState([])
     const [newmessage, setNewMessage] = useState("")
@@ -62,7 +62,8 @@ export default function Message({ own }) {
     useEffect(() => {
         // https://chatrendering.herokuapp.com/
         // https://idkanymoree.herokuapp.com
-        socket.current = io("https://idkanymoree.herokuapp.com", {})
+        // https://idkanymoree.herokuapp.com
+        socket.current = io(process.env.REACT_APP_SOCKET_URL, {})
         // transportOptions: {
         // polling: {
         // extraHeaders: headers
@@ -85,11 +86,11 @@ export default function Message({ own }) {
         })
     }, [])
 
-
+console.log(process.env.REACT_APP__LOCAL_URL)
     useEffect(() => {
         socket.current.emit("addUser", id)
         // console.log(socket)
-        socket.current.on("getUsers", users => { })
+        socket.current.on("getUsers", users => { console.log(users)})
     }, [id])
 
     useEffect(() => {
@@ -173,7 +174,7 @@ export default function Message({ own }) {
                 <Announcemets />
                 <Nav />
             </div>
-            <div className="wrapper">
+            <div className="playnice">
                 <div className="goodmornin">
                     <div className="wutang">
                         {convo.map((item, i) => (<div className="rollinwiththisone" key={i} onClick={(e) => { setCurrent(item._id); setNewcurrent(item) }}>

@@ -1,3 +1,4 @@
+@import '../../global.scss';
 
     .blackexcellence {
         display       : flex;
@@ -14,12 +15,20 @@
             // background-color: red;
             // display    : flex;
             // align-items: center;
-
+            @include mobile{
+                // background-color: red;
+                display: flex;
+                align-items: center;
+            }
             img {
                 object-fit   : cover;
                 height       : 40px;
                 width        : 40px;
                 border-radius: 50%;
+                @include mobile{
+                    height: 20px;
+                    width: 20px;
+                }
             }
 
 
@@ -33,6 +42,12 @@
                 background-color: rgb(46, 190, 190);
                 color           : white;
                 max-width       : 300px;
+                @include mobile{
+                    margin-left: 5px;
+                    padding: 5px;
+                    border-radius: 10px;
+                    font-size: 13px;
+                }
             }
 
         }
@@ -40,6 +55,9 @@
         .cuzhehurtin {
             span {
                 font-size: 13px;
+                @include mobile{
+                    font-size: 10px;
+                }
             }
         }
     }
@@ -57,6 +75,12 @@
             background-color: rgb(240, 240, 240);
             color           : black;
             max-width       : 300px;
+            @include mobile{
+                margin-left: 5px;
+                padding: 5px;
+                border-radius: 10px;
+                font-size: 13px;
+            }
         }
 
         // margin-left: 200px;
