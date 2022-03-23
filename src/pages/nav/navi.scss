@@ -17,13 +17,17 @@
         display    : flex;
         align-items: center;
 
+
+
         @include mobile {
             display:grid;
+            width: 70px;
+            flex:content;
             // flex: none;
             // background-color: red;
-            // position: relative;
+            position: absolute;
             margin-top: 10px;
-            background-color: orange;
+            // background-color: orange;
 
         }
 
@@ -66,11 +70,12 @@
         display: flex;
         @include mobile{
             margin-right: 20px;
-            background-color: red;
+            // background-color: red;
             flex: none;
-            // position: absolute;
-            // right:0px;
-            // left: 200px;
+            // width: 30px;
+            position: absolute;
+            right:0px;
+            left: 200px;
         }
         &.take{
             margin-left: 10px;
@@ -227,18 +232,20 @@
         justify-content: center;
         flex: 1;
         @include mobile{
-            display:block;
+            // display:block;
             // flex: none;
-            background-color: blue;
-            width: 100px;
+            // background-color: blue;
+            // width: 100px;
+            margin-left: -100px;
+
             // flex: none;
 
             // width: ;
-            // position: absolute;
+            position: absolute;
             // left: 20px;
-            // top: 37px;
+            top: 37px;
             // margin-left: 20px;
-            // left: -15px;
+            left: -15px;
             // flex: 3;
         }
 
