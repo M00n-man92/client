@@ -90,7 +90,7 @@ export default function Message({ own }) {
     useEffect(() => {
         socket.current.emit("addUser", id)
         // console.log(socket)
-        socket.current.on("getUsers", users => {})
+        socket.current.on("getUsers", users => { })
     }, [id])
 
     useEffect(() => {
@@ -118,7 +118,7 @@ export default function Message({ own }) {
         }
         getconvo()
     }, [id])
-    useEffect(() => {
+    useEffect(async() => {
         const getmessages = async () => {
             // console.log("i di it or the glort")
             try {
@@ -151,18 +151,27 @@ export default function Message({ own }) {
     // console.log(newcurrent)
     const handlesending = async (e) => {
         e.preventDefault()
-        try {
-            socket.current.emit("sendMessage", { senderId: id, reciverId: otheruserid, text: newmessage })
-            const bruhh = { conversationId: current, sender: id, text: newmessage }
-            // console.log(bruhh)
-            const hola = await userRequest.post(`message/newmessage/${id}/`, bruhh)
-            if (hola) {
-                setMessage([...message, hola.data.data])
-                setNewMessage("")
-            }
+        if (newmessage === "") {
+
+
         }
-        catch (e) {
-            console.log(e)
+        else if (newmessage === " ") {
+
+        }
+        else {
+            try {
+                socket.current.emit("sendMessage", { senderId: id, reciverId: otheruserid, text: newmessage })
+                const bruhh = { conversationId: current, sender: id, text: newmessage }
+                // console.log(bruhh)
+                const hola = await userRequest.post(`message/newmessage/${id}/`, bruhh)
+                if (hola) {
+                    setMessage([...message, hola.data.data])
+                    setNewMessage("")
+                }
+            }
+            catch (e) {
+                console.log(e)
+            }
         }
     }
     useEffect(() => {
@@ -206,11 +215,11 @@ export default function Message({ own }) {
                 <div className="somethinelse">
                     <span>Chat Room Rules</span>
                     <div className="rules">
-                    <li>Do not verbally abuse, attack, embarrass, or threaten anyone else in the chat room.</li>
-                <li>Do not use obscene, offensive, or sexually explicit language.</li>
+                        <li>Do not verbally abuse, attack, embarrass, or threaten anyone else in the chat room.</li>
+                        <li>Do not use obscene, offensive, or sexually explicit language.</li>
+                    </div>
                 </div>
-                </div>
-                
+
 
             </div>
             <div className="fotter">

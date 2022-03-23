@@ -2,13 +2,14 @@
 
 .wrapper {
     @include mobile {
-        width: 380px;
-        display: flex;
+        width: 360px;
+        display:flex;
         // background-color: blue;
     }
 
 
     display : flex;
+
 
 
     .left {
@@ -17,10 +18,12 @@
         align-items: center;
 
         @include mobile {
-            flex: none;
+            display:grid;
+            // flex: none;
             // background-color: red;
-            position: relative;
+            // position: relative;
             margin-top: 10px;
+            background-color: orange;
 
         }
 
@@ -63,11 +66,11 @@
         display: flex;
         @include mobile{
             margin-right: 20px;
-            // background-color: rsed;
+            background-color: red;
             flex: none;
-            position: absolute;
+            // position: absolute;
             // right:0px;
-            left: 200px;
+            // left: 200px;
         }
         &.take{
             margin-left: 10px;
@@ -131,7 +134,7 @@
                         border: none;
     
                         @include mobile {
-                            width: 30px;
+                            width: 45px;
                         }
     
                         &:focus {
@@ -224,13 +227,18 @@
         justify-content: center;
         flex: 1;
         @include mobile{
-            // background-color: red;
-            flex: none;
-            position: absolute;
+            display:block;
+            // flex: none;
+            background-color: blue;
+            width: 100px;
+            // flex: none;
+
+            // width: ;
+            // position: absolute;
             // left: 20px;
-            top: 37px;
+            // top: 37px;
             // margin-left: 20px;
-            left: -15px;
+            // left: -15px;
             // flex: 3;
         }
 

@@ -7,7 +7,7 @@ export default function Chat({own,message,picture,time}) {
                         <div className={own?"blackexcellence own":"blackexcellence"}>
                             <div className="somethings">
                                 
-                                    <img src={picture} alt="" className="crazy" />
+                                    {/* <img src={picture} alt="" className="crazy" /> */}
                                 
                                 
                                     <p className="lettingyoudown">
