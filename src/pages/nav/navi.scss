@@ -5,11 +5,12 @@
         width: 360px;
         display:flex;
         // background-color: blue;
+        justify-content:space-between;
     }
 
 
     display : flex;
-
+// margin-bottom: 10px;
 
 
     .left {
@@ -25,9 +26,10 @@
             flex:content;
             // flex: none;
             // background-color: red;
-            position: absolute;
+            // position: absolute;
             margin-top: 10px;
             // background-color: orange;
+            margin-right: -50px;
 
         }
 
@@ -69,13 +71,13 @@
         flex   : 3;
         display: flex;
         @include mobile{
-            margin-right: 20px;
+            margin-right: 100px;
             // background-color: red;
             flex: none;
             // width: 30px;
-            position: absolute;
-            right:0px;
-            left: 200px;
+            // position: absolute;
+            // right:0px;
+            // left: 200px;
         }
         &.take{
             margin-left: 10px;
@@ -236,17 +238,21 @@
             // flex: none;
             // background-color: blue;
             // width: 100px;
-            margin-left: -100px;
+            // margin-left: -100px;
 
             // flex: none;
 
             // width: ;
-            position: absolute;
+            // position: absolute;
             // left: 20px;
-            top: 37px;
+            // top: 37px;
             // margin-left: 20px;
-            left: -15px;
+            // left: -15px;
             // flex: 3;
+            // background-color: red;
+            width: 300px;
+            flex: auto;
+            margin-left: 100px;
         }
 
         &.yetmbihon{

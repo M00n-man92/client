@@ -118,7 +118,7 @@ export default function Message({ own }) {
         }
         getconvo()
     }, [id])
-    useEffect(async() => {
+    useEffect(() => {
         const getmessages = async () => {
             // console.log("i di it or the glort")
             try {
@@ -160,6 +160,7 @@ export default function Message({ own }) {
         }
         else {
             try {
+                newmessage.trim()
                 socket.current.emit("sendMessage", { senderId: id, reciverId: otheruserid, text: newmessage })
                 const bruhh = { conversationId: current, sender: id, text: newmessage }
                 // console.log(bruhh)
@@ -177,6 +178,7 @@ export default function Message({ own }) {
     useEffect(() => {
         scrollref.current?.scrollIntoView({ behavior: "smooth" })
     }, [message])
+    console.log(newmessage.trim())
     return (
         <div className='message'>
             <div className="header">
