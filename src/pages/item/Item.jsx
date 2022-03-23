@@ -14,7 +14,7 @@ export default function Item() {
     const dropzoneStyle = (isPreview) => ({
 
         backgroundColor: (isPreview),
-        
+
 
     });
     const deispatch = useDispatch()
@@ -29,7 +29,7 @@ export default function Item() {
     const id = location.pathname.split("/")[2]
     const [individualItem, setIndividualItem] = useState({})
     const [quantity, setQuantity] = useState(1)
-    const [image,setImage]=useState("")
+    const [image, setImage] = useState("")
     //  console.log(individualItem.color[0].coloring)
     const count = (type) => {
         if (type === "dec") {
@@ -83,11 +83,11 @@ export default function Item() {
             </div>
             <div className="wrapperr">
                 <div className="letmetellyou">
-                    {individualItem.img ? individualItem.img.map((item,i) => (<div className="booby" key={i}><img src={item} alt="" onClick={(e)=>setImage(item)}/></div>)) : <span></span>}
+                    {individualItem.img ? individualItem.img.map((item, i) => (<div className="booby" key={i}><img src={item} alt="" onClick={(e) => setImage(item)} /></div>)) : <span></span>}
                     {/* <div className="booby"><img src={individualItem.img[0]} alt="" /></div> */}
                 </div>
                 <div className="imgg">
-                    {individualItem.img  ? image?<img src={image} alt="" />:<img src={individualItem.img[0]} alt="" /> : <img src={individualItem.img} alt="" />}
+                    {individualItem.img ? image ? <img src={image} alt="" /> : <img src={individualItem.img[0]} alt="" /> : <img src={individualItem.img} alt="" />}
                 </div>
                 <div className="info">
                     <div className="title">
@@ -101,10 +101,18 @@ export default function Item() {
                     </div>
                     <div className="selectt">
                         <div className="color">
-                            <span>Colour :</span>
-                            {individualItem.color ?individualItem.color==="multicolor"?<div className="ohhellnahh" ><img src={individualItem.img[0]} alt="" className="jk" /></div>:<div className="ohhellnahh" style={dropzoneStyle(individualItem.color)}></div>: <span></span>}
-                            {individualItem.associate_color ?individualItem.color==="multicolor"? individualItem.associate_color.map((item,i)=>(<Link to={item.id}><div className="ohhellnahh" key={i} ><img src={item.img} alt="" className="jk" /></div></Link>)): individualItem.associate_color.map((r,op) => (<Link to={`/product/${r.id}`}><div className="ohhellnah" key={op} style={dropzoneStyle(r.coloring)}></div></Link>)) : <span></span>}
-                            {/* <select name="Color" id="" onClick={(e)=>{setUsedColor(e.target.value)}}> */}
+                            <div className="manishboy">
+                                <span>Colour :</span>
+                            </div>
+                            <div className="jazzythinds">
+                                {individualItem.color ? individualItem.color === "multicolor" ? <div className="ohhellnahh" ><img src={individualItem.img[0]} alt="" className="jk" /></div> : <div className="ohhellnahh" style={dropzoneStyle(individualItem.color)}></div> : <span></span>}
+                                {individualItem.associate_color ? individualItem.color === "multicolor" ? individualItem.associate_color.map((item, i) => (<Link to={item.id}><div className="ohhellnahh" key={i} ><img src={item.img} alt="" className="jk" /></div></Link>)) : individualItem.associate_color.map((item,i)=>(<Link to={item.id}><div className="ohhellnahh" style={dropzoneStyle(item.coloring)}></div> </Link>)): <span></span>}
+                                {/* <select name="Color" id="" onClick={(e)=>{setUsedColor(e.target.value)}}> */}
+                               
+
+                            </div>
+
+
 
 
                             {/* {individualItem.color?individualItem.color.map(s=>(<option key={s._id}>{s.coloring}</option>)) : individualItem.color.map((s)=>(<option key={s}>{s}</option>))} */}
@@ -116,7 +124,7 @@ export default function Item() {
                         <div className="size">
                             <span>Size :</span>
                             <select name="Size" id="" onClick={(e) => { setUsedSize(e.target.value) }}>
-        <option disabled="true">size</option>
+                                <option disabled="true">size</option>
 
                                 {individualItem.size?.map((s) => (<option key={s}>{s}</option>))}
 

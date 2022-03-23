@@ -19,7 +19,7 @@
 
             @include mobile {
                 flex: 0.01;
-               
+
             }
 
             .booby {
@@ -116,7 +116,8 @@
                 p {
                     font-size  : 17px;
                     font-weight: 400;
-                    @include mobile{
+
+                    @include mobile {
                         font-size: 14px;
                     }
 
@@ -126,13 +127,16 @@
 
             .price {
                 margin-top: 30px;
-                @include mobile{
-                 margin-top: 10px;       
+
+                @include mobile {
+                    margin-top: 10px;
                 }
+
                 span {
                     font-size  : 30px;
                     font-weight: 400;
-                    @include mobile{
+
+                    @include mobile {
                         font-size: 20px;
                     }
                 }
@@ -142,26 +146,31 @@
                 margin-top : 30px;
                 display    : flex;
                 align-items: center;
-                @include mobile{
-                   margin-top: 10px;
+
+                @include mobile {
+                    margin-top: 10px;
 
                 }
+
                 .option {
                     margin-top     : 20px;
                     display        : flex;
                     align-items    : center;
                     justify-content: center;
-                    @include mobile{
+
+                    @include mobile {
                         margin-top: 10px;
                     }
+
                     .minus {
                         height       : 30px;
                         width        : 30px;
                         cursor       : pointer;
                         margin-bottom: 20px;
-                        @include mobile{
-                        height: 20px;
-                        width: 20px;
+
+                        @include mobile {
+                            height: 20px;
+                            width : 20px;
                         }
                     }
 
@@ -175,11 +184,13 @@
                         width          : 30px;
                         border-radius  : 8px;
                         border         : 1px solid rgb(132, 132, 219);
-                        @include mobile{
-                        height: 26;
-                        width: 20;
-                        border-radius: 6px;
+
+                        @include mobile {
+                            height       : 26;
+                            width        : 20;
+                            border-radius: 6px;
                         }
+
                         span {
                             font-size: 18px;
 
@@ -192,9 +203,9 @@
                         width : 30px;
                         cursor: pointer;
 
-                        @include mobile{
-                        height: 20px;
-                        width: 20px;
+                        @include mobile {
+                            height: 20px;
+                            width : 20px;
                         }
                     }
                 }
@@ -207,11 +218,13 @@
                     height     : 40px;
                     width      : 170px;
                     border     : 1px solid rgb(132, 132, 219);
-                    @include mobile{
+
+                    @include mobile {
                         margin-left: 5px;
-                        margin-top: 10px;
-                        width: 100px;
+                        margin-top : 10px;
+                        width      : 100px;
                     }
+
                     &:hover {
                         .op {
 
@@ -235,9 +248,10 @@
                         font-size       : 15px;
                         outline         : none;
                         background-color: inherit;
-                        @include mobile{
-                        width: 100px;
-                        font-size: 14px;
+
+                        @include mobile {
+                            width    : 100px;
+                            font-size: 14px;
 
                         }
                     }
@@ -263,24 +277,29 @@
                 margin-top : 30px;
                 display    : flex;
                 align-items: center;
-                @include mobile{
-                        margin-top: 10px;
-                        flex-direction:column;
-                        align-items:flex-start;
-                        margin-left: 5px;
+
+                @include mobile {
+                    margin-top    : 10px;
+                    flex-direction: column;
+                    align-items   : flex-start;
+                    margin-left   : 5px;
                 }
+
                 .size {
                     margin-left: 52px;
-                    @include mobile{
+
+                    @include mobile {
                         // margin-left: 5px;
                         margin-left: 0px;
-                        margin-top: 10px;
+                        margin-top : 10px;
                     }
+
                     span {
                         font-size  : 20px;
                         font-weight: 400;
-                        @include mobile{
-                        font-size: 14px;
+
+                        @include mobile {
+                            font-size: 14px;
                         }
                     }
 
@@ -291,86 +310,130 @@
                         height       : 40px;
                         width        : 90px;
                         border-radius: 5px;
-                        @include mobile{
-                        width: 50px;
-                        margin-left: 5px;
-                        padding: 0%;
+
+                        @include mobile {
+                            width      : 50px;
+                            margin-left: 5px;
+                            padding    : 0%;
                         }
                     }
                 }
 
                 .color {
 
+
                     display    : flex;
                     align-items: center;
-                    @include mobile{
+// background-color: red;
+                    @include mobile {
                         // margin-left: 5px;
+                        display    : flex;
+                    align-items: center;
+                        // background-color: red;
                     }
-                    select {
-                        padding      : 10px;
-                        margin-left  : 10px;
-                        border       : 1px solid black;
-                        height       : 40px;
-                        width        : 90px;
-                        border-radius: 5px;
-                        @include mobile{
-                        padding: 0%;
-                        margin-left: 5px;
-                        width: 50px;
+
+                    .manishboy {
+                        display: flex;
+                        align-items: center;
+                        span {
+                            font-size  : 20px;
+                            font-weight: 400;
+
+                            @include mobile {
+                                font-size: 17px;
+                                margin-bottom: 3px;
+                            }
                         }
                     }
 
-                    .ohhellnah {
-                        margin-left  : 10px;
-                        width        : 30px;
-                        height       : 30px;
-                        border-radius: 100%;
-                        border       : 1px solid #555;
-                        cursor       : pointer;
+                    // select {
+                    //     padding      : 10px;
+                    //     margin-left  : 10px;
+                    //     border       : 1px solid black;
+                    //     height       : 40px;
+                    //     width        : 90px;
+                    //     border-radius: 5px;
+                    //     @include mobile{
+                    //     padding: 0%;
+                    //     margin-left: 5px;
+                    //     width: 50px;
+                    //     background-color: black;
+                    //     }
+                    // }
+                    .jazzythinds {
+                        display    : flex;
+                        // background-color: red;
+                        align-items: center;
                         @include mobile{
-                            margin-left: 3px;
-                        width: 15px;
-                        height: 15px;
-                        margin-left: 5px;
+                            width: 100px;
+                            // background-color: red;
+                            align-items: center;
+                            flex-wrap: wrap;
                         }
-                    }
 
-                    .ohhellnahh {
-                        margin-left  : 10px;
-                        width        : 30px;
-                        height       : 30px;
-                        border-radius: 100%;
-                        .jk{
-                            object-fit: contain;
-                            width: 30px;
-                            height: 30px;
+                        .ohhellnahh {
+                            transition: all ease 0.5s;
+
+                            margin-left  : 10px;
+                            margin-bottom: 5px;
+                            width        : 30px;
+                            height       : 30px;
                             border-radius: 100%;
-                            @include mobile{
-                                margin-left: 3px;
-                            width: 20px;
-                            height: 20px;
-                            border: 1px solid #555;;
+                            &:hover{
+                                width: 25px;
+                                height: 25px;
+
+                            }
+                            .jk {
+                                object-fit   : contain;
+                                width        : 30px;
+                                height       : 30px;
+                                border-radius: 100%;
+
+                                @include mobile {
+                                    margin-left: 3px;
+                                    width      : 20px;
+                                    height     : 20px;
+                                    // border     : 1px solid #555;
+                                    ;
+                                }
+
                             }
 
+                            // cursor       : pointer;
+                            @include mobile {
+                                margin-left: 3px;
+                                width      : 20px;
+                                height     : 20px;
+                                // border     : 1px solid #555;
+                                ;
+                            }
                         }
-                        // cursor       : pointer;
-                        @include mobile{
-                            margin-left: 3px;
-                        width: 20px;
-                        height: 20px;
-                        border: 1px solid #555;;
-                        }
+
+                        // .ohhellnah {
+                        //     margin-left  : 10px;
+                        //     width        : 30px;
+                        //     height       : 30px;
+                        //     border-radius: 100%;
+                        //     border       : 1px solid #555;
+                        //     cursor       : pointer;
+                        //     @include mobile{
+                        //         // background-color: black;
+                        //         margin-left: 3px;
+                        //     width: 15px;
+                        //     height: 15px;
+                        //     margin-left: 5px;
+                        //     }
+                        // }
                     }
 
-                    span {
-                        font-size  : 20px;
-                        font-weight: 400;
-                        @include mobile{
-                           font-size: 17px; 
-                        }
-                    }
 
-                                  }
+
+
+
+
+
+                }
             }
 
         }
