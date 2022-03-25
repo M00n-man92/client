@@ -20,7 +20,7 @@
         text-align : center;
         
         @include mobile{
-            font-size: 22px;
+            font-size: 40px;
             margin-bottom: 20px;
 
         }
@@ -75,7 +75,7 @@
                 @include mobile{
                     margin-left: 5px;
                     margin-top: 5px;
-                    width: 250px;
+                    width: 300px;
                 }
                 
                 .yeyeye {
