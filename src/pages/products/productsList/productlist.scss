@@ -1,7 +1,7 @@
 @import '../../../global.scss';
 .productlist {
   
-width: 360px;
+width: 335px;
 // background-color: red;
     .tilte {
         margin-top : 20px;
@@ -11,7 +11,7 @@ margin-bottom: 40px;
             margin-left: 20px;
             font-weight: 500;
             @include mobile{
-                background-color: blue;
+                // background-color: blue;
             }
         }
 
@@ -26,6 +26,7 @@ margin-bottom: 40px;
         }
 
         .filter {
+
             @include mobile{
                 // width: 400px;
                 // background-color: red;
@@ -36,7 +37,7 @@ margin-bottom: 40px;
             select{
                 padding: 10px;
                 margin-left: 10px;
-                border: 1px solid black;
+                // border: 1px solid black;
                 height: 40px;
                 width: 90px;
                 border-radius: 5px;
@@ -52,9 +53,15 @@ margin-bottom: 40px;
             &.l {
                 font-size  : 20px;
                 margin-left: 20px;
+                
+                @include mobile{
+                    background-color: red;
+                    margin-left: 0px;
+                }
                 span{
                     @include mobile{
                         font-size: 17px;
+                       
                         // background-color: blue;
                     }
                 select{
@@ -69,6 +76,10 @@ margin-bottom: 40px;
             }
 
             &.r {
+                @include mobile{
+                    margin-left: 0px;
+                    background-color: blue;
+                }
                 select{
                    
                     width: 120px;
@@ -76,6 +87,7 @@ margin-bottom: 40px;
                     
                     @include mobile{
                         // font-size: 17px;
+                      
                         width: 50px;
                         // background-color: grey;
                     }
