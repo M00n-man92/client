@@ -71,9 +71,10 @@ export default function Login() {
                     setStatus(res.status)
                     if (success === true) {
                         history.push("/")
-                        window.location.reload()
+
+                        
                         //  history.push("/")
-                    //    setInterval(()=>{console.log("hello world")},2000)
+                    //    setInterval(()=>{ window.location.reload()},2000)
                        
                     }
 
@@ -83,6 +84,7 @@ export default function Login() {
                     setSuccess(false)
                     setMessage("something went wrong with our server")
                 }
+                window.location.reload()
                
             }
             catch (e) {
