@@ -28,7 +28,7 @@ export default function ProductList() {
             <div className="tilte">
                 <h2>Catagory: {cata}</h2>
             </div>
-            <div className="container">
+            <div className="containerrr">
                 <div className={"filter " + ("l")}>
                     <span> Filter :</span>
                     <select name="color" onChange={changeHnadler}>

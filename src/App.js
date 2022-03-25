@@ -15,9 +15,10 @@ import Message from './pages/message/Message'
 import Forgot from './pages/forgot/Forgot'
 import Stripe from './pages/stripe/Stripe';
 import { Route, Switch, BrowserRouter as Router, Redirect } from 'react-router-dom'
-import Product from './pages/products/product/Product';
-import {useSelector} from 'react-redux'
-
+// import Product from './pages/products/product/Product';
+// import {useSelector} from 'react-redux'
+// import { useHistory } from 'react-router-dom';
+// import {useEffect} from 'react'
 function App() {
   const user = false
   const people=localStorage.getItem("persist:root")
@@ -26,9 +27,12 @@ function App() {
   if(people){
     como=JSON.parse(people).user
     commonPeople=JSON.parse(como).currentUser
+    // window.location.reload()
     
   
   }
+  // window.location.reload()
+  
   return (
     <div className="App">
       <Router>
@@ -55,7 +59,7 @@ function App() {
         </Route>
         <Route path="/login">
         {commonPeople?<Redirect to="/"/>:<Login/>}
-       <Login/>
+       {/* <Login/> */}
         </Route>
         <Route path="/message">
         {commonPeople?<Message />:<Redirect to="/login"/>}

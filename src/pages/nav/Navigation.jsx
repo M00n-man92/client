@@ -11,12 +11,14 @@ import { logout } from '../../redux/apiCall'
 import { useHistory } from 'react-router-dom';
 import { publicRequest } from '../../requestMethods'
 import { isAsyncThunkAction } from '@reduxjs/toolkit';
+import { useLocation } from 'react-router'
 // import { Link } from 'react-router-dom'
 // import {useNavigate}
 export default function Nav() {
     const quantity = useSelector(state => state.cart.quantity)
     const user = useSelector(state => state.user)
-
+const location=useLocation()
+// console.log(location.pathname)
 
     var people = localStorage.getItem("persist:root")
     var its_my_jam
@@ -25,10 +27,11 @@ export default function Nav() {
     var alister
     const history = useHistory()
     const dispatch = useDispatch()
-    const lbetenestwal = () => {
-        logout(dispatch)
-
-        history.push("/")
+    const lbetenestwal = async() => {
+    
+        const better=await logout(dispatch)
+        history.push(location.pathname)
+       window.location.reload()
     }
     const [weare, setWeare] = useState([])
     const [tadyaechilij, setTadyaechilij] = useState(true)

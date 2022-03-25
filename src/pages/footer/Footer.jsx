@@ -3,7 +3,15 @@ import './footer.scss'
 import { Link } from 'react-router-dom'
 // import {   } from '@fortawesome/fontawesome-free-solid'
 export default function Footer() {
+    const dropzoneStyle = (isPreview,notpreview) => ({
+
+       width: (isPreview),
+       height:(notpreview)
+
+
+    });
     return (
+        
         <div className="footer">
             <div className="left">
                 <div className="title">
@@ -13,17 +21,17 @@ export default function Footer() {
                     <p>Wear Better, Look Better.</p>
                 </div>
                 <div className="social">
-                    <div className="container">
+                    <div className="container" >
                     <a href="https://www.tiktok.com/@leyu__clothing" className='link'>
-                    <img src='/assets/Tiktok-icon-on-transparent-background-PNG.png'></img>
+                    <img src='/assets/Tiktok-icon-on-transparent-background-PNG.png' ></img>
                         </a>
 
                     </div>
                     <div className="container">
-                        <a href="https://www.instagram.com/leyu_clothing_and_accessories" className='link'><Instagram /></a>
+                        <a href="https://www.instagram.com/leyu_clothing_and_accessories" className='link'><Instagram style={dropzoneStyle(20,20)}/></a>
                     </div>
                     <div className="container">
-                    <a href="https://t.me/Leyuclothing" className='link'> <Telegram /></a>
+                    <a href="https://t.me/Leyuclothing" className='link'> <Telegram style={dropzoneStyle(20,20)}/></a>
                     </div>
                 </div>
             </div>
@@ -74,15 +82,15 @@ export default function Footer() {
                     <h4>Contact.</h4>
                 </div>
                 <div className="container">
-                    <Phone />    <h4>(+251) 0965633343</h4>
+                    <Phone style={dropzoneStyle(15,15)}/>    <h4>(+251) 0965633343</h4>
                 </div>
                 <div className="container">
-                    <Mail />        <h4>email2dream2020@gmail.com</h4>
+                    <Mail style={dropzoneStyle(15,15)}/>        <h4>email2dream2020@gmail.com</h4>
 
                 </div>
 
                 <div className="container">
-                    <Room />     <h4>   Ethiopia, Addis Ababa around Bole</h4>
+                    <Room style={dropzoneStyle(15,15)}/>     <h4>   Ethiopia, Addis Ababa around Bole</h4>
                 </div>
 
             </div>

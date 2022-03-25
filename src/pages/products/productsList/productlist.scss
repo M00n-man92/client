@@ -1,9 +1,8 @@
 @import '../../../global.scss';
 .productlist {
   
-.con{
-   
-}
+width: 360px;
+// background-color: red;
     .tilte {
         margin-top : 20px;
         margin-left: 20px;
@@ -11,16 +10,29 @@ margin-bottom: 40px;
         h2 {
             margin-left: 20px;
             font-weight: 500;
+            @include mobile{
+                background-color: blue;
+            }
         }
 
     }
 
-    .container {
+    .containerrr {
       
         display        : flex;
         justify-content: space-between;
+        @include mobile{
+            // background-color: red;
+        }
 
         .filter {
+            @include mobile{
+                // width: 400px;
+                // background-color: red;
+                display: flex;
+                align-items: center;
+                // background-color: red;
+            }
             select{
                 padding: 10px;
                 margin-left: 10px;
@@ -30,7 +42,9 @@ margin-bottom: 40px;
                 border-radius: 5px;
                 @include mobile{
                     height: 40px;
-                    width: 90px; 
+                    width: 70px; 
+                    font-size: 11px;
+                   
                 }
             }
             
@@ -41,9 +55,10 @@ margin-bottom: 40px;
                 span{
                     @include mobile{
                         font-size: 17px;
-    
+                        // background-color: blue;
                     }
                 select{
+
                     .birthday{
                         @include mobile{
                             margin-left: 20pxs;
@@ -57,10 +72,12 @@ margin-bottom: 40px;
                 select{
                    
                     width: 120px;
+
                     
                     @include mobile{
                         // font-size: 17px;
                         width: 50px;
+                        // background-color: grey;
                     }
  
                 }

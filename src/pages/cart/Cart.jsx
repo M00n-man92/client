@@ -79,7 +79,7 @@ export default function Cart() {
             // console.log(res.data)
         }
         catch (e) {
-            console.log( e.responce.data)
+            console.log( e)
         }
 
     }
