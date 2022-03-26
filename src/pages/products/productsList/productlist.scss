@@ -1,7 +1,7 @@
 @import '../../../global.scss';
 .productlist {
-  
-width: 330px;
+  @include mobile{width: 330px;}
+
 // background-color: red;
     .tilte {
         margin-top : 20px;
@@ -21,8 +21,12 @@ margin-bottom: 40px;
       
         display        : flex;
         justify-content: space-between;
+        padding-left: 20px;
+        padding-right: 20px;
+        padding-bottom: 10px;
         @include mobile{
             // background-color: red;
+            padding: 0px;
         }
 
         .filter {
