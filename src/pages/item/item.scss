@@ -1,10 +1,11 @@
 @import '../../global.scss';
+
 @media (max-width:40em) {
-    .item{
-        max-width: 40em;
-    // background-color: blue;
-    // margin-top: 0px;
-    // padding:0 1em;
+    .item {
+        max-width          : 40em;
+        // background-color: blue;
+        // margin-top: 0px;
+        // padding:0 1em;
     }
 }
 
@@ -17,10 +18,10 @@
 
         // background-color: red;
         @include mobile {
-            padding: 0 0.5em;
-            margin-bottom: 10px;
+            padding            : 0 0.5em;
+            margin-bottom      : 10px;
             // background-color: red;
-            max-width: 40em;
+            max-width          : 40em;
         }
 
         .letmetellyou {
@@ -43,10 +44,10 @@
 
                 @include mobile {
                     // height        : 60px;
-                    object-fit    : contain;
-                    max-height: 60px;
-                    margin-bottom: 0px;
-                    background-color: blanchedalmond;
+                    object-fit         : contain;
+                    max-height         : 60px;
+                    margin-bottom      : 0px;
+                    background-color   : blanchedalmond;
                     // margin-top: ;
                     // background-color: red;
                     // margin-left: 0px;
@@ -163,13 +164,14 @@
             }
 
             .bag {
-                margin-top : 30px;
-                display    : flex;
-                align-items: center;
-flex-direction: column;
+                margin-top    : 30px;
+                display       : flex;
+                align-items   : center;
+                flex-direction: column;
+
                 @include mobile {
                     align-items: flex-start;
-                    margin-top: 5px;
+                    margin-top : 5px;
 
                 }
 
@@ -180,7 +182,7 @@ flex-direction: column;
                     justify-content: center;
 
                     @include mobile {
-                        margin-top: 5px;
+                        margin-top: 0px;
                     }
 
                     .minus {
@@ -242,9 +244,9 @@ flex-direction: column;
 
                     @include mobile {
                         margin-left: 5px;
-                        margin-top : 10px;
-                        height: 35px;
-                        width: 100px;
+                        margin-top : 0px;
+                        height     : 35px;
+                        width      : 100px;
                         width      : 100px;
                     }
 
@@ -274,7 +276,7 @@ flex-direction: column;
 
                         @include mobile {
                             width    : 70px;
-                            height: 20;
+                            height   : 20;
                             font-size: 12px;
 
                         }
@@ -332,14 +334,14 @@ flex-direction: column;
                         margin-left  : 10px;
                         border       : 1px solid black;
                         height       : 40px;
-                        max-width        : 100px;
+                        max-width    : 100px;
                         border-radius: 5px;
 
                         @include mobile {
-                            max-width      : 60px;
+                            max-width  : 60px;
                             margin-left: 5px;
                             padding    : 0%;
-                            font-size: 10px;
+                            font-size  : 10px;
                         }
                     }
                 }
@@ -349,23 +351,25 @@ flex-direction: column;
 
                     display    : flex;
                     align-items: center;
-// background-color: red;
+
+                    // background-color: red;
                     @include mobile {
                         // margin-left: 5px;
-                        display    : flex;
-                    align-items: center;
+                        display            : flex;
+                        align-items        : center;
                         // background-color: red;
                     }
 
                     .manishboy {
-                        display: flex;
+                        display    : flex;
                         align-items: center;
+
                         span {
                             font-size  : 20px;
                             font-weight: 400;
 
                             @include mobile {
-                                font-size: 13px;
+                                font-size    : 13px;
                                 margin-bottom: 3px;
                             }
                         }
@@ -386,14 +390,15 @@ flex-direction: column;
                     //     }
                     // }
                     .jazzythinds {
-                        display    : flex;
+                        display            : flex;
                         // background-color: red;
-                        align-items: center;
-                        @include mobile{
-                            width: 100px;
+                        align-items        : center;
+
+                        @include mobile {
+                            width              : 100px;
                             // background-color: red;
-                            align-items: center;
-                            flex-wrap: wrap;
+                            align-items        : center;
+                            flex-wrap          : wrap;
                         }
 
                         .ohhellnahh {
@@ -404,11 +409,13 @@ flex-direction: column;
                             width        : 30px;
                             height       : 30px;
                             border-radius: 100%;
-                            &:hover{
-                                width: 25px;
+
+                            &:hover {
+                                width : 25px;
                                 height: 25px;
 
                             }
+
                             .jk {
                                 object-fit   : contain;
                                 width        : 30px;
@@ -416,9 +423,9 @@ flex-direction: column;
                                 border-radius: 100%;
 
                                 @include mobile {
-                                    margin-left: 3px;
-                                    width      : 20px;
-                                    height     : 20px;
+                                    margin-left   : 3px;
+                                    width         : 20px;
+                                    height        : 20px;
                                     // border     : 1px solid #555;
                                     ;
                                 }
@@ -427,9 +434,9 @@ flex-direction: column;
 
                             // cursor       : pointer;
                             @include mobile {
-                                margin-left: 3px;
-                                width      : 20px;
-                                height     : 20px;
+                                margin-left   : 3px;
+                                width         : 20px;
+                                height        : 20px;
                                 // border     : 1px solid #555;
                                 ;
                             }
