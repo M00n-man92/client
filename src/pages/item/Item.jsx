@@ -17,6 +17,13 @@ export default function Item() {
 
 
     });
+    const dropzoneStylee = (isPreview,notpreview) => ({
+
+        width: (isPreview),
+        height:(notpreview)
+ 
+ 
+     });
     const deispatch = useDispatch()
     const handleClick = () => {
         setUsedColor(individualItem.color)
@@ -145,7 +152,7 @@ export default function Item() {
                         </div>
                         <div className="cart">
                             <button onClick={handleClick}>Add to Cart</button>
-                            <ShoppingBagOutlined className="op" onClick={handleClick} />
+                            <ShoppingBagOutlined className="op" onClick={handleClick} style={dropzoneStylee(25,25)} />
                         </div>
                     </div>
 
