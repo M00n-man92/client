@@ -147,7 +147,7 @@ const location=useLocation()
                         </div>
                         <div className="ereesey">
 
-                            <Link className="link" to="/register">  <span>Register</span>
+                            <Link className="link" to="/register">  <span>Signup</span>
                             </Link>
                         </div>
                     </>}
