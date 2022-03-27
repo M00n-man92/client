@@ -1,3 +1,12 @@
+@import '../../../global.scss';
+
+@media (max-width:40em) {
+    .product{
+    // background-color: blue;
+    // margin-top: 0px;
+    
+    }
+}
 .product {
 // background-color: red;
     height          : 50vh;
@@ -12,6 +21,7 @@
     background-color: #f5fdfb;
     margin-right    : 10px;
     margin-left: 20px;
+
 
     &:hover {
 

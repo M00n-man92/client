@@ -2,7 +2,7 @@
 
 @media (max-width:40em) {
     .catitem{
-    background-color: blue;
+    // background-color: blue;
     margin-top: 0px;
     }
 }
@@ -21,7 +21,7 @@
     margin-bottom        : 20px;
   @include mobile {
         margin-left: 4px;
-        height     : 20vh;
+       max-height     : 20vh;
         max-width      : 9em;
 
         margin-right: 4px;
