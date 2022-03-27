@@ -5,6 +5,7 @@ export default function Catagories() {
     return (
 
         <div className="catagory">
+            
             <div className="blamegame">
                {/* <span>Catagories</span> */}
                 
