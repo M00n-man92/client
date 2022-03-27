@@ -1,17 +1,29 @@
 @import '../../../global.scss';
+
+@media (max-width:40em) {
+    .productlist{
+    // background-color: blue;
+    // margin-top: 0px;
+    
+    }
+}
 .productlist {
-  @include mobile{width: 330px;}
+//   @include mobile{width: 330px;}
 
 // background-color: red;
     .tilte {
         margin-top : 20px;
         margin-left: 20px;
 margin-bottom: 40px;
+@include mobile{
+    margin-bottom: 20px;
+}
         h2 {
             margin-left: 20px;
             font-weight: 500;
             @include mobile{
                 // background-color: blue;
+                font-size: 18px;
             }
         }
 
