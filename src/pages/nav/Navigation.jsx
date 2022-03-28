@@ -1,5 +1,5 @@
 import './navi.scss'
-import { Person, FavoriteBorder, ShoppingCartOutlined, SearchOutlined, MessageOutlined } from '@mui/icons-material';
+import { Person, FavoriteBorder, ShoppingCartOutlined, SearchOutlined, MessageOutlined, ArrowForwardIosOutlined, ArrowBackIosNewOutlined } from '@mui/icons-material';
 import { Badge } from '@mui/material';
 import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
@@ -15,6 +15,7 @@ import { useLocation } from 'react-router'
 // import { Link } from 'react-router-dom'
 // import {useNavigate}
 export default function Nav() {
+    const [itemm,setitemm]=useState(0)
     const quantity = useSelector(state => state.cart.quantity)
     const user = useSelector(state => state.user)
     const location = useLocation()
@@ -27,6 +28,16 @@ export default function Nav() {
     var alister
     const history = useHistory()
     const dispatch = useDispatch()
+    const nion = (digits) => {
+        if (digits == "l") {
+            itemm != 0 ? setitemm(itemm - 1) : setitemm(1)
+            // console.log(itemm)
+        }
+        else if (digits == "r") {
+            itemm != 1 ? setitemm(itemm + 1) : setitemm(0)
+            console.log(itemm)
+        }
+    }
     const lbetenestwal = async () => {
 
         const better = await logout(dispatch)
@@ -86,7 +97,12 @@ export default function Nav() {
                 {/* <div className="languge">
                         <span>EN</span>
                     </div> */}
-                <div className='mneyeserahnew'>
+                <div className="lightnigga">
+                    {/* <img src="/assets/arrowr.png" alt="" /> */}
+                    <ArrowBackIosNewOutlined className='ion' onClick={() => nion("l")} />
+                </div>
+                <div className="killakilla">
+                <div className='mneyeserahnew' style={{ transform: `translateX(${-30 * itemm}vw)` }}>
                     <Link className="link" to="/">
                         <div className="navigatoe">
                             <span>HOME</span>
@@ -101,8 +117,19 @@ export default function Nav() {
                         <span>KIDS</span>
                     </div>
                     <div className="navigatoe">
-                        <span>CURVES PLUS</span>
+                        <span>CURVES + PLUS</span>
                     </div>
+                    <div className="navigatoe">
+                        <span>ACCESSORIES</span>
+                    </div>
+                    
+                </div>
+                </div>
+                
+                <div className="darknigga">
+                    {/* <img src="/assets/arrowr.png" alt="" /> */}
+
+                    <ArrowForwardIosOutlined className='ion'  onClick={() => nion("r")}/>
                 </div>
 
             </div>

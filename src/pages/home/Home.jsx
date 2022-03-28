@@ -1,6 +1,7 @@
 import Announcemets from '../announcmenet/Announcemets'
 import Catagories from '../catgories/Catagories'
 import Footer from '../footer/Footer'
+import Menu from '../menu/Menu'
 import Nav from '../nav/Navigation'
 import Products from '../products/Products'
 import './home.scss'
@@ -13,6 +14,7 @@ export default function Home() {
             <Catagories/>
             <Products/>
             <Footer/>
+       {/* <Menu /> */}
         </div>
     )
 }

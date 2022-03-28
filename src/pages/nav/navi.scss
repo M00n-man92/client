@@ -6,27 +6,29 @@
 //         }
 @media (max-width:40em) {
     .wrapper {
-        display: flex;
-max-height: 2em;
-max-width: 40em;
-// background-color: violet;
-// background-color: brown;
+        display   : flex;
+        max-height: 2em;
+        max-width : 40em;
+
+        // background-color: violet;
+        // background-color: brown;
         //  background-color: red;
         .left {
             // flex            : 1;
-            flex: 0.5;
+            flex               : 0.5;
             //  align-items: flex-start;
             // background-color: blue;
 
-            
-            
+
+
 
         }
+
         .right {
             // background-color: red;
             // flex: auto;
         }
-        
+
     }
 }
 
@@ -38,7 +40,7 @@ max-width: 40em;
     //     justify-content:space-between;
     // }
 
-margin-top: 3px;
+    margin-top: 3px;
 
     display         : flex;
     // margin-bottom: 10px;
@@ -48,11 +50,36 @@ margin-top: 3px;
         flex       : 3;
         display    : flex;
         align-items: center;
-.mneyeserahnew{background-color: red;
-    width: 18em;
-display: flex;
-align-items: center;
-overflow-x: hidden ;}
+        overflow     : hidden;
+       
+        .lightnigga {
+            .ion{width : 15px;
+                height: 15px;}
+           
+        }
+        .darknigga{
+            .ion{width : 15px;
+                height: 15px;}
+           
+        }
+        .killakilla{
+            width: 60vw;
+            background-color: red;
+            display: flex;
+            overflow: hidden;
+            .mneyeserahnew {
+                transition: all 0.5s ease;
+                margin-left: 20px;
+                
+                width           : 30vw;
+                display         : flex;
+                align-items     : center;
+                // overflow:scroll;
+               
+            }
+        }
+
+        
 
 
 
@@ -70,13 +97,14 @@ overflow-x: hidden ;}
 
         } */
 
-        @media (max-width:40em){
+        @media (max-width:40em) {
             // display: flex;
             // background-color: red;
-            padding: 0 0.5em;
+            padding  : 0 0.5em;
             font-size: 5px;
-            flex: auto;
-                }
+            flex     : auto;
+        }
+
         .languge {
             span {
                 // @include mobile {
@@ -87,9 +115,9 @@ overflow-x: hidden ;}
         }
 
         .navigatoe {
-            margin-left: 30px;
+            margin-left: 20px;
 
-            @media (max-width:40em)  {
+            @media (max-width:40em) {
                 margin-left: 0px;
 
                 padding: 0 1em;
@@ -118,7 +146,7 @@ overflow-x: hidden ;}
         flex   : 3;
         display: flex;
 
-       /*  @include mobile {
+        /*  @include mobile {
             margin-right       : 100px;
             // background-color: red;
             flex               : none;
@@ -134,14 +162,14 @@ overflow-x: hidden ;}
 
             @media (max-width:40em) {
                 // margin-left: 10px;
-                flex: auto;
+                flex               : auto;
                 // background-color: violet;
             }
         }
 
         @include mobile {
-            margin-left: 0px;
-            flex: auto;
+            margin-left        : 0px;
+            flex               : auto;
             // background-color:brown;
         }
 
@@ -149,9 +177,10 @@ overflow-x: hidden ;}
             display    : flex;
             align-items: center;
             margin-left: 50px;
-// background-color: black;
+
+            // background-color: black;
             @include mobile {
-                margin-left: 0px;
+                margin-left : 0px;
                 // max-width: 40em;
                 // margin: 0px;
             }
@@ -159,30 +188,30 @@ overflow-x: hidden ;}
             .itrusteverypartofyou {
                 display       : flex;
                 flex-direction: column;
-                
+
                 @media (max-width:40em) {
                     // min-width: em;
                     // background-color: purple;
 
-                    
+
                 }
 
                 .tellmewhaturwaitnfor {
-                    display       : flex;
-                    flex-direction: column;
+                    display          : flex;
+                    flex-direction   : column;
                     // height: 100px;
-                    position      : absolute;
-                    margin-top    : 35px;
-                    z-index       : 3;
+                    position         : absolute;
+                    margin-top       : 35px;
+                    z-index          : 3;
                     // border        : 1px solid lightgrey;
-                    width         : 190px;
-                    background-color:
+                    width            : 190px;
+                    background-color :
                         white;
-                        // display: none;
+                    // display: none;
 
                     @include mobile {
-                        max-width    : 9em;
-                        font-size: 12px;
+                        max-width          : 9em;
+                        font-size          : 12px;
                         // background-color: red;
                     }
 
@@ -190,7 +219,7 @@ overflow-x: hidden ;}
                         margin-left  : 5px;
                         margin-top   : 5px;
                         border-bottom: 1px solid black;
-                        
+
                         // @include mobile {background-color: red;}
 
                     }
@@ -206,17 +235,18 @@ overflow-x: hidden ;}
                         margin-left: 40px;
 
                     }
+
                     @media (max-width:40em) {
-                        max-width: 5em;
+                        max-width          : 5em;
                         // background-color: red;
                     }
 
                     .uworryaboutthewrongthings {
 
                         &.babe {
-                           max-width         : 1300px;
+                            max-width          : 1300px;
                             // margin-left: ;
-// background-color: red;
+                            // background-color: red;
 
 
 
@@ -226,7 +256,7 @@ overflow-x: hidden ;}
                         border: none;
 
                         @include mobile {
-                            max-width: 4em;
+                            max-width          : 4em;
                             // background-color: red;
                         }
 
@@ -273,9 +303,10 @@ overflow-x: hidden ;}
 
             // align-items: center;
             // background-color: red;
-            @include mobile{
+            @include mobile {
                 margin-left: 0px;
             }
+
             .star {
                 margin-top: 7px;
 
@@ -290,8 +321,8 @@ overflow-x: hidden ;}
             //     // margin-left: 10px;
             // }
             @include mobile {
-                max-height     : 20px;
-                margin-left: 0px;
+                max-height         : 20px;
+                margin-left        : 0px;
                 // background-color: red;
 
             }
@@ -332,6 +363,7 @@ overflow-x: hidden ;}
         display        : flex;
         align-items    : center;
         justify-content: center;
+
         // flex           : 1;
         // max-width: 30rem;
         // background-color: red;
@@ -352,13 +384,13 @@ overflow-x: hidden ;}
             // left: -15px;
             // flex: 3;
             // background-color: red;
-        //    min-width: 5rem;// width              : 300px;
+            //    min-width: 5rem;// width              : 300px;
             // flex               : auto;
             // margin-left        : 100px;
             // background-color: red;
-            min-width: 7em;
-            margin-right: 1px;
-            flex: auto;
+            min-width          : 7em;
+            margin-right       : 1px;
+            flex               : auto;
             // background-color: blue;
         }
 
@@ -371,7 +403,7 @@ overflow-x: hidden ;}
         }
 
         @include mobile {
-margin-left: 0px;
+            margin-left   : 0px;
             // margin-left: 25px;
         }
 
