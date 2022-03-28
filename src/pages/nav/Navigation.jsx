@@ -17,8 +17,8 @@ import { useLocation } from 'react-router'
 export default function Nav() {
     const quantity = useSelector(state => state.cart.quantity)
     const user = useSelector(state => state.user)
-const location=useLocation()
-// console.log(location.pathname)
+    const location = useLocation()
+    // console.log(location.pathname)
 
     var people = localStorage.getItem("persist:root")
     var its_my_jam
@@ -27,11 +27,11 @@ const location=useLocation()
     var alister
     const history = useHistory()
     const dispatch = useDispatch()
-    const lbetenestwal = async() => {
-    
-        const better=await logout(dispatch)
+    const lbetenestwal = async () => {
+
+        const better = await logout(dispatch)
         history.push(location.pathname)
-       window.location.reload()
+        window.location.reload()
     }
     const [weare, setWeare] = useState([])
     const [tadyaechilij, setTadyaechilij] = useState(true)
@@ -86,10 +86,25 @@ const location=useLocation()
                 {/* <div className="languge">
                         <span>EN</span>
                     </div> */}
-                <Link className="link" to="/">
+                <div className='mneyeserahnew'>
+                    <Link className="link" to="/">
+                        <div className="navigatoe">
+                            <span>HOME</span>
+                        </div></Link>
                     <div className="navigatoe">
-                        <span>Home</span>
-                    </div></Link>
+                        <span>WOMEN</span>
+                    </div>
+                    <div className="navigatoe">
+                        <span>MEN</span>
+                    </div>
+                    <div className="navigatoe">
+                        <span>KIDS</span>
+                    </div>
+                    <div className="navigatoe">
+                        <span>CURVES PLUS</span>
+                    </div>
+                </div>
+
             </div>
             <div className={`center ${alister ? "yetmbihon" : ""}`}>
                 <h3>Leyu Clothing</h3>
@@ -155,7 +170,7 @@ const location=useLocation()
                 </div>
 
             </div>
-        </div>
+        </div >
 
 
     )

@@ -48,8 +48,13 @@ margin-top: 3px;
         flex       : 3;
         display    : flex;
         align-items: center;
+.mneyeserahnew{background-color: red;
+    width: 18em;
+display: flex;
+align-items: center;
+overflow-x: hidden ;}
 
-// background-color: red;
+
 
         /* @include mobile {
             // display:grid;
@@ -82,7 +87,7 @@ margin-top: 3px;
         }
 
         .navigatoe {
-            margin-left: 50px;
+            margin-left: 30px;
 
             @media (max-width:40em)  {
                 margin-left: 0px;
