@@ -23,8 +23,9 @@
     margin-left: 20px;
 @include mobile{
     margin-left: 0px;
-    max-width: 10em;
-    max-height: 350px;
+    max-width: 8em;
+    max-height: 250px;
+    margin-bottom: 5px;
 }
 
     &:hover {
@@ -92,8 +93,14 @@
         top: 320px;
         left:20px;
         z-index: 3;
+        @include mobile{
+            top:230px
+        }
           span{
             font-size: 20px;
+            @include mobile{
+                font-size: 16px;
+            }
         }
     }
 
