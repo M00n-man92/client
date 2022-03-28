@@ -7,6 +7,11 @@
     // padding:0 1em;
     }
 }
+// @media (max-width:270px) {
+//     .product{
+//         margin-left: 0px;
+//     }
+// }
 .product {
 // background-color: red;
     height          : 50vh;
@@ -22,10 +27,11 @@
     margin-right    : 10px;
     margin-left: 20px;
 @include mobile{
-    margin-left: 0px;
-    max-width: 8em;
-    max-height: 250px;
+    margin-left: 2px;
+    max-width: 7em;
+    max-height: 200px;
     margin-bottom: 5px;
+    // background-color: red;
 }
 
     &:hover {
@@ -83,7 +89,8 @@
 
         z-index: 2;
         @include mobile{
-            max-width: 8em;
+            max-width: 6em;
+            object-fit: contain;
         }
     }
     .price{
@@ -94,7 +101,7 @@
         left:20px;
         z-index: 3;
         @include mobile{
-            top:230px
+            top:170px
         }
           span{
             font-size: 20px;
