@@ -24,5 +24,5 @@ if(people){
 
 
 //const token="eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxNjY3Y2M1Y2IyMzIxODI5ZDk2ZDg0ZiIsImlzQWRtaW4iOnRydWUsImlhdCI6MTYzNDI4NzI4OSwiZXhwIjoxNjM0NTQ2NDg5fQ.gBmmuChZ0wrDKjV6f9Bgq0pGmVQ84PkUuJkiVEYYiLc"
-export const publicRequest=axios.create({baseURL:otherUrl})
-export const userRequest=axios.create({baseURL:otherUrl,headers:{token:`Bearer ${token}` }})
+export const publicRequest=axios.create({baseURL:baseUrl})
+export const userRequest=axios.create({baseURL:baseUrl,headers:{token:`Bearer ${token}` }})

@@ -1,5 +1,5 @@
 import './catagories.scss'
-import { catagory } from '../../data'
+import { maleCatagory } from '../../data'
 import Catitem from './catagoryitem/Catitem'
 export default function Catagories() {
     return (
@@ -11,7 +11,7 @@ export default function Catagories() {
                 
             </div>
             <div className="lovetoplay">
-            {catagory.map((item,i)=>(
+            {maleCatagory.map((item,i)=>(
                 <Catitem item={item} id={i} key={i}/>
             ))}
             </div>
