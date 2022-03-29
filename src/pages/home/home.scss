@@ -4,7 +4,9 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        margin-bottom: 20px;
         .makecatagory{
+            padding: 0 1em;
             cursor: pointer;
             margin-right: 50px;
             height: 40px;
@@ -21,6 +23,7 @@
 
         }
         .femakecatagory{
+            padding: 0 1em;
             cursor: pointer;
             height: 40px;
             // width: 100px;

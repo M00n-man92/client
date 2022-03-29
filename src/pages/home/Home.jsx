@@ -14,7 +14,7 @@ export default function Home() {
             <Nav />
             {/* <Catagories/> */}
             <div className="sexcatagories">
-                <Link to="/products/men" >
+                <Link to="/products/men" className='link'>
                 <div className="makecatagory" >
                     <MaleOutlined />
                     <span className="malespan">
@@ -24,7 +24,7 @@ export default function Home() {
                 </div>
             
                 </Link>
-                <Link to="/products/women" >
+                <Link to="/products/women" className='link' >
                 <div className="femakecatagory">
                     <FemaleOutlined />
                     <span className="malespan">

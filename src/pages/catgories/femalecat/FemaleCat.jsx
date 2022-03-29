@@ -6,11 +6,11 @@ import Catagories from '../Catagories'
 import { femaleCatagory } from '../../../data'
 import Footer from '../../footer/Footer'
 import Products from '../../products/Products'
-export default function MaleCat() {
+export default function FemaleCat() {
     return (<>
     <Announcemets />
         <Nav />
-        <Catagories sex={femaleCatagory} />
+        <Catagories sex={femaleCatagory} gender="women" />
         <Products sex="women"/>
         <Footer />
 </>

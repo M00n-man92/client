@@ -15,7 +15,7 @@ import { useLocation } from 'react-router'
 // import { Link } from 'react-router-dom'
 // import {useNavigate}
 export default function Nav() {
-    const [itemm,setitemm]=useState(0)
+    const [itemm, setitemm] = useState(0)
     const quantity = useSelector(state => state.cart.quantity)
     const user = useSelector(state => state.user)
     const location = useLocation()
@@ -102,37 +102,47 @@ export default function Nav() {
                     <ArrowBackIosNewOutlined className='ion' onClick={() => nion("l")} />
                 </div>
                 <div className="killakilla">
-                <div className='mneyeserahnew' style={{ transform: `translateX(${-30 * itemm}vw)` }}>
-                    <Link className="link" to="/">
+                    <div className='mneyeserahnew' style={{ transform: `translateX(${-30 * itemm}vw)` }}>
+                        <Link className="link" to="/">
+                            <div className="navigatoe">
+                                <span>HOME</span>
+                            </div></Link>
+                        <Link className='link' to="/products/women">
+                            <div className="navigatoe">
+                                <span>WOMEN</span>
+                            </div>
+                        </Link>
+
+                        <Link className='link' to="/products/men">
+                            <div className="navigatoe">
+                                <span>MEN</span>
+                            </div>
+                        </Link>
+
+                        <Link className='link' to="/products/kids">
+                            <div className="navigatoe">
+                                <span>KIDS</span>
+                            </div>
+                        </Link>
+
                         <div className="navigatoe">
-                            <span>HOME</span>
+                            <span>CURVES+PLUS</span>
+                        </div>
+                        <Link className='link' to="/products/accessory"><div className="navigatoe">
+                            <span>ACCESSORIES</span>
                         </div></Link>
-                    <div className="navigatoe">
-                        <span>WOMEN</span>
-                    </div>
-                    <div className="navigatoe">
-                        <span>MEN</span>
-                    </div>
-                    <div className="navigatoe">
-                        <span>KIDS</span>
-                    </div>
-                    <div className="navigatoe">
-                        <span>CURVES + PLUS</span>
-                    </div>
-                    <div className="navigatoe">
-                        <span>ACCESSORIES</span>
-                    </div>
-                    {/* <div className="navigatoe">
+
+                        {/* <div className="navigatoe">
                         <span>a;slkdjfaslkdjasjd;lkj</span>
                     </div> */}
-                    
+
+                    </div>
                 </div>
-                </div>
-                
+
                 <div className="darknigga">
                     {/* <img src="/assets/arrowr.png" alt="" /> */}
 
-                    <ArrowForwardIosOutlined className='ion'  onClick={() => nion("r")}/>
+                    <ArrowForwardIosOutlined className='ion' onClick={() => nion("r")} />
                 </div>
 
             </div>
