@@ -28,7 +28,7 @@ export default function ProductList() {
            <div className="con"><Announcemets />
             <Nav /></div> 
             <div className="tilte">
-                <h2>Catagory: {cata}</h2>
+                <h2> {cata}</h2>
             </div>
             <div className="containerrr">
                 <div className={"filter " + ("l")}>

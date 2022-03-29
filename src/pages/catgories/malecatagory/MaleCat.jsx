@@ -12,7 +12,7 @@ export default function MaleCat() {
     <>
     <Announcemets />
         <Nav />
-        <Catagories sex={maleCatagory} />
+        <Catagories sex={maleCatagory} gender="men" />
         <Products sex="men"/>
         <Footer />
 </>

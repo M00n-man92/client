@@ -65,7 +65,7 @@ const heandler = () => {
     useEffect(() => {
         const fun = async () => {
             try {
-                const reply = await publicRequest.get(sex && cat ? `product/find?sex=${sex}?catagory=${cat}` : sex?`product/find?sex=${sex}`:cat?`product/find?catagory=${cat}`:'product/find')
+                const reply = await publicRequest.get(sex && cat ? `product/find?sex=${sex}&catagory=${cat}` : sex?`product/find?sex=${sex}`:cat?`product/find?catagory=${cat}`:'product/find')
                 const res = reply.data
                 setProducts(res.data)
             }
