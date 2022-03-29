@@ -47,8 +47,8 @@ export const femaleCatagory=[{
 
 export const maleCatagory=[{
     id:"7",
-    name:"Jay - Z",
-    img:"https://firebasestorage.googleapis.com/v0/b/bang-clothing.appspot.com/o/16411197857261628576485642e39e873ac93d39fe02d417a35d2d8_thumbnail_600x.webp?alt=media&token=67c0c718-ff85-4c31-a0cc-ccb4e76ac04b",
+    name:"TOPS",
+    img:"https://firebasestorage.googleapis.com/v0/b/bang-clothing.appspot.com/o/men%20catagory%2Ftop.webp?alt=media&token=0138ef99-d923-42f2-80ac-a83c5f15324a",
     cat:"top"
 },{
     id:"2",
@@ -76,8 +76,8 @@ export const maleCatagory=[{
 },
 {
     id:"6",
-    name:"Play boi",
-    img:"https://firebasestorage.googleapis.com/v0/b/bang-clothing.appspot.com/o/1641119722007163754528521cc1cc0bfaec055cee5876e2d94c3a9_thumbnail_600x.webp?alt=media&token=a625efff-f460-4ba4-a71b-9e9cf4e5f3bb",
+    name:"BOTTOM",
+    img:"https://firebasestorage.googleapis.com/v0/b/bang-clothing.appspot.com/o/men%20catagory%2Fbottom.webp?alt=media&token=62458636-82c7-4995-9ea1-d850de66851c",
     cat:"bottom"
 },
 {

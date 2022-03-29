@@ -1,0 +1,40 @@
+.home{
+    .sexcatagories{
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .makecatagory{
+            cursor: pointer;
+            margin-right: 50px;
+            height: 40px;
+            width: 100px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: solid 1px #555;
+            border-radius: 4px;
+            background-color: rgb(84, 84, 233); 
+            span{
+                color: white;
+            }
+
+        }
+        .femakecatagory{
+            cursor: pointer;
+            height: 40px;
+            width: 100px;
+margin-left: 20px;
+border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: solid 1px #555;
+            background-color: pink; 
+            span{
+                color: white;
+            }
+
+        }
+    }
+}

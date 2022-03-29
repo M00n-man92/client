@@ -2,7 +2,9 @@ import Nav from './pages/nav/Navigation'
 import Sliders from './pages/slider/Sliders'
 import Announcemets from './pages/announcmenet/Announcemets';
 import './app.scss'
-import Catagories from './pages/catgories/Catagories';
+// import Catagories from './pages/catgories/MaleCatagories';
+import FemaleCat from './pages/catgories/femalecat/FemaleCat'
+import MaleCat from './pages/catgories/malecatagory/MaleCat'
 import Products from './pages/products/Products';
 import Footer from './pages/footer/Footer';
 import ProductList from './pages/products/productsList/ProductList';
@@ -41,7 +43,13 @@ function App() {
         <Route exact path="/">
           <Home/>
         </Route>
-        <Route path="/products/:catagory">
+        <Route path="/products/women">
+          <FemaleCat />
+          </Route> 
+          <Route path="/products/men">
+          <MaleCat />
+          </Route> 
+        <Route path="/products/:sex/:catagory">
           <ProductList/>
         </Route>
         <Route path="/product/:id">

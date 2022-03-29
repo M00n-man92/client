@@ -10,7 +10,9 @@ import { useState } from "react"
 
 export default function ProductList() {
     const location=useLocation()
-   const cata=location.pathname.split("/")[2]
+   const cata=location.pathname.split("/")[3]
+   const sexa=location.pathname.split("/")[2]
+   console.log(sexa,cata)
     const [filters,setFilter]=useState({})
     const [sort,setSort]=useState("newest")
 //    console.log(cata)
@@ -66,7 +68,7 @@ export default function ProductList() {
 
                 </div>
             </div>
-            <Products cat={cata} filter={filters} sort={sort}/>
+            <Products cat={cata} filter={filters} sort={sort} sex={sexa}/>
      <Footer/> 
         </div>
     )

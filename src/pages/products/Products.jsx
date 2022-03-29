@@ -5,10 +5,11 @@ import Product from './product/Product'
 import { useEffect, useState,useRef } from 'react'
 import { publicRequest } from '../../requestMethods'
 
-export default function Products({ cat, sort, filter }) {
+export default function Products({ cat, sex,sort, filter }) {
+    // console.log(sex)
     const [products, setProducts] = useState([])
     const [filters, setFilters] = useState([])
-
+// console.log(sex)
     const socartis = {
         g: ["/assets/logo.jpg","/assets/kanye1.jpg",
             "/assets/kanye2.jpg",
@@ -64,7 +65,7 @@ const heandler = () => {
     useEffect(() => {
         const fun = async () => {
             try {
-                const reply = await publicRequest.get(cat ? `product/find?catagory=${cat}` : 'product/find')
+                const reply = await publicRequest.get(sex && cat ? `product/find?sex=${sex}?catagory=${cat}` : sex?`product/find?sex=${sex}`:cat?`product/find?catagory=${cat}`:'product/find')
                 const res = reply.data
                 setProducts(res.data)
             }

@@ -117,14 +117,14 @@ export default function Nav() {
                         <span>KIDS</span>
                     </div>
                     <div className="navigatoe">
-                        <span>CURVES+PLUS</span>
+                        <span>CURVES + PLUS</span>
                     </div>
                     <div className="navigatoe">
                         <span>ACCESSORIES</span>
                     </div>
-                    <div className="navigatoe">
+                    {/* <div className="navigatoe">
                         <span>a;slkdjfaslkdjasjd;lkj</span>
-                    </div>
+                    </div> */}
                     
                 </div>
                 </div>
