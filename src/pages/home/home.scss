@@ -1,43 +1,102 @@
-.home{
-    .sexcatagories{
-        margin-top: 20px;
-        display: flex;
-        align-items: center;
+.home {
+    .sexcatagories {
+        margin-top     : 20px;
+        display        : flex;
+        align-items    : center;
         justify-content: center;
-        margin-bottom: 20px;
-        .makecatagory{
-            padding: 0 1em;
-            cursor: pointer;
-            margin-right: 50px;
-            height: 40px;
+        margin-bottom  : 20px;
+
+        .makecatagory {
+            padding         : 0 1em;
+            cursor          : pointer;
+            margin-right    : 50px;
+            height          : 40px;
             // width: 100px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border: solid 1px #555;
-            border-radius: 4px;
-            background-color: rgb(194, 194, 255); 
-            span{
+            display         : flex;
+            align-items     : center;
+            justify-content : center;
+            border          : solid 1px #555;
+            border-radius   : 4px;
+            background-color: rgb(194, 194, 255);
+
+            span {
                 color: black;
             }
 
         }
-        .femakecatagory{
-            padding: 0 1em;
-            cursor: pointer;
-            height: 40px;
+
+        .femakecatagory {
+            padding         : 0 1em;
+            cursor          : pointer;
+            height          : 40px;
             // width: 100px;
-margin-left: 20px;
-border-radius: 4px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border: solid 1px #555;
-            background-color: rgb(255, 231, 235); 
-            span{
+            margin-left     : 20px;
+            border-radius   : 4px;
+            display         : flex;
+            align-items     : center;
+            justify-content : center;
+            border          : solid 1px #555;
+            background-color: rgb(255, 231, 235);
+
+            span {
                 color: black;
             }
 
+        }
+
+    }
+
+    .beautify {
+        display       : flex;
+        flex-direction: column;
+
+        .companyname {
+            height         : 100vh;
+            width          : 100vw;
+            display        : flex;
+            justify-content: center;
+
+            // background-color: pink;
+            img {
+                width     : 90vw;
+                height    : 90vh;
+                padding   : 30px 10em;
+                object-fit: cover;
+            }
+
+        }
+
+        .sliderorproduct {
+            width           : 100vw;
+            height          : 10em;
+            background-color: red;
+display: flex;
+// justify-content: center;
+            .dopemoney {
+
+                margin-left: 30px;
+                // padding: 0 30px;
+                width           : 80em;
+                background-color: blue;
+                height          : inherit;
+                display: flex;
+                align-items: center;
+                overflow: hidden;
+                .keepmoving{
+                    width: 400vw;
+                    background-color: pink;
+                    height: inherit;
+                    display: flex;
+                    .singleproduct{
+                        margin-left: 20px;
+                        width: 120px;
+                        height: 150px;
+                        background-color: orange;
+    
+                    }
+                }
+                
+            }
         }
     }
 }
