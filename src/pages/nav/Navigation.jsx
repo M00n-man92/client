@@ -30,11 +30,11 @@ export default function Nav() {
     const dispatch = useDispatch()
     const nion = (digits) => {
         if (digits == "l") {
-            itemm != 0 ? setitemm(itemm - 1) : setitemm(1)
+            itemm != 0 ? setitemm(itemm - 1) : setitemm(2)
             // console.log(itemm)
         }
         else if (digits == "r") {
-            itemm != 1 ? setitemm(itemm + 1) : setitemm(0)
+            itemm != 2 ? setitemm(itemm + 1) : setitemm(0)
             console.log(itemm)
         }
     }
@@ -102,7 +102,7 @@ export default function Nav() {
                     <ArrowBackIosNewOutlined className='ion' onClick={() => nion("l")} />
                 </div>
                 <div className="killakilla">
-                    <div className='mneyeserahnew' style={{ transform: `translateX(${-30 * itemm}vw)` }}>
+                    <div className='mneyeserahnew' style={{ transform: `translateX(${-12 * itemm}vw)` }}>
                         <Link className="link" to="/">
                             <div className="navigatoe">
                                 <span>HOME</span>
@@ -119,7 +119,7 @@ export default function Nav() {
                             </div>
                         </Link>
 
-                        <Link className='link' to="/products/kids">
+                        {/* <Link className='link' to="/products/kids">
                             <div className="navigatoe">
                                 <span>KIDS</span>
                             </div>
@@ -130,7 +130,7 @@ export default function Nav() {
                         </div>
                         <Link className='link' to="/products/accessory"><div className="navigatoe">
                             <span>ACCESSORIES</span>
-                        </div></Link>
+                        </div></Link> */}
 
                         {/* <div className="navigatoe">
                         <span>a;slkdjfaslkdjasjd;lkj</span>

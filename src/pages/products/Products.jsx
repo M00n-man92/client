@@ -9,7 +9,7 @@ export default function Products({ cat, sex,sort, filter }) {
     // console.log(sex)
     const [products, setProducts] = useState([])
     const [filters, setFilters] = useState([])
-console.log(sex)
+// console.log(sex)
     const socartis = {
         g: ["/assets/logo.jpg","/assets/kanye1.jpg",
             "/assets/kanye2.jpg",

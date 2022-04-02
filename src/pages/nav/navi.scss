@@ -51,30 +51,80 @@
         display    : flex;
         align-items: center;
         overflow     : hidden;
-       
+        min-width:10em;
+        // margin-right: 80px;
+      @include mobile{
+          
+        //  min-width: 10em;
+        //   background-color: brown;
+      }
         .lightnigga {
-            .ion{width : 15px;
-                height: 15px;}
+            @media (min-width:30em) {
+                display: none;
+                background-color: red;
+                
+            }
+            .ion{
+            //     width : 15px;
+            //     height: 15px;
+            // margin-left: 20px;
+            display: none;
+        @include mobile{
+            display: flex;
+            width : 10px;
+                height: 10px;
+            margin-left: 0px;
+            margin-left: -5px
+            // background-color: red;
+        }}
            
         }
         .darknigga{
-            .ion{width : 15px;
-                height: 15px;}
+            @media (min-width:30em) {
+                display: none;
+                background-color: red;
+                
+            }
+            .ion{
+            //     width : 15px;
+            //     height: 15px;
+            // margin-right: 80px;
+            display: none;
+            @include mobile{
+                display: flex;
+                margin-right: -5px;
+                width : 10px;
+                height: 10px;
+            }}
            
         }
         .killakilla{
+            margin-right: 20px;
+            margin-left: 20px;
             width: 60vw;
-            // background-color: red;
+        //  background-color: red;
             display: flex;
             overflow: hidden;
+            @include mobile{
+                // width: 30vw;
+                // background-color: red;
+                margin-right: 0px;
+                margin-left: 0px;
+            }
             .mneyeserahnew {
                 transition: all 0.5s ease;
-                margin-left: 20px;
+                // margin-left: 20px;
                 
                 width           : 30vw;
                 display         : flex;
                 align-items     : center;
                 // overflow:scroll;
+                // background-color: blue;
+                @include mobile{
+                    // max-width: 10vw ;
+
+                    // background-color: blue;
+                }
                
             }
         }
@@ -132,7 +182,7 @@
                 cursor     : pointer;
 
                 @media (max-width:40em) {
-                    font-size  : 13px;
+                    font-size  : 11px;
                     font-weight: 300;
                     cursor     : pointer;
                 }
