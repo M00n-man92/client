@@ -1,3 +1,4 @@
+@import '../../global.scss';
 .home {
     .sexcatagories {
         margin-top     : 20px;
@@ -72,6 +73,53 @@
             background-color: red;
 display: flex;
 // justify-content: center;
+.lightnigga {
+    @media (min-width:30em) {
+        display         : none;
+        background-color: red;
+
+    }
+
+    .ion {
+        //     width : 15px;
+        //     height: 15px;
+        // margin-left: 20px;
+        display: none;
+
+        @include mobile {
+            display    : flex;
+            width      : 10px;
+            height     : 10px;
+            margin-left: 0px;
+            margin-left: -5px // background-color: red;
+        }
+    }
+
+}
+
+.darknigga {
+    @media (min-width:30em) {
+        display         : none;
+        background-color: red;
+
+    }
+
+    .ion {
+        //     width : 15px;
+        //     height: 15px;
+        // margin-right: 80px;
+        display: none;
+
+        @include mobile {
+            display     : flex;
+            margin-right: -5px;
+            width       : 10px;
+            height      : 10px;
+        }
+    }
+
+}
+
             .dopemoney {
 
                 margin-left: 30px;
@@ -88,6 +136,7 @@ display: flex;
                     height: inherit;
                     display: flex;
                     .singleproduct{
+                        
                         margin-left: 20px;
                         width: 120px;
                         height: 150px;
