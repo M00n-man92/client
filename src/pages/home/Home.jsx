@@ -6,14 +6,16 @@ import Nav from '../nav/Navigation'
 import Products from '../products/Products'
 import './home.scss'
 import { MaleOutlined, FemaleOutlined, ArrowForwardIosOutlined, ArrowBackIosNewOutlined } from '@mui/icons-material'
-import { Link } from 'react-router-dom'
+// import { Link } from 'react-router-dom'
 import { useEffect, useState } from 'react'
+import { Link } from 'react-router-dom'
 import { publicRequest } from '../../requestMethods'
+import Product from '../products/product/Product'
 export default function Home() {
-    const [productm,setProductm]=useState([])
-    useEffect(()=>{
-        const stuallday=async()=>{
-            const answer=await publicRequest.get('/product/find/limit/home')
+    const [productm, setProductm] = useState([])
+    useEffect(() => {
+        const stuallday = async () => {
+            const answer = await publicRequest.get('/product/find/limit/home')
             setProductm(answer.data.data)
         }
         stuallday()
@@ -50,92 +52,42 @@ export default function Home() {
                     <img src="/assets/laser.webp" alt="" />
                 </div>
                 <div className="sliderorproduct">
-                <div className="lightnigga">
+                    <div className="lightnigga">
+                        {/* <img src="/assets/arrowr.png" alt="" /> */}
+                        <ArrowBackIosNewOutlined className='ion' />
+                    </div>
+                    <div className="dopemoney">
+                        <div className="keepmoving">
+                            {productm.map((item, i) => (
+                                // <Link to=`/product/${item._id}` ></Link>
+                                // <Product items={item} toss={i} />
+                                <>
+                                    <Link className='link' to={`/product/${item._id}`}>
+                                        <div className="singleproduct" key={i}>
+                                            <img src={item.img} alt="" />
+                                            <div className="priceofproduct">
+                                                <span>{item.price}</span>
+                                            </div>
+                                        </div>
+                                    </Link></>
+
+
+                            ))}
+
+
+                        </div>
+                    </div>
+                    <div className="darknigga">
                     {/* <img src="/assets/arrowr.png" alt="" /> */}
-                    <ArrowBackIosNewOutlined className='ion'  />
+
+                    <ArrowForwardIosOutlined className='ion'  />
                 </div>
-                <div className="dopemoney">
-                    <div className="keepmoving">
-                    {/* {productm.map((item,i)=>(<div className="singleproduct" key={i}>
-                            <img src={item.img} alt="" />
-                            <div className="priceofproduct">
-                            <span>{item.price}</span>
-                            </div>
-                        </div>))} */}
-                        
-                        <div className="singleproduct">
-                            {/* <img src="/assets/1625808057956735e5accb327524affc0e11d1fd12_thumbnail_405x552.webp" alt="" /> */}
-                            <div className="priceofproduct">
-                            <span>345</span>
-                            </div>
-                        </div>
-                        <div className="singleproduct">
-                            {/* <img src="/assets/1625808057956735e5accb327524affc0e11d1fd12_thumbnail_405x552.webp" alt="" /> */}
-                            <div className="priceofproduct">
-                            <span>345</span>
-                            </div>
-                        </div>
-                        <div className="singleproduct">
-                            {/* <img src="/assets/1625808057956735e5accb327524affc0e11d1fd12_thumbnail_405x552.webp" alt="" /> */}
-                            <div className="priceofproduct">
-                            <span>345</span>
-                            </div>
-                        </div>
-                        <div className="singleproduct">
-                            {/* <img src="/assets/1625808057956735e5accb327524affc0e11d1fd12_thumbnail_405x552.webp" alt="" /> */}
-                            <div className="priceofproduct">
-                            <span>345</span>
-                            </div>
-                        </div>
-                        <div className="singleproduct">
-                            {/* <img src="/assets/1625808057956735e5accb327524affc0e11d1fd12_thumbnail_405x552.webp" alt="" /> */}
-                            <div className="priceofproduct">
-                            <span>345</span>
-                            </div>
-                        </div>
-                        <div className="singleproduct">
-                            {/* <img src="/assets/1625808057956735e5accb327524affc0e11d1fd12_thumbnail_405x552.webp" alt="" /> */}
-                            <div className="priceofproduct">
-                            <span>345</span>
-                            </div>
-                        </div>
-                        <div className="singleproduct">
-                            {/* <img src="/assets/1625808057956735e5accb327524affc0e11d1fd12_thumbnail_405x552.webp" alt="" /> */}
-                            <div className="priceofproduct">
-                            <span>345</span>
-                            </div>
-                        </div>
-                        <div className="singleproduct">
-                            {/* <img src="/assets/1625808057956735e5accb327524affc0e11d1fd12_thumbnail_405x552.webp" alt="" /> */}
-                            <div className="priceofproduct">
-                            <span>345</span>
-                            </div>
-                        </div>
-                        <div className="singleproduct">
-                            {/* <img src="/assets/1625808057956735e5accb327524affc0e11d1fd12_thumbnail_405x552.webp" alt="" /> */}
-                            <div className="priceofproduct">
-                            <span>345</span>
-                            </div>
-                        </div><div className="singleproduct">
-                            {/* <img src="/assets/1625808057956735e5accb327524affc0e11d1fd12_thumbnail_405x552.webp" alt="" /> */}
-                            <div className="priceofproduct">
-                            <span>345</span>
-                            </div>
-                        </div><div className="singleproduct">
-                            {/* <img src="/assets/1625808057956735e5accb327524affc0e11d1fd12_thumbnail_405x552.webp" alt="" /> */}
-                            <div className="priceofproduct">
-                            <span>345</span>
-                            </div>
-                        </div><div className="singleproduct">
-                            {/* <img src="/assets/1625808057956735e5accb327524affc0e11d1fd12_thumbnail_405x552.webp" alt="" /> */}
-                            <div className="priceofproduct">
-                            <span>345</span>
-                            </div>
-                        </div>
-                    </div>
-                    </div>
                     
+
                 </div>
+                <div className="companyname">
+                        <img src="/assets/campaigns.jpg" alt="" />
+                    </div>
             </div>
             <Footer />
             {/* <Menu /> */}
