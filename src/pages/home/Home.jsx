@@ -18,22 +18,22 @@ export default function Home() {
 
     const nion = (digits) => {
         if (digits == "l") {
-            itemm != 0 ? setitemm(itemm - 1) : setitemm(1)
+            itemm != 0 ? setitemm(itemm - 1) : setitemm(2)
             // console.log(itemm)
         }
         else if (digits == "r") {
-            itemm != 1 ? setitemm(itemm + 1) : setitemm(0)
+            itemm != 2 ? setitemm(itemm + 1) : setitemm(0)
             console.log(itemm)
         }
     }
-    console.log(itemm)
+    // console.log(itemm)
     useEffect(() => {
         const stuallday = async () => {
             const answer = await publicRequest.get('/product/find/limit/home')
             setProductm(answer.data.data)
         }
         stuallday()
-    })
+    },[])
     return (
         <div className="home">
             <Announcemets />

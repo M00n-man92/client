@@ -1,9 +1,14 @@
 @import '../../global.scss';
+@media (max-width:40em) {
+    .message{
 
+    }
+    
+}
 .message {
 
     @include mobile{
-        width: 360px;
+        max-width: 40em;
         // margin-top: 10px;
        
     }
@@ -146,7 +151,9 @@
                 width              : 100%;
                 overflow-y         : scroll;
                 overflow-x         : hidden;
-
+@include mobile{
+    // background-color: red;
+}
             }
 
             ::-webkit-scrollbar {
