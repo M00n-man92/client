@@ -12,7 +12,21 @@ import { Link } from 'react-router-dom'
 import { publicRequest } from '../../requestMethods'
 import Product from '../products/product/Product'
 export default function Home() {
+
     const [productm, setProductm] = useState([])
+    const [itemm,setitemm]=useState(0)
+
+    const nion = (digits) => {
+        if (digits == "l") {
+            itemm != 0 ? setitemm(itemm - 1) : setitemm(1)
+            // console.log(itemm)
+        }
+        else if (digits == "r") {
+            itemm != 1 ? setitemm(itemm + 1) : setitemm(0)
+            console.log(itemm)
+        }
+    }
+    console.log(itemm)
     useEffect(() => {
         const stuallday = async () => {
             const answer = await publicRequest.get('/product/find/limit/home')
@@ -54,10 +68,10 @@ export default function Home() {
                 <div className="sliderorproduct">
                     <div className="lightnigga">
                         {/* <img src="/assets/arrowr.png" alt="" /> */}
-                        <ArrowBackIosNewOutlined className='ion' />
+                        <ArrowBackIosNewOutlined className='ion' onClick={()=>nion("l")} />
                     </div>
                     <div className="dopemoney">
-                        <div className="keepmoving">
+                        <div className="keepmoving" style={ {transform: `translateX(${-100 * itemm}vw)`} }>
                             {productm.map((item, i) => (
                                 // <Link to=`/product/${item._id}` ></Link>
                                 // <Product items={item} toss={i} />
@@ -66,7 +80,7 @@ export default function Home() {
                                         <div className="singleproduct" key={i}>
                                             <img src={item.img} alt="" />
                                             <div className="priceofproduct">
-                                                <span>{item.price}</span>
+                                                <span>$ {item.price}</span>
                                             </div>
                                         </div>
                                     </Link></>
@@ -80,7 +94,7 @@ export default function Home() {
                     <div className="darknigga">
                     {/* <img src="/assets/arrowr.png" alt="" /> */}
 
-                    <ArrowForwardIosOutlined className='ion'  />
+                    <ArrowForwardIosOutlined className='ion'  onClick={()=>nion("r")} />
                 </div>
                     
 

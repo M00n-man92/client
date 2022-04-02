@@ -1,5 +1,12 @@
 @import '../../global.scss';
+
+@media (max-width:40em) {
+    .home {}
+
+}
+
 .home {
+
     .sexcatagories {
         margin-top     : 20px;
         display        : flex;
@@ -51,7 +58,16 @@
         display       : flex;
         flex-direction: column;
 
+        @include mobile {
+            // background-color: red;
+        }
+
         .companyname {
+            @include mobile {
+                max-height: 30em;
+            }
+
+            //     }
             height         : 100vh;
             width          : 100vw;
             display        : flex;
@@ -62,118 +78,150 @@
                 width     : 90vw;
                 height    : 90vh;
                 padding   : 30px 10em;
-                object-fit: cover;
+                object-fit: contain;
+
+                @include mobile {
+                    max-width : 40em;
+                    // width: 20em;
+                    max-height: 25em;
+                    object-fit: cover;
+                }
             }
 
         }
 
         .sliderorproduct {
-            width           : 100vw;
-            height          : 10em;
+            width              : 100vw;
+            height             : 10em;
             // background-color: red;
-display: flex;
-align-items: center;
-// justify-content: center;
-.lightnigga {
-    // padding: 20px;
-    position: relative;
-    left: 20px;
-    cursor: pointer;
-    // margin-left: 20px;
-//     @media (min-width:30em) {
-//         display         : none;
-//         background-color: red;
-// // 
-//     }
+            display            : flex;
+            align-items        : center;
 
-    .ion {
-        //     width : 15px;
-        //     height: 15px;
-        // margin-left: 20px;
-        // display: none;
+            // justify-content: center;
+            @include mobile{
+                max-width: 40em;
+                // background-color: red;
+            }
+            .lightnigga {
+                // padding: 20px;
+                position                   : relative;
+                left                       : 20px;
+                cursor                     : pointer;
+                // margin-left: 20px;
+                //     @media (min-width:30em) {
+                //         display         : none;
+                //         background-color: red;
+                // // 
+                //     }
 
-        @include mobile {
-            display    : flex;
-            width      : 10px;
-            height     : 10px;
-            margin-left: 0px;
-            margin-left: -5px // background-color: red;
-        }
-    }
+                .ion {
+                    //     width : 15px;
+                    //     height: 15px;
+                    // margin-left: 20px;
+                    // display: none;
 
-}
-
-.darknigga {
-    // @media (min-width:30em) {
-    //     display         : none;
-    //     // background-color: red;
-
-    // }
-    position: relative;
-    right:10px;
-    cursor: pointer;
-
-    .ion {
-        //     width : 15px;
-        //     height: 15px;
-        // margin-right: 80px;
-        // display: none;
-
-        @include mobile {
-            display     : flex;
-            margin-right: -5px;
-            width       : 10px;
-            height      : 10px;
-        }
-    }
-
-}
-
-            .dopemoney {
-
-                margin-left: 30px;
-                // padding: 0 30px;
-                width           : 80em;
-                // background-color: blue;
-                height          : inherit;
-                display: flex;
-                align-items: center;
-                overflow: hidden;
-                .keepmoving{
-                    width: 400vw;
-                    // background-color: pink;
-                    height: inherit;
-                    display: flex;
-                    .singleproduct{
-                        
-                        margin-left: 20px;
-                        width: 120px;
-                        height: 150px;
-                        // background-color: orange;
-                        display: flex;
-                        flex-direction: column;
-                        align-items: center;
-                        cursor: pointer;
-                        background-color: #f5fdfb;
-                        &:hover{
-                            background-color: #e6f0ec;;
-                        }
-                        img{
-                            width: 130px;
-                            height: 120px;
-                            margin-bottom: 10px;
-                            object-fit: contain;
-                        }
-                        // .priceofproduct{
-                        //     position: relative;
-                        //     top: 120px;
-                        //     margin-left: 20px;
-
-                        // }
-    
+                    @include mobile {
+                        display    : flex;
+                        width      : 10px;
+                        height     : 10px;
+                        margin-left: 0px;
+                        left: 0px;
+                        margin-left: -5px // background-color: red;
                     }
                 }
-                
+
+            }
+
+            .darknigga {
+                // @media (min-width:30em) {
+                //     display         : none;
+                //     // background-color: red;
+
+                // }
+                position: relative;
+                right   : 10px;
+                cursor  : pointer;
+@include mobile{
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background-color: red;
+
+}
+                .ion {
+                    //     width : 15px;
+                    //     height: 15px;
+                    // margin-right: 80px;
+                    // display: none;
+
+                    @include mobile {
+                        display     : flex;
+                        margin-right: -5px;
+                        width       : 10px;
+                        height      : 10px;
+                        right: 0px;
+                    }
+                }
+
+            }
+
+            .dopemoney {
+                transition         : all 0.5s ease-in-out;
+                margin-left        : 30px;
+                // padding: 0 30px;
+                width              : 80em;
+                // background-color: blue;
+                height             : inherit;
+                display            : flex;
+                align-items        : center;
+                overflow           : hidden;
+                @include mobile{
+                    max-width: 40em;
+                }
+
+                .keepmoving {
+                    transition         : all 0.5s ease-in-out;
+                    width              : 400vw;
+                    // background-color: pink;
+                    height             : inherit;
+                    display            : flex;
+@include mobile{
+    // background-color: red;
+}
+                    .singleproduct {
+
+                        margin-left        : 20px;
+                        width              : 120px;
+                        height             : 150px;
+                        // background-color: orange;
+                        display            : flex;
+                        flex-direction     : column;
+                        align-items        : center;
+                        cursor             : pointer;
+                        background-color   : #f5fdfb;
+
+                        &:hover {
+                            background-color: #e6f0ec;
+                            ;
+                        }
+
+                        img {
+                            width        : 130px;
+                            height       : 120px;
+                            margin-bottom: 10px;
+                            object-fit   : contain;
+                        }
+
+                        .priceofproduct {
+                            position: relative;
+
+                            left: -40px;
+
+                        }
+
+                    }
+                }
+
             }
         }
     }
