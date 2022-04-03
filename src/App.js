@@ -44,13 +44,13 @@ function App() {
         <Route exact path="/">
           <Home/>
         </Route>
-        <Route exact path="/products/women">
+        <Route exact path="/clothingproducts/women">
           <FemaleCat />
           </Route> 
-          <Route exact path="/products/men">
+          <Route exact path="/clothingproducts/men">
           <MaleCat />
           </Route> 
-        <Route exact path="/products/:sex/:catagory">
+        <Route  path="/products/:sex/:catagory">
           <ProductList/>
         </Route>
         <Route path="/product/:id">
@@ -59,8 +59,8 @@ function App() {
         <Route path="/cart">
           <Cart/>
         </Route>
-        <Route path="/products/accessory">
-          {/* <Cart/> */}
+        <Route path="/accessory">
+         
           <Accessory />
         </Route>
         <Route path="/forgot">

@@ -13,7 +13,7 @@ export default function Accessory() {
     <Announcemets />
         <Nav />
         {/* <Catagories sex={femaleCatagory} gender="women" /> */}
-        <Products cat=""/>
+        <Products  cat="accessory" filter={{}}/>
         <Footer />
 </>
   )

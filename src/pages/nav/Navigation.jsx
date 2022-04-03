@@ -107,18 +107,18 @@ export default function Nav() {
                             <div className="navigatoe">
                                 <span>HOME</span>
                             </div></Link>
-                        <Link className='link' to="/products/women">
+                        <Link className='link' to="/clothingproducts/women">
                             <div className="navigatoe">
                                 <span>WOMEN</span>
                             </div>
                         </Link>
 
-                        <Link className='link' to="/products/men">
+                        <Link className='link' to="/clothingproducts/men">
                             <div className="navigatoe">
                                 <span>MEN</span>
                             </div>
                         </Link>
-                        <Link className='link' to="/products/accessory">
+                        <Link className='link' to="/accessory">
                             <div className="navigatoe">
                                 <span>ACCESSORIES</span>
                             </div>

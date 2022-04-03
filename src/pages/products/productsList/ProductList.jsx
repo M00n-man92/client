@@ -10,9 +10,17 @@ import { useState } from "react"
 
 export default function ProductList() {
     const location=useLocation()
-   const cata=location.pathname.split("/")[3]
-   const sexa=location.pathname.split("/")[2]
-   console.log(sexa,cata)
+    let cata 
+    let sexa
+    if(location.pathname.split("/")[3]){
+         cata=location.pathname.split("/")[3]
+         sexa=location.pathname.split("/")[2]
+    }
+   else if(!(location.pathname.split("/")[3])){
+     cata=location.pathname.split("/")[2]
+   }
+   console.log("sex= "+sexa)
+console.log("cat= "+cata)
     const [filters,setFilter]=useState({})
     const [sort,setSort]=useState("newest")
 //    console.log(cata)

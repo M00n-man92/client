@@ -77,14 +77,14 @@ const heandler = () => {
         
     }, [cat])
     useEffect(() => {
-        cat && setFilters(products.filter(item =>
+        cat && setFilters( products.filter(item =>
             Object.entries(filter).every(([key, value]) =>
 
                 item[key].includes(value)
 
             )))
     }, [cat, filter, products])
-
+// console.log(products)
     useEffect(() => {
         if (sort === "newest") {
             setFilters(prev =>
