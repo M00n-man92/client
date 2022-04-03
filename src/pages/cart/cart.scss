@@ -1,8 +1,19 @@
 @import '../../global.scss';
+@media (max-width:40em) {
+    .cart{
+
+    }
+    
+}
 
 .cart {
-    margin-top: 20px;
 
+    
+    margin-top: 20px;
+@include mobile{
+    display: flex;
+    flex-direction: column;
+}
     .wrapper {
         display       : flex;
         flex-direction: column;

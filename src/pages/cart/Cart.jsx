@@ -26,7 +26,7 @@ export default function Cart() {
 
 
     });
-    // console.log(pro)
+    // console.log(cart)
     // console.log(hol)
     const despatch = useDispatch()
     const [quantity, setQuantity] = useState(1)
@@ -117,7 +117,7 @@ export default function Cart() {
                             <button className={"but " + ("l")}>Continue Shopping</button>
                         </div></Link>
                         <div className="text">
-                            <span>Shopping Bag(1)</span>
+                            <span>Shopping Bag({cart.quantity})</span>
                             <span>Your WishList</span>
                         </div>
                         <div className="butt " >
@@ -189,7 +189,7 @@ export default function Cart() {
                                 </div>
                                 <div className="shipping">
                                     <span>ESTIMATED SHIPPING </span>
-                                    <span><b>$ {400}</b></span>
+                                    <span><b>$ {0.00}</b></span>
                                 </div>
                                 <div className="totall">
                                     <span>TOTAL: </span>
@@ -213,7 +213,7 @@ export default function Cart() {
 
                 </div>
             </div>
-            <Footer />
+            
         </div>
     )
 }
