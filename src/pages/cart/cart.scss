@@ -9,7 +9,7 @@
 .wehadarule{
     // background-color: red;
     .footers{
-        background-color: red;
+        // background-color: red;
         @include mobile{
             display: none;
         }
@@ -59,7 +59,7 @@
                 align-items    : center;
     
                 @include mobile {
-                    width  : 360px;
+                    max-width  : 40em;
                     padding: 0%;
                 }
     
@@ -112,9 +112,9 @@
     
             .bottom {
                 display: flex;
-    
+    // background-color: red;
                 @include mobile {
-                    width              : 360px;
+                    max-width              : 40em;
                     flex-direction     : column;
                     
                 }
