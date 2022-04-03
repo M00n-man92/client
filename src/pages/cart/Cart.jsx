@@ -79,7 +79,7 @@ export default function Cart() {
             // console.log(res.data)
         }
         catch (e) {
-            console.log( e)
+            console.log(e)
         }
 
     }
@@ -87,7 +87,7 @@ export default function Cart() {
 
         // setStripeToken && makeRequest()
 
-    }, [quantity, thatsjusthowitgo, setStripeToken,makeRequest()])
+    }, [quantity, thatsjusthowitgo, setStripeToken, makeRequest()])
     /* const handleStuff=(type)=>{
             if(type==="dec"){
                 product.quantity-=1
@@ -105,123 +105,125 @@ export default function Cart() {
 
     return (
         <>
-        <div>
-        <div className="headers">
-            <Announcemets />
-            <Nav />
-            </div>
-            <div className="cart">
-                <div className="wrapper">
-                    <div className="title">
-                        <h2>YOUR BAG</h2>
-                    </div>
-                    <div className="container">
-                        <Link className="link" to='/'><div className="butt ">
-                            <button className={"but " + ("l")}>Continue Shopping</button>
-                        </div></Link>
-                        <div className="text">
-                            <span>Shopping Bag({cart.quantity})</span>
-                            <span>Your WishList</span>
+            <div className="wehadarule">
+                <div className="headers">
+                    <Announcemets />
+                    <Nav />
+                </div>
+                <div className="cart">
+                    <div className="wrapper">
+                        <div className="title">
+                            <h2>YOUR BAG</h2>
                         </div>
-                        <div className="butt " >
-                            <button className={"but " + ("r")}>Chekout Now</button>
+                        <div className="container">
+                            <Link className="link" to='/'><div className="butt ">
+                                <button className={"but " + ("l")}>Continue Shopping</button>
+                            </div></Link>
+                            <div className="text">
+                                <span>Shopping Bag({cart.quantity})</span>
+                                <span>Your WishList</span>
+                            </div>
+                            <div className="butt " >
+                                <button className={"but " + ("r")}>Chekout Now</button>
+                            </div>
                         </div>
-                    </div>
-                    <div className="bottom">
-                        <div className="infoo">
-                            {cart.products.map((product, i) => (<div className="toppro" key={i}>
+                        <div className="bottom">
+                            <div className="infoo">
+                                {cart.products.map((product, i) => (<div className="toppro" key={i}>
 
-                                <div className="productt">
+                                    <div className="productt">
 
-                                    <div className="imagecontianerr">
-                                        <img src={product.img} alt="" />
+                                        <div className="imagecontianerr">
+                                            <img src={product.img} alt="" />
+                                        </div>
+                                        <div className="detailss">
+                                            <div className="prodname">
+                                                <span>Product : <b>{product.title}</b></span>
+                                            </div>
+                                            <div className="idd">
+                                                <span>ID : <b>{product._id}</b></span>
+                                            </div>
+                                            <div className="coli" style={product.color ? dropzoneStyle(product.color[0]) : dropzoneStyle(product.color)}>
+
+                                            </div>
+                                            <div className="seze">
+                                                <span>Size : <b>{product.usedSize}</b></span>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div className="detailss">
-                                        <div className="prodname">
-                                            <span>Product : <b>{product.title}</b></span>
-                                        </div>
-                                        <div className="idd">
-                                            <span>ID : <b>{product._id}</b></span>
-                                        </div>
-                                        <div className="coli" style={product.color ? dropzoneStyle(product.color[0]) : dropzoneStyle(product.color)}>
-
-                                        </div>
-                                        <div className="seze">
-                                            <span>Size : <b>{product.usedSize}</b></span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="pricee">
-                                    <div className="bagg">
-                                        <div className="optionn">
-                                            {/* <Minimize className="minuss" onClick={() => {count("des",product._id)
+                                    <div className="pricee">
+                                        <div className="bagg">
+                                            <div className="optionn">
+                                                {/* <Minimize className="minuss" onClick={() => {count("des",product._id)
                                             }} /> */}
 
-                                            <div className="numberr">
-                                                <span>{product.quantity}
-                                                </span>
+                                                <div className="numberr">
+                                                    <span>{product.quantity}
+                                                    </span>
+                                                </div>
+                                                <DeleteOutlineOutlined className="wrosheba" onClick={() => { thatsjusthowitgo(i, product.quantity, product.price) }} />
+                                                {/* <Add className="pluss" onClick={() =>{count("acc",product._id)}} /> */}
+
                                             </div>
-                                            <DeleteOutlineOutlined className="wrosheba" onClick={() => { thatsjusthowitgo(i, product.quantity, product.price) }} />
-                                            {/* <Add className="pluss" onClick={() =>{count("acc",product._id)}} /> */}
+                                            <div className="lio">
+                                                <span>$ {product.price * product.quantity}</span>
+                                            </div>
 
                                         </div>
-                                        <div className="lio">
-                                            <span>$ {product.price * product.quantity}</span>
-                                        </div>
+                                    </div>
+
+
+                                </div>))}
+
+                                <hr />
+
+
+                            </div>
+
+
+                            <div className="summary">
+                                <div className="summaryitem">
+                                    <div className="sumtitle">
+                                        <span>ORDER SUMMERY</span>
+                                    </div>
+                                    <div className="subtotal">
+                                        <span>SUBTOTAL: </span>
+                                        <span><b>$ {cart.total}</b></span>
+                                    </div>
+                                    <div className="shipping">
+                                        <span>ESTIMATED SHIPPING </span>
+                                        <span><b>$ {0.00}</b></span>
+                                    </div>
+                                    <div className="totall">
+                                        <span>TOTAL: </span>
+                                        <span><b>$ {cart.total}</b></span>
+                                    </div>
+                                    <div className="butit">
+                                        <StripeCheckout
+                                            stripeKey={Key}
+                                            currency="USD"
+                                            description={`your total is $${cart.total}`}
+                                            amount={cart.total * 100}
+                                            token={onToken}>
+                                            <button onClick={makeRequest}>CHECKOUT</button>
+                                        </StripeCheckout>
 
                                     </div>
                                 </div>
 
-
-                            </div>))}
-
-                            <hr />
-
-
-                        </div>
-
-
-                        <div className="summary">
-                            <div className="summaryitem">
-                                <div className="sumtitle">
-                                    <span>ORDER SUMMERY</span>
-                                </div>
-                                <div className="subtotal">
-                                    <span>SUBTOTAL: </span>
-                                    <span><b>$ {cart.total}</b></span>
-                                </div>
-                                <div className="shipping">
-                                    <span>ESTIMATED SHIPPING </span>
-                                    <span><b>$ {0.00}</b></span>
-                                </div>
-                                <div className="totall">
-                                    <span>TOTAL: </span>
-                                    <span><b>$ {cart.total}</b></span>
-                                </div>
-                                <div className="butit">
-                                    <StripeCheckout
-                                        stripeKey={Key}
-                                        currency="USD"
-                                        description={`your total is $${cart.total}`}
-                                        amount={cart.total * 100}
-                                        token={onToken}>
-                                        <button onClick={makeRequest}>CHECKOUT</button>
-                                    </StripeCheckout>
-
-                                </div>
                             </div>
-
                         </div>
+
                     </div>
 
                 </div>
-               
+                <div className="footers">
+{/* we were poppping whtn there was sone dtrama */}
+                <Footer className="booje" />
             </div>
-            {/* <div className="footers">
-            <Footer className="footers" />
-            </div> */}
-              
-        </div>
+
+            </div>
+            
         </>
     )
 }

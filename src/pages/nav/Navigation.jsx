@@ -30,12 +30,12 @@ export default function Nav() {
     const dispatch = useDispatch()
     const nion = (digits) => {
         if (digits == "l") {
-            itemm != 0 ? setitemm(itemm - 1) : setitemm(2)
+            itemm != 0 ? setitemm(itemm - 1) : setitemm(3)
             // console.log(itemm)
         }
         else if (digits == "r") {
-            itemm != 2 ? setitemm(itemm + 1) : setitemm(0)
-            console.log(itemm)
+            itemm != 3 ? setitemm(itemm + 1) : setitemm(0)
+            // console.log(itemm)
         }
     }
     const lbetenestwal = async () => {
@@ -116,6 +116,11 @@ export default function Nav() {
                         <Link className='link' to="/products/men">
                             <div className="navigatoe">
                                 <span>MEN</span>
+                            </div>
+                        </Link>
+                        <Link className='link' to="/products/accessory">
+                            <div className="navigatoe">
+                                <span>ACCESSORIES</span>
                             </div>
                         </Link>
 

@@ -17,6 +17,7 @@ import Message from './pages/message/Message'
 import Forgot from './pages/forgot/Forgot'
 import Stripe from './pages/stripe/Stripe';
 import { Route, Switch, BrowserRouter as Router, Redirect } from 'react-router-dom'
+import Accessory from './pages/catgories/accessories/Accessory';
 // import Product from './pages/products/product/Product';
 // import {useSelector} from 'react-redux'
 // import { useHistory } from 'react-router-dom';
@@ -57,6 +58,10 @@ function App() {
         </Route>
         <Route path="/cart">
           <Cart/>
+        </Route>
+        <Route path="/products/accessory">
+          {/* <Cart/> */}
+          <Accessory />
         </Route>
         <Route path="/forgot">
         {commonPeople?<Redirect to="/"/>: <Forgot/>}

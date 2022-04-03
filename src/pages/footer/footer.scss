@@ -3,7 +3,7 @@
 
 
 @media (max-width:40em) {
-    .footer{
+    .footera{
     // background-color: blue;
     // margin-top: 0px;
     
@@ -20,6 +20,8 @@
         margin-left: 0px;
         // background-color: red;
         padding: 0 1em;
+        display: flex;
+        justify-content: center;
     }
 
     .left {

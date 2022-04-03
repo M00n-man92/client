@@ -1,402 +1,412 @@
 @import '../../global.scss';
 @media (max-width:40em) {
+    .wehadarule{}
     .cart{
 
     }
     
 }
-
-.cart {
-
-    
-    margin-top: 20px;
-@include mobile{
-    display: flex;
-    flex-direction: column;
-}
-.footers{
-    
-    position:floor($number: 2);
-    @include mobile{
-        display: none;
+.wehadarule{
+    // background-color: red;
+    .footers{
         background-color: red;
+        @include mobile{
+            display: none;
+        }
+        .booje{
+            
+        }
     }
-   
-}
-    .wrapper {
-        display       : flex;
+    .cart {
+
+    
+        margin-top: 20px;
+    @include mobile{
+        display: flex;
         flex-direction: column;
-
-        .title {
-            margin-bottom: 20px;
-
-            @include mobile {
-                margin-bottom: 10px;
-            }
-
-            h2 {
-                text-align: center;
-
+    }
+    
+    .footers{
+        // background-color: red;
+        // position:floor($number: 2);
+        
+       
+    }
+        .wrapper {
+            display       : flex;
+            flex-direction: column;
+    
+            .title {
+                margin-bottom: 20px;
+    
                 @include mobile {
-                    font-size: 20px;
+                    margin-bottom: 10px;
+                }
+    
+                h2 {
+                    text-align: center;
+    
+                    @include mobile {
+                        font-size: 20px;
+                    }
                 }
             }
-        }
-
-        .container {
-            padding        : 10px;
-            display        : flex;
-            justify-content: space-between;
-            align-items    : center;
-
-            @include mobile {
-                width  : 360px;
-                padding: 0%;
-            }
-
-            .butt {
-
-                .but {
-                    height: 40px;
-                    width : 150px;
-                    cursor: pointer;
-
-                    @include mobile {
-                        width : 70px;
-                        height: 70px;
-                    }
-
-                    &.r {
-                        background-color: black;
-                        font-size       : 18px;
-                        color           : white;
-
+    
+            .container {
+                padding        : 10px;
+                display        : flex;
+                justify-content: space-between;
+                align-items    : center;
+    
+                @include mobile {
+                    width  : 360px;
+                    padding: 0%;
+                }
+    
+                .butt {
+    
+                    .but {
+                        height: 40px;
+                        width : 150px;
+                        cursor: pointer;
+    
                         @include mobile {
-                            font-size   : 12px;
-                            margin-right: 5px;
+                            width : 70px;
+                            height: 70px;
+                        }
+    
+                        &.r {
+                            background-color: black;
+                            font-size       : 18px;
+                            color           : white;
+    
+                            @include mobile {
+                                font-size   : 12px;
+                                margin-right: 5px;
+                            }
+                        }
+    
+                        &.l {
+                            @include mobile {
+                                font-size     : 12px;
+                                // font-weight: 400;
+                                margin-left   : 5px;
+                            }
                         }
                     }
-
-                    &.l {
+    
+                }
+    
+                .text {
+                    span {
+                        margin-left: 10px;
+                        font-size  : 17px;
+    
                         @include mobile {
-                            font-size     : 12px;
-                            // font-weight: 400;
-                            margin-left   : 5px;
+                            margin-left: 0px;
+                            font-size  : 14px;
                         }
                     }
                 }
-
             }
-
-            .text {
-                span {
-                    margin-left: 10px;
-                    font-size  : 17px;
-
-                    @include mobile {
-                        margin-left: 0px;
-                        font-size  : 14px;
-                    }
+    
+            .bottom {
+                display: flex;
+    
+                @include mobile {
+                    width              : 360px;
+                    flex-direction     : column;
+                    
                 }
-            }
-        }
-
-        .bottom {
-            display: flex;
-
-            @include mobile {
-                width              : 360px;
-                flex-direction     : column;
-                
-            }
-
-            .infoo {
-
-                @include mobile{
-                    max-width: 40em;
-                   
-                }
-                hr {
-                    border: none;
-                    height: 1px;
-                }
-
-                display       : flex;
-                flex          :2;
-                flex-direction: column;
-
-                .toppro {
-                    display: flex;
+    
+                .infoo {
+    
                     @include mobile{
-                        flex-direction: column;
-                        // background-color: red;
-                        border-bottom: 1px solid #555;
-                        margin-top: 3px;
+                        max-width: 40em;
+                       
                     }
-                    .productt {
-                        flex: 2;
-
-                        display: flex;
-                        
-                        .imagecontianerr {
-                            height: 300px;
-
-                            display: flex;
-
-                            object-fit: cover;
-                            @include mobile{
-                                height: 150px;
-                                
-                            }
-
-                            img {
-                                padding: 10px;
-                                height : 90%;
-                               
-
-
-                            }
-
-                        }
-
-                        .detailss {
-                            margin-top: 10px;
-                            padding   : 20px;
-                            @include mobile{
-                                padding: 5px;
-                            }
-                            .prodname {
-                                margin-bottom: 10px;
-                                @include mobile{
-                                    margin-bottom: 5px;
-                                }
-                                span {
-                                    font-size  : 17px;
-                                    font-weight: 500;
-                                    @include mobile{
-                                        font-size: 14px;
-                                    }
-                                }
-                            }
-
-                            .idd {
-                                margin-bottom: 10px;
-                                @include mobile{
-                                    margin-bottom: 5px;
-                                }
-                                span {
-                                    font-size  : 17px;
-                                    font-weight: 500;
-                                    @include mobile{
-                                        font-size: 14px;
-                                    }
-                                }
-                            }
-
-                            .coli {
-                                margin-bottom   : 10px;
-                                height          : 20px;
-                                width           : 20px;
-                                // background-color: slategray;
-                                border-radius   : 50%;
-                            }
-
-                            .seze {
-                                margin-bottom: 10px;
-                                @include mobile{
-                                    margin-bottom: 5px;
-                                }
-                                span {
-                                    font-size  : 17px;
-                                    font-weight: 500;
-                                    @include mobile{
-                                        font-size: 14px;
-                                    }
-                                }
-                            }
-                        }
+                    hr {
+                        border: none;
+                        height: 1px;
                     }
-
-                    .pricee {
-                        flex   : 1;
+    
+                    display       : flex;
+                    flex          :2;
+                    flex-direction: column;
+    
+                    .toppro {
                         display: flex;
-
                         @include mobile{
-                         
-                        }
-                        .bagg {
-                            margin-top    : 30px;
-                            display       : flex;
-                            align-items   : center;
                             flex-direction: column;
-                            @include mobile{
-                                flex-direction: row;
-                                margin-top: 0px;
-                            }
-                            .optionn {
-                                margin-top     : 20px;
-                                display        : flex;
-                                align-items    : center;
-                                justify-content: center;
+                            // background-color: red;
+                            border-bottom: 1px solid #555;
+                            margin-top: 3px;
+                        }
+                        .productt {
+                            flex: 2;
+    
+                            display: flex;
+                            
+                            .imagecontianerr {
+                                height: 300px;
+    
+                                display: flex;
+    
+                                object-fit: cover;
                                 @include mobile{
-                                    margin-top: 5px;
-                                    margin-left: 10px;
+                                    height: 150px;
+                                    
                                 }
-                                .minuss {
-                                    height       : 30px;
-                                    width        : 30px;
-                                    cursor       : pointer;
-                                    margin-bottom: 20px;
-
+    
+                                img {
+                                    padding: 10px;
+                                    height : 90%;
+                                   
+    
+    
                                 }
-                                .wrosheba{
-                                    color: red;
-                                    // background-color: red;
-                                    margin-left: 20px;
-                                    width: 40px;
-                                    height: 40px;
-                                    cursor: pointer;
+    
+                            }
+    
+                            .detailss {
+                                margin-top: 10px;
+                                padding   : 20px;
+                                @include mobile{
+                                    padding: 5px;
                                 }
-
-                                .numberr {
-                                    margin-left    : 10px;
-                                    margin-right   : 10px;
-                                    display        : flex;
-                                    justify-content: center;
-                                    align-items    : center;
-                                    height         : 36px;
-                                    width          : 30px;
-                                    border-radius  : 8px;
-                                    border         : 1px solid rgb(132, 132, 219);
+                                .prodname {
+                                    margin-bottom: 10px;
                                     @include mobile{
-
+                                        margin-bottom: 5px;
                                     }
                                     span {
-                                        font-size: 18px;
+                                        font-size  : 17px;
+                                        font-weight: 500;
+                                        @include mobile{
+                                            font-size: 14px;
+                                        }
                                     }
                                 }
-
-                                .pluss {
-
-                                    height: 30px;
-                                    width : 30px;
-                                    cursor: pointer;
-
-
-                                }
-                            }
-
-                            .lio {
-                                margin-top: 20px;
-                                @include mobile{
-                                    margin-top: 5px;
-                                    margin-left: 30px;
-                                }
-                                span {
-                                    font-size  : 40px;
-                                    font-weight: 400;
+    
+                                .idd {
+                                    margin-bottom: 10px;
                                     @include mobile{
-                                        font-size: 20px;
+                                        margin-bottom: 5px;
+                                    }
+                                    span {
+                                        font-size  : 17px;
+                                        font-weight: 500;
+                                        @include mobile{
+                                            font-size: 14px;
+                                        }
+                                    }
+                                }
+    
+                                .coli {
+                                    margin-bottom   : 10px;
+                                    height          : 20px;
+                                    width           : 20px;
+                                    // background-color: slategray;
+                                    border-radius   : 50%;
+                                }
+    
+                                .seze {
+                                    margin-bottom: 10px;
+                                    @include mobile{
+                                        margin-bottom: 5px;
+                                    }
+                                    span {
+                                        font-size  : 17px;
+                                        font-weight: 500;
+                                        @include mobile{
+                                            font-size: 14px;
+                                        }
                                     }
                                 }
                             }
-
-
-
-
                         }
-
-                    }
-                }
-
-
-            }
-
-            .summary {
-                border        : 1px solid rgb(150, 146, 146);
-                flex          : 1;
-                display       : flex;
-                flex-direction: column;
-                padding       : 10px;
-                height        : 50vh;
-                @include mobile{
-                    margin-top: 3px;
-                    margin-left: 3px;
-                    // background-color: red;
-                    height: 150px;
-                }
-                .summaryitem {
-                    margin: 30px 0px;
-                    @include mobile{
-                        margin: 5px;
-                    }
-
-                    .sumtitle {
-
-                        margin-top: 20px;
-                        @include mobile{
-                            margin-top: 5px;
-                        }
-
-                        span {
-                            font-size  : 43px;
-                            text-align : center;
-                            font-weight: 400;
+    
+                        .pricee {
+                            flex   : 1;
+                            display: flex;
+    
                             @include mobile{
-                                font-size: 20px;
+                             
+                            }
+                            .bagg {
+                                margin-top    : 30px;
+                                display       : flex;
+                                align-items   : center;
+                                flex-direction: column;
+                                @include mobile{
+                                    flex-direction: row;
+                                    margin-top: 0px;
+                                }
+                                .optionn {
+                                    margin-top     : 20px;
+                                    display        : flex;
+                                    align-items    : center;
+                                    justify-content: center;
+                                    @include mobile{
+                                        margin-top: 5px;
+                                        margin-left: 10px;
+                                    }
+                                    .minuss {
+                                        height       : 30px;
+                                        width        : 30px;
+                                        cursor       : pointer;
+                                        margin-bottom: 20px;
+    
+                                    }
+                                    .wrosheba{
+                                        color: red;
+                                        // background-color: red;
+                                        margin-left: 20px;
+                                        width: 40px;
+                                        height: 40px;
+                                        cursor: pointer;
+                                    }
+    
+                                    .numberr {
+                                        margin-left    : 10px;
+                                        margin-right   : 10px;
+                                        display        : flex;
+                                        justify-content: center;
+                                        align-items    : center;
+                                        height         : 36px;
+                                        width          : 30px;
+                                        border-radius  : 8px;
+                                        border         : 1px solid rgb(132, 132, 219);
+                                        @include mobile{
+    
+                                        }
+                                        span {
+                                            font-size: 18px;
+                                        }
+                                    }
+    
+                                    .pluss {
+    
+                                        height: 30px;
+                                        width : 30px;
+                                        cursor: pointer;
+    
+    
+                                    }
+                                }
+    
+                                .lio {
+                                    margin-top: 20px;
+                                    @include mobile{
+                                        margin-top: 5px;
+                                        margin-left: 30px;
+                                    }
+                                    span {
+                                        font-size  : 40px;
+                                        font-weight: 400;
+                                        @include mobile{
+                                            font-size: 20px;
+                                        }
+                                    }
+                                }
+    
+    
+    
+    
+                            }
+    
+                        }
+                    }
+    
+    
+                }
+    
+                .summary {
+                    border        : 1px solid rgb(150, 146, 146);
+                    flex          : 1;
+                    display       : flex;
+                    flex-direction: column;
+                    padding       : 10px;
+                    height        : 50vh;
+                    @include mobile{
+                        margin-top: 3px;
+                        margin-left: 3px;
+                        // background-color: red;
+                        height: 150px;
+                    }
+                    .summaryitem {
+                        margin: 30px 0px;
+                        @include mobile{
+                            margin: 5px;
+                        }
+    
+                        .sumtitle {
+    
+                            margin-top: 20px;
+                            @include mobile{
+                                margin-top: 5px;
+                            }
+    
+                            span {
+                                font-size  : 43px;
+                                text-align : center;
+                                font-weight: 400;
+                                @include mobile{
+                                    font-size: 20px;
+                                }
+                            }
+    
+                        }
+    
+                        .subtotal {
+                            display        : flex;
+                            justify-content: space-between;
+                            margin-top     : 20px;
+                            margin-bottom  : 10px;
+    
+                            span {
+                                font-size: 17px;
                             }
                         }
-
-                    }
-
-                    .subtotal {
-                        display        : flex;
-                        justify-content: space-between;
-                        margin-top     : 20px;
-                        margin-bottom  : 10px;
-
-                        span {
-                            font-size: 17px;
+    
+                        .shipping {
+                            display        : flex;
+                            justify-content: space-between;
+                            margin-bottom  : 10px;
+    
+                            span {
+                                font-size: 17px;
+                            }
+                        }
+    
+                        .totall {
+                            display        : flex;
+                            justify-content: space-between;
+                            margin-bottom  : 10px;
+    
+                            span {
+                                font-size: 17px;
+                            }
+                        }
+    
+                        .butit {
+                            margin-top: 20px;
+    
+                            button {
+                                height          : 40px;
+                                width           : 100%;
+                                cursor          : pointer;
+                                background-color: black;
+                                color           : white;
+                                padding         : 10px;
+                            }
                         }
                     }
-
-                    .shipping {
-                        display        : flex;
-                        justify-content: space-between;
-                        margin-bottom  : 10px;
-
-                        span {
-                            font-size: 17px;
-                        }
-                    }
-
-                    .totall {
-                        display        : flex;
-                        justify-content: space-between;
-                        margin-bottom  : 10px;
-
-                        span {
-                            font-size: 17px;
-                        }
-                    }
-
-                    .butit {
-                        margin-top: 20px;
-
-                        button {
-                            height          : 40px;
-                            width           : 100%;
-                            cursor          : pointer;
-                            background-color: black;
-                            color           : white;
-                            padding         : 10px;
-                        }
-                    }
+    
+    
                 }
-
-
             }
+    
         }
-
     }
 }
