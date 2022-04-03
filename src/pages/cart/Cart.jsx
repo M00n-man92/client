@@ -104,9 +104,12 @@ export default function Cart() {
     // console.log(pro)
 
     return (
+        <>
         <div>
+        <div className="headers">
             <Announcemets />
             <Nav />
+            </div>
             <div className="cart">
                 <div className="wrapper">
                     <div className="title">
@@ -212,8 +215,13 @@ export default function Cart() {
                     </div>
 
                 </div>
+               
             </div>
-            
+            {/* <div className="footers">
+            <Footer className="footers" />
+            </div> */}
+              
         </div>
+        </>
     )
 }

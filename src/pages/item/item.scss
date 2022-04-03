@@ -72,10 +72,10 @@
 
         .imgg {
             margin-left: 20px;
-            flex       : 0.9;
+            flex       : 0.7;
             border     : none;
-
-            object-fit: cover;
+// background-color: red;
+            object-fit: contain;
 
             @include mobile {
                 margin-left: 0.5em;
@@ -85,7 +85,8 @@
 
             img {
                 overflow: hidden;
-
+                height: 570px;
+                width:500px;
 
                 border: none;
 
@@ -164,9 +165,10 @@
             }
 
             .bag {
+                // background-color: red;
                 margin-top    : 30px;
                 display       : flex;
-                align-items   : center;
+                // align-items   : center;
                 flex-direction: column;
 
                 @include mobile {
@@ -179,7 +181,7 @@
                     margin-top     : 20px;
                     display        : flex;
                     align-items    : center;
-                    justify-content: center;
+                    // justify-content: center;
 
                     @include mobile {
                         margin-top: 0px;

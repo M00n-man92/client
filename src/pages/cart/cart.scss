@@ -14,6 +14,15 @@
     display: flex;
     flex-direction: column;
 }
+.footers{
+    
+    position:floor($number: 2);
+    @include mobile{
+        display: none;
+        background-color: red;
+    }
+   
+}
     .wrapper {
         display       : flex;
         flex-direction: column;
@@ -98,14 +107,15 @@
             @include mobile {
                 width              : 360px;
                 flex-direction     : column;
-                // background-color: red;
+                
             }
 
             .infoo {
 
-                // @include mobile{
-                //     width: 360px;
-                // }
+                @include mobile{
+                    max-width: 40em;
+                   
+                }
                 hr {
                     border: none;
                     height: 1px;
@@ -119,6 +129,9 @@
                     display: flex;
                     @include mobile{
                         flex-direction: column;
+                        // background-color: red;
+                        border-bottom: 1px solid #555;
+                        margin-top: 3px;
                     }
                     .productt {
                         flex: 2;
@@ -307,6 +320,9 @@
                 padding       : 10px;
                 height        : 50vh;
                 @include mobile{
+                    margin-top: 3px;
+                    margin-left: 3px;
+                    // background-color: red;
                     height: 150px;
                 }
                 .summaryitem {
