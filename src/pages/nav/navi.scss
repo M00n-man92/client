@@ -370,6 +370,7 @@
             align-items: center;
             // background-color: red;
             @include mobile {
+                height: 20px;
                 margin-left: 0px;
             }
 

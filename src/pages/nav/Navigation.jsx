@@ -193,8 +193,8 @@ export default function Nav() {
                     </Link>
                     <Link className='link' to="/likes">
                         <div className={`image ${lovelokedown ? "likeido" : ""}`}>
-
-                            <Badge badgeContent={likesnum} anchorOrigin={{ horizontal: 'right', vertical: "top" }} overlap="circular" color="primary" style={{width:2,height:2}}><FavoriteBorder className="belhidatenager"></FavoriteBorder></Badge>
+{/* badgeContent={likesnum} */}
+                            <Badge  anchorOrigin={{ horizontal: 'right', vertical: "top" }} overlap="circular" color="primary" className="somethin"><FavoriteBorder className="belhidatenager"></FavoriteBorder></Badge>
                         </div>
                     </Link>
                     {lovelokedown ? <div className="image">
