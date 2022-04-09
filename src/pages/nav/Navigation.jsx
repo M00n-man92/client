@@ -197,8 +197,8 @@ export default function Nav() {
                             <Badge  anchorOrigin={{ horizontal: 'right', vertical: "top" }} overlap="circular" color="primary" className="somethin"><FavoriteBorder className="belhidatenager"></FavoriteBorder></Badge>
                         </div>
                     </Link>
-                    {lovelokedown ? <div className="image">
-                        <div className='star'>
+                    {lovelokedown ? 
+                        <div className="suicidal">
                           
                                     <div className="star">
                                         <Link className="link" to="/message"><MessageOutlined className="belhidatenager" /></Link>
@@ -212,7 +212,7 @@ export default function Nav() {
                            
                         </div>
 
-                    </div> : <div className="rocky">
+                    : <div className="rocky">
                         <div className="ereesey">
                             <Link className="link" to="/login">  <span>Login</span>
                             </Link>
