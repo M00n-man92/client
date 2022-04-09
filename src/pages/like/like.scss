@@ -1,0 +1,15 @@
+@media (max-height:40em) {
+    .likes{
+    // background-color: red;
+}
+    
+}
+.likes{
+    display: flex;
+    flex-wrap: wrap;
+min-height: 100vh;
+// background-color: red;
+min-width: 100vw;
+margin-top: 20px;
+
+}
