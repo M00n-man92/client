@@ -1,5 +1,5 @@
 import './navi.scss'
-import { Person, FavoriteBorder, ShoppingCartOutlined, SearchOutlined, MessageOutlined, ArrowForwardIosOutlined, ArrowBackIosNewOutlined } from '@mui/icons-material';
+import { FavoriteBorder, Person, ShoppingCartOutlined, SearchOutlined, MessageOutlined, ArrowForwardIosOutlined, ArrowBackIosNewOutlined } from '@mui/icons-material';
 import { Badge } from '@mui/material';
 import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
@@ -14,7 +14,10 @@ import { isAsyncThunkAction } from '@reduxjs/toolkit';
 import { useLocation } from 'react-router'
 // import { Link } from 'react-router-dom'
 // import {useNavigate}
+
 export default function Nav() {
+    const likes=useSelector(state=>state.like)
+    const likesnum=likes.quantity
     const [itemm, setitemm] = useState(0)
     const quantity = useSelector(state => state.cart.quantity)
     const user = useSelector(state => state.user)
@@ -184,23 +187,32 @@ export default function Nav() {
                     <Link className="link" to="/cart">
                         <div className={`image ${lovelokedown ? "likeido" : ""}`}>
 
-                            <Badge badgeContent={quantity} anchorOrigin={{ horizontal: 'left', vertical: "top" }} overlap="circular" color="primary" className='image' ><div className="star"><ShoppingCartOutlined /></div></Badge>
+                            <Badge badgeContent={quantity} anchorOrigin={{ horizontal: 'left', vertical: "top" }} overlap="circular" color="primary" className='image' ><div className="star"><ShoppingCartOutlined className="belhidatenager"/></div></Badge>
 
                         </div>
                     </Link>
-                    {/* <div className="image">
-
-                        <Badge badgeContent={quantity} anchorOrigin={{horizontal:'left',vertical:"top"}} overlap="circular" color="primary" className="somethin"><FavoriteBorder></FavoriteBorder></Badge>
-                        </div> */}
-
-                    {lovelokedown ? <div className="image">
-                        <div className="star">
-                            <Link className="link" to="/message"><MessageOutlined className="belhidatenager" /></Link>
+                    <Link className='link' to="/likes">
+                        <div className={`image ${lovelokedown ? "likeido" : ""}`}>
+{/* badgeContent={likesnum} */}
+                            <Badge  anchorOrigin={{ horizontal: 'right', vertical: "top" }} overlap="circular" color="primary" className="somethin"><FavoriteBorder className="belhidatenager"></FavoriteBorder></Badge>
                         </div>
-                        <div className="star">
-                            <LogoutOutlined onClick={lbetenestwal} className="belhidatenager" />
+                    </Link>
+                    {lovelokedown ? 
+                        <div className="suicidal">
+                          
+                                    <div className="star">
+                                        <Link className="link" to="/message"><MessageOutlined className="belhidatenager" /></Link>
+                                    </div>
+
+                                
+                                    <div className="star">
+                                        <LogoutOutlined onClick={lbetenestwal} className="belhidatenager" />
+                                    </div>
+                               
+                           
                         </div>
-                    </div> : <>
+
+                    : <div className="rocky">
                         <div className="ereesey">
                             <Link className="link" to="/login">  <span>Login</span>
                             </Link>
@@ -210,7 +222,8 @@ export default function Nav() {
                             <Link className="link" to="/register">  <span>Signup</span>
                             </Link>
                         </div>
-                    </>}
+
+                    </div>}
 
                 </div>
 

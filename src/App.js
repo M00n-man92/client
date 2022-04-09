@@ -14,6 +14,7 @@ import Register from './pages/signup/Register';
 import Cart from './pages/cart/Cart';
 import Home from './pages/home/Home';
 import Message from './pages/message/Message'
+import Like from './pages/like/Like';
 import Forgot from './pages/forgot/Forgot'
 import Stripe from './pages/stripe/Stripe';
 import { Route, Switch, BrowserRouter as Router, Redirect } from 'react-router-dom'
@@ -55,6 +56,9 @@ function App() {
         </Route>
         <Route path="/product/:id">
           <Item/>
+        </Route>
+        <Route path="/likes">
+<Like />
         </Route>
         <Route path="/cart">
           <Cart/>
