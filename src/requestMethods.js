@@ -1,11 +1,15 @@
 import axios from 'axios'
 
 
-const path = require('path')
-const dotenv=require('dotenv').config()
+// const path = require('path')
+// const dotenv=require('dotenv').config()
 
-const baseUrl=process.env.REACT_APP_API_URL
-const otherUrl=process.env.REACT_APP_LOCAL_URL
+// const baseUrl=process.env.REACT_APP_API_URL
+// const otherUrl=process.env.REACT_APP_LOCAL_URL
+const baseUrl = "https://jazzythings.herokuapp.com/api/"
+const otherUrl = "http://localhost:5000/api/"
+
+
 // console.log(require('dotenv').config())
 // console.log(process.env.REACT_APP_LOCAL_URL)
 var people=JSON.parse(localStorage.getItem("persist:root"))
@@ -14,9 +18,14 @@ var yolo
 var token
 var commonPeople
 if(people){
-    commonPeople=people.user
-    yolo=JSON.parse(commonPeople).currentUser
-    if(yolo){token=yolo.data.token}
+    // console.log(people)
+    yolo=people.currentUser
+    // yolo=JSON.parse(commonPeople).currentUser
+    
+    // if(yolo!==null){
+    //     console.log(yolo)
+    //     token=JSON.parse(yolo).data.token
+    // }
     // console.log(yolo)
     
      

@@ -1,6 +1,5 @@
 import React from 'react'
 import '../catagories.scss'
-import Announcemets from '../../announcmenet/Announcemets'
 import Nav from '../../nav/Navigation'
 import Catagories from '../Catagories'
 import { femaleCatagory } from '../../../data'
@@ -8,9 +7,8 @@ import Footer from '../../footer/Footer'
 import Products from '../../products/Products'
 export default function FemaleCat() {
     return (<>
-    <Announcemets />
         <Nav />
-        <Catagories sex={femaleCatagory} gender="women" />
+        {/* <Catagories sex={femaleCatagory} gender="women" /> */}
         <Products sex="women"/>
         <Footer />
 </>

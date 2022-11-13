@@ -1,5 +1,4 @@
 // import React, { useRef } from 'react'
-import Announcemets from '../announcmenet/Announcemets'
 import Chat from '../chat/Chat'
 import Footer from '../footer/Footer'
 import { useEffect, useRef } from 'react'
@@ -182,7 +181,6 @@ export default function Message({ own }) {
     return (
         <div className='message'>
             <div className="header">
-                <Announcemets />
                 <Nav />
             </div>
             <div className="playnice">

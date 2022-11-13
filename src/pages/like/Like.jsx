@@ -3,7 +3,6 @@ import './like.scss'
 import Product from '../products/product/Product'
 import { useSelector } from 'react-redux'
 import {useEffect,useState} from 'react'
-import Announcemets from '../announcmenet/Announcemets'
 import Navigation from '../nav/Navigation'
 import Footer from '../footer/Footer'
 
@@ -19,7 +18,7 @@ likes&&likes.products&&setProducts(likes.products)
  },[])
     return (
         <>
-        <Announcemets />
+
         <Navigation />
         <div className="likes">
         {products.map((items,i)=>(<Product items={items} toss={i} />))}

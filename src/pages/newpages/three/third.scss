@@ -1,0 +1,74 @@
+.third {
+  margin-top: 5%;
+  margin-left: 10%;
+  margin-right: 10%;
+  height: 100vh;
+  // background-color: red;
+  overflow: hidden;
+  .container {
+    display: flex;
+    img {
+      height: 80%;
+      margin-right: 2%;
+      width: 50%;
+      border-top-left-radius: 25%;
+    }
+    .infoholder {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content:flex-end;
+      
+      .header {
+        // background-color: blue;
+        margin-left: 10%;
+        margin-bottom: 10%;
+        h3 {
+          width: 90%;
+          font-family: "FrankRuhlLibre-Bold";
+          font-size: 68px;
+          color: #34251f;
+        }
+
+      }
+      .info{
+        margin-left: 10%;
+        margin-bottom: 10%;
+        // margin-bottom: 3%;
+        // background-color: blue;
+        span{
+          // background-color: red;
+          width: 50%;
+          font-size: 20px;
+          color: #34251f;
+        }
+      }
+      .values{
+        background-color: white;
+        width: 170%;
+        // right: 20%;
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+        height: 20%;
+        .individual{
+          // margin-right: 10%;
+          h3{
+            font-family: "FrankRuhlLibre-Bold";
+        font-size: 40px;
+        color: #34251F;
+          }
+          span{
+            
+            font-size: 18px;
+            color: #34251F;
+          }
+        }
+        .individual:last-child{
+          margin-right: 10%;
+        }
+
+      }
+    }
+  }
+}

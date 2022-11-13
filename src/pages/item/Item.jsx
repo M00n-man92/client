@@ -1,7 +1,6 @@
 import { Add, Minimize, Shop, ShopOutlined, ShoppingBagOutlined } from '@mui/icons-material'
 import { useEffect, useState } from 'react'
 import { useLocation } from 'react-router'
-import Announcemets from '../announcmenet/Announcemets'
 import Footer from '../footer/Footer'
 import Nav from '../nav/Navigation'
 import './item.scss'
@@ -55,18 +54,9 @@ export default function Item() {
                 const reply = await publicRequest.get(`/product/find/${id}`)
                 const real = reply.data
                 const data = real.data
-                // console.log(data)
+                
                 setIndividualItem(data)
-                // if(individualItem.color){
-                //     console.log("DR wesly")
-                //     individualItem.color.map(item=>{setUsedColor(item)})
-                //     // setUsedColor(individualItem.color)
-                // }
-                // else if(!individualItem.color[0]){
-                //     setUsedColor(individualItem.color)
-                // }
-                // setUsedColor(individualItem.color[0]?individualItem.color[0]:individualItem.color)
-                // console.log(usedColor)
+                
                 setImage("")
             }
             getProduct()
@@ -78,20 +68,17 @@ export default function Item() {
     }, [id])
     const [usedColor, setUsedColor] = useState(null)
     const [usedSize, setUsedSize] = useState(null)
-    //   setUsedColor(individualItem.price)
-    //   console.log(individualItem.color)
-    // console.log(usedColor, usedSize, quantity)
+  
     return (
         <div className="item">
             <div className="headers">
-                <Announcemets />
                 <Nav />
 
             </div>
             <div className="wrapperr">
                 <div className="letmetellyou">
                     {individualItem.img ? individualItem.img.map((item, i) => (<div className="booby" key={i}><img src={item} alt="" onClick={(e) => setImage(item)} /></div>)) : <span></span>}
-                    {/* <div className="booby"><img src={individualItem.img[0]} alt="" /></div> */}
+                   
                 </div>
                 <div className="imgg">
                     {individualItem.img ? image ? <img src={image} alt="" /> : <img src={individualItem.img[0]} alt="" /> : <img src={individualItem.img} alt="" />}

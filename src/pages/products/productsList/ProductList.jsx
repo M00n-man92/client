@@ -1,6 +1,5 @@
 import styled from "styled-components"
 import { RadioButtonChecked } from '@mui/icons-material'
-import Announcemets from '../../announcmenet/Announcemets'
 import Nav from '../../nav/Navigation'
 import './productlist.scss'
 import Products from '../../products/Products';
@@ -33,7 +32,7 @@ console.log("cat= "+cata)
 
     return (
         <div className="productlist">
-           <div className="con"><Announcemets />
+           <div className="con">
             <Nav /></div> 
             <div className="tilte">
                 <h2>{sexa} {cata}</h2>
