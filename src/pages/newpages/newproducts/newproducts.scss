@@ -1,0 +1,35 @@
+.newproducts {
+  margin-top: 5%;
+  margin-left: 10%;
+  margin-right: 10%;
+  width: inherit;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  // background-color: blue;
+  h3 {
+    font-size: 48px;
+    font-family: "FrankRuhlLibre-Bold";
+  }
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    span {
+      margin-right: 2%;
+    }
+  }
+  .productscontainer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    overflow: hidden;
+    width: 100%;
+    height: 100%;
+    // background-color: red;
+
+  }
+}

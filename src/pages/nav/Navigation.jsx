@@ -97,14 +97,16 @@ export default function Nav() {
 
 		<div className="wrapper">
 			<div className={`center ${alister ? "yetmbihon" : ""}`}>
-				<div className="higer">
-					<h3>Ethiopian</h3>
-				</div>
-				<div className="lower">
-					<span>
-						Fashion
-					</span>
-				</div>
+				<Link className='link' to="/">
+					<div className="higer" >
+						<h3>Ethiopian</h3>
+					</div>
+					<div className="lower">
+						<span>
+							Fashion
+						</span>
+					</div>
+				</Link>
 			</div>
 			<div className="left">
 

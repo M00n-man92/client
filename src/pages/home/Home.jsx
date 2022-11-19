@@ -17,6 +17,7 @@ import { publicRequest } from '../../requestMethods'
 import Product from '../products/product/Product'
 import Fifith from '../newpages/five/Fifith'
 import Comments from '../newpages/comments/Comments'
+import Newproducts from '../newpages/newproducts/Newproducts'
 export default function Home() {
 
 	const [productm, setProductm] = useState([])
@@ -48,6 +49,7 @@ export default function Home() {
 				<Second />
 				<Third />
 				<Fourth />
+				<Newproducts />
 				<Timer />
 				<Fifith />
 				<Comments />

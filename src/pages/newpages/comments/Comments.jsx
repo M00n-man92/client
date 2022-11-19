@@ -78,7 +78,8 @@ export default function Comments() {
             </div>
             
           </div>
-          <div className="individualcomponent">
+          
+          {/* <div className="individualcomponent">
             <div className="indi">
               <h3>
                 Comfortable and met all my expectations! I ordered a medium and it fit perfectly
@@ -134,63 +135,7 @@ export default function Comments() {
             
 
           </div>
-          <div className="individualcomponent">
-            <div className="indi">
-              <h3>
-                Comfortable and met all my expectations! I ordered a medium and it fit perfectly
-              </h3>
-              <span>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut lacus, auctor pretium ac ultrices. Dui lacus dignissim tincidunt urna,
-              </span>
-              <img src="./assets/Gojjam Amhara.jfif" alt="" />
-              <h2>Tantos creative studio</h2>
-            </div>
-            
-
-          </div>
-          <div className="individualcomponent">
-            <div className="indi">
-              <h3>
-                Comfortable and met all my expectations! I ordered a medium and it fit perfectly
-              </h3>
-              <span>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut lacus, auctor pretium ac ultrices. Dui lacus dignissim tincidunt urna,
-              </span>
-              <img src="./assets/Gojjam Amhara.jfif" alt="" />
-              <h2>Tantos creative studio</h2>
-            </div>
-            
-
-          </div>
-          <div className="individualcomponent">
-            <div className="indi">
-              <h3>
-                Comfortable and met all my expectations! I ordered a medium and it fit perfectly
-              </h3>
-              <span>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut lacus, auctor pretium ac ultrices. Dui lacus dignissim tincidunt urna,
-              </span>
-              <img src="./assets/Gojjam Amhara.jfif" alt="" />
-              <h2>Tantos creative studio</h2>
-            </div>
-            
-
-          </div>
-          <div className="individualcomponent">
-            <div className="indi">
-              <h3>
-                Comfortable and met all my expectations! I ordered a medium and it fit perfectly
-              </h3>
-              <span>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut lacus, auctor pretium ac ultrices. Dui lacus dignissim tincidunt urna,
-              </span>
-              <img src="./assets/Gojjam Amhara.jfif" alt="" />
-              <h2>Tantos creative studio</h2>
-            </div>
-            
-
-          </div>
-
+ */}
         </div>
       </div>
       <div className="sliderbuttons" >

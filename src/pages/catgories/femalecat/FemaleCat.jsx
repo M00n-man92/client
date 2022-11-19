@@ -9,7 +9,10 @@ export default function FemaleCat() {
     return (<>
         <Nav />
         {/* <Catagories sex={femaleCatagory} gender="women" /> */}
+        <div className="spaceing" style={{marginLeft:"10%",marginRight:"10%"}}>
         <Products sex="women"/>
+        </div>
+        
         <Footer />
 </>
         
