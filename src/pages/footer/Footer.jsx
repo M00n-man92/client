@@ -101,6 +101,15 @@ export default function Footer() {
 					</div>
 
 				</div>
+				<div className="farright">
+					<div className="headering">
+						<h3>My Account</h3>
+					</div>
+					<div className="items">
+						<Link to="/login" className='link'>sign in</Link>
+						<Link to="/cart" className='link'>view cart</Link>
+					</div>
+				</div>
 			</div>
 
 

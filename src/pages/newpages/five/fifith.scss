@@ -1,0 +1,33 @@
+.fifith{
+  margin-top: 4%;
+  height: 50vh;
+  width: 100%;
+  background-color: #E4E4E4;
+  display: flex;
+  justify-content: space-between;
+  .first{
+    margin-left: 10%;
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    // background-color: red;
+    h3{
+      font-size: 60px;
+      font-family: "FrankRuhlLibre-Bold";
+    }
+  }
+  .last{
+    display: flex;
+    justify-content: flex-end;
+    height: inherit;
+    width: 100%;
+    margin-right: 10%;
+    img{
+      height: inherit;
+width: 55%;
+object-fit: cover;
+    }
+  }
+
+}

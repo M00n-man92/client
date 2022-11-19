@@ -1,0 +1,112 @@
+.comments{
+  margin-top: 5%;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height:80vh;
+  align-items: center;
+  justify-content:flex-start;
+  // background-color: red;
+  h3{
+    font-size: 48px;
+      font-family: "FrankRuhlLibre-Bold";
+  }
+  span{
+    margin-top: 1%;
+    font-size: 20px;
+  }
+  .slider{
+    width: 100%;
+    height: 80%;
+    transition: all 0.5s ease-in-out;
+
+    // background-color: blue;
+    // display: flex;
+    overflow: hidden;
+    .slidercomponenet{
+      display: flex;
+      transition: all 0.5s ease-in-out;
+
+      width: 400%;
+      height: 100%;
+      // height: 900px;
+      // background-color: black
+      .individualcomponent{
+        margin-right: 1%;
+        margin-top: 1%;
+        height: 80%;
+        width: 800px;
+        // width: inherit;
+        background-color: #EEDDCC;
+       display: flex;
+       align-items: center;
+       justify-content: center;
+        .indi{
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content:space-evenly;
+          margin-left: 10%;
+          margin-right: 10%;
+          height: 70%;
+          // background-color: red;
+          h3{
+            font-family: "Lato-Black";
+            font-size: 18px; 
+            text-align: center;
+           }
+           span{
+            text-align: center;
+             font-size: 14px;
+           }
+           img{
+             height: 25%;
+             width:20%;
+             border-radius: 50%;
+             object-fit: cover;
+           }
+           h2{
+             font-family: "Lato-Black";
+            font-size: 16px; 
+           }
+        }
+        
+      }
+    }
+  }
+  .sliderbuttons{
+    height: 5%;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    // background-color: black;
+    width: 100%;
+    .circle{
+      width: 100%;
+      // background-color: red;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      .individualcircle{
+        width: 0.5%;
+        height:6px;
+        border-radius: 50%;
+        // background-color: red;
+        margin-right: 2%;
+        cursor: pointer;
+        border: 1px solid #EEDDCC;
+        background-color: #34251F;
+      }
+      .individualcircle.own{
+        width: 0.5%;
+        height: 6px;
+        border-radius: 50%;
+        // background-color: red;
+        margin-right: 2%;
+        cursor: pointer;
+        border: 1px solid #34251F;
+        background-color: white;
+      }
+    }
+  }
+}
