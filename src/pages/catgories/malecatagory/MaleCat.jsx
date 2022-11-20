@@ -11,7 +11,9 @@ export default function MaleCat() {
     <>
         <Nav />
         {/* <Catagories sex={maleCatagory} gender="men" /> */}
+        <div className="spaceing" style={{marginLeft:"10%",marginRight:"10%"}}>
         <Products sex="men"/>
+        </div>
         <Footer />
 </>
           

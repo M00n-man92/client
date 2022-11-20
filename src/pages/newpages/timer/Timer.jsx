@@ -4,10 +4,10 @@ export default function Timer() {
   const countdown = new Date("Nov 21, 2022").getTime()
   const now = new Date().getTime()
   var p, d, r, f;
-  const [days, setDays] = useState(0);
-  const [hours, setHours] = useState(0);
-  const [minutes, setMin] = useState(0);
-  const [sec, setSecs] = useState(0);
+  const [days, setDays] = useState();
+  const [hours, setHours] = useState();
+  const [minutes, setMin] = useState();
+  const [sec, setSecs] = useState();
 
   const interval = () => {
     
@@ -32,6 +32,7 @@ export default function Timer() {
         setHours(d)
         setMin(r)
         setSecs(f)
+        clearInterval(timer)
       }
     }, 1000)
     
