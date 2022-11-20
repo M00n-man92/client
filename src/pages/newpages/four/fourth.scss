@@ -40,7 +40,13 @@
     .slider {
       margin-left: 10%;
       width: 55em;
-      overflow: hidden;
+      overflow: scroll;
+      scrollbar-width : none;
+    // background-color: red;
+
+    &::-webkit-scrollbar {
+        display: none
+    }
       // background-color: red;
       // background-color: red;
       height: inherit;
