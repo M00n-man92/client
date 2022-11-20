@@ -160,7 +160,7 @@ export default function Cart() {
 													<span>{product.quantity}
 													</span>
 												</div>
-												<DeleteOutlineOutlined className="wrosheba" onClick={() => { thatsjusthowitgo(i, product.quantity, product.price) }} />
+												<DeleteOutlineOutlined color='red' className="wrosheba" onClick={() => { thatsjusthowitgo(i, product.quantity, product.price) }} />
 												{/* <Add className="pluss" onClick={() =>{count("acc",product._id)}} /> */}
 
 											</div>
@@ -216,10 +216,10 @@ export default function Cart() {
 					</div>
 
 				</div>
-				<div className="footers">
-					{/* we were poppping whtn there was sone dtrama */}
-					{/* <Footer className="booje" /> */}
-				</div>
+				{/* <div className="footers"> */}
+				{/* we were poppping whtn there was sone dtrama */}
+				<Footer className="booje" />
+				{/* </div> */}
 
 			</div>
 

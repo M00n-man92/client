@@ -1,43 +1,44 @@
 import React, { useEffect, useState } from 'react'
 import "./timer.scss"
 export default function Timer() {
-  const countdown = new Date("Nov 20, 2022 00:00:00").getTime()
+  const countdown = new Date("Nov 21, 2022").getTime()
   const now = new Date().getTime()
-  var p,d,r,f;
-  const [ days, setDays] = useState(0);
-  const [ hours, setHours] = useState(0);
-  const [ minutes, setMin] = useState(0);
-  const [ sec, setSecs] = useState(0);
+  var p, d, r, f;
+  const [days, setDays] = useState(0);
+  const [hours, setHours] = useState(0);
+  const [minutes, setMin] = useState(0);
+  const [sec, setSecs] = useState(0);
 
-  useEffect(()=>{
-    const c = ()=>{
-      setInterval(()=>{
-        const difference = countdown - now;
-        setDays( Math.floor(difference / (1000 * 60 * 60 * 24 )))
-        setHours( Math.floor((difference %  (1000 * 60 * 60 * 24 )) / (1000 * 60 * 60)))
-        setMin( Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60)))
-        setSecs(Math.floor((difference % (1000 * 60)) / 1000))
-      },1000)
-    }
-    c();
-  },[sec])
-//   const timer = setInterval(()=>{
-//     const difference = countdown - now;
-// var p = Math.floor(difference / (1000 * 60 * 60 * 24 ))
-// var d = Math.floor((difference %  (1000 * 60 * 60 * 24 )) / (1000 * 60 * 60))
-// var r =  Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60))
-// var f =  Math.floor((difference % (1000 * 60)) / 1000)
-// document.getElementById("days").innerHTML = p;
-// document.getElementById("hours").innerHTML = d;
-// document.getElementById("mins").innerHTML = r;
-// document.getElementById("secs").innerHTML = f;
-/* setDays(p)
-    setHours(d )
-    setMin(r)
-    setSecs(f) */
-    // console.log(difference);
-  // },1000)
-  
+  const interval = () => {
+    
+    const timer = setInterval(() => {
+      const difference = countdown - now;
+      var p = Math.floor(difference / (1000 * 60 * 60 * 24))
+      var d = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
+      var r = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60))
+      var f = Math.floor((difference % (1000 * 60)) / 1000)
+      // document.getElementById("days").innerHTML = p;
+      // document.getElementById("hours").innerHTML = d;
+      // document.getElementById("mins").innerHTML = r;
+      // document.getElementById("secs").innerHTML = f;
+
+      // console.log(difference);
+      if (difference < 0) {
+        clearInterval()
+        // console.l
+      }
+      else {
+        setDays(p)
+        setHours(d)
+        setMin(r)
+        setSecs(f)
+      }
+    }, 1000)
+    
+  }
+  useEffect(() => {
+    interval();
+  })
   return (
 
     <div className='timer'>
