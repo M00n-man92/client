@@ -11,10 +11,14 @@
 
 .item {
     .wrapperr {
+        margin-left: 10%;
+        margin-right: 10%;
+
         display      : flex;
         margin-top   : 10px;
         margin-bottom: 20px;
-        padding      : 20px;
+        // background-color: red;
+        // padding      : 20px;
 
         // background-color: red;
         @include mobile {
