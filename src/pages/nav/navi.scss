@@ -390,7 +390,9 @@
 					font-family: "Lato-Bold";
 				}
 				@include mobile {
-					font-size: 13px;
+					// height: inherit;
+					width: 80%;
+					font-size: 12px;
 					margin-left: 5px;
 					margin-bottom: 3px;
 				}

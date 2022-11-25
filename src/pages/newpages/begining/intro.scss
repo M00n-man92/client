@@ -1,20 +1,29 @@
-.intro{
+.intro {
   height: 100vh;
   overflow: hidden;
   background-color: #ffcdab;
+  @media (max-width: 40em) {
+  }
   // display: flex;
-  .circle{
+  .circle {
+    @media (max-width: 40em) {
+      // background-color: red;
+      width: 70%;
+      height: 50%;
+      left: 60%;
+      top: -100%;
+    }
     width: 35%;
     height: 75%;
-    background-color: #D7B798;
+    background-color: #d7b798;
     position: relative;
     border-radius: 50%;
     left: 80%;
     top: -100%;
   }
-  .container{
+  .container {
     margin-top: 8%;
-    width: 40%;
+    width: 50%;
     height: 60%;
     // background-color: red;
     margin-left: 10%;
@@ -23,46 +32,82 @@
     align-items: flex-start;
     justify-content: space-between;
     flex-direction: column;
-    .header{
+    @media (max-width: 40em) {
+      justify-content: space-evenly;
+      width: 50%;
+      height: 80%;
+      // margin-top: 2%;
+      // background-color: red;
+      margin: 4% 0% 3% 3%;
+    }
+    .header {
       width: 100%;
-      h3{
+      @media (max-width: 40em) {
+        // margin-top: -20%;
+        // background-color: red;
+        // width: 20%;
+      }
+      h3 {
         font-family: "FrankRuhlLibre-Bold";
         font-size: 70px;
-        color: #34251F;
+        color: #34251f;
+        @media (max-width: 40em) {
+          font-size: 30px;
+        }
       }
     }
-    .mid{
+    .mid {
       width: 80%;
-      span{
+      @media (max-width: 40em) {
+        width: 100%;
+        margin-top: -20%;
+      }
+      span {
         font-size: 22px;
-        color: #34251F;
+        color: #34251f;
+        @media (max-width: 40em) {
+          font-size: 16px;
+        }
       }
     }
-    .last{
-      button{
+    .last {
+      margin-top: 10%;
+
+      @media (max-width: 40em) {
+        margin-top: 0%;
+      }
+      button {
         border: none;
         height: 40px;
         width: 120px;
         font-family: "FrankRuhlLibre-Bold";
         font-size: 16px;
-        background-color: #34251F;
+        background-color: #34251f;
         color: white;
+
       }
     }
   }
-  .picture{
+  .picture {
     position: relative;
-    top: -140%;
-    left: 50%;
-    height: 70%;
-  width: 40%;
-  // background-color: red;
-  border-bottom-left-radius: 25%;
-    img{
+    top: -145%;
+    left: 60%;
+    height: 80%;
+    width: 30%;
+    // background-color: red;
+
+    border-bottom-left-radius: 25%;
+    @media (max-width:40em) {
+      top: -124%;
+      left: 53%;
+      width: 40%;
+      height: 70%;
+    }
+    img {
       width: 100%;
       height: 100%;
-      border-bottom-left-radius: 25%;
+      border-radius: 3%;
       object-fit: cover;
     }
-}
+  }
 }

@@ -3,7 +3,6 @@ import "./timer.scss"
 export default function Timer() {
   const countdown = new Date("Dec 21, 2022").getTime()
   const now = new Date().getTime()
-  var p, d, r, f;
   const [days, setDays] = useState();
   const [hours, setHours] = useState();
   const [minutes, setMin] = useState();

@@ -3,24 +3,23 @@ import { ArrowForwardIosOutlined, ArrowBackIosNewOutlined, ShoppingBagOutlined }
 import { Badge } from '@mui/material';
 import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
-import { logoutSuccess } from '../../redux/userRedux';
+// import { logoutSuccess } from '../../redux/userRedux';
 import { LogoutOutlined } from '@mui/icons-material';
 import { useState, useEffect } from 'react';
 import { useDispatch } from 'react-redux';
 import { logout } from '../../redux/apiCall'
 import { useHistory } from 'react-router-dom';
 import { publicRequest } from '../../requestMethods'
-import { isAsyncThunkAction } from '@reduxjs/toolkit';
 import { useLocation } from 'react-router'
 // import { Link } from 'react-router-dom'
 // import {useNavigate}
 
 export default function Nav() {
-	const likes = useSelector(state => state.like)
-	const likesnum = likes.quantity
+	// const likes = useSelector(state => state.like)
+	// const likesnum = likes.quantity
 	const [itemm, setitemm] = useState(0)
 	const quantity = useSelector(state => state.cart.quantity)
-	const user = useSelector(state => state.user)
+	// const user = useSelector(state => state.user)
 	const location = useLocation()
 	// console.log(location.pathname)
 
@@ -32,27 +31,27 @@ export default function Nav() {
 	const history = useHistory()
 	const dispatch = useDispatch()
 	const nion = (digits) => {
-		if (digits == "l") {
-			itemm != 0 ? setitemm(itemm - 1) : setitemm(3)
+		if (digits === "l") {
+			itemm !== 0 ? setitemm(itemm - 1) : setitemm(3)
 			// console.log(itemm)
 		}
-		else if (digits == "r") {
-			itemm != 3 ? setitemm(itemm + 1) : setitemm(0)
+		else if (digits === "r") {
+			itemm !== 3 ? setitemm(itemm + 1) : setitemm(0)
 			// console.log(itemm)
 		}
 	}
 	const lbetenestwal = async () => {
 
-		const better = await logout(dispatch)
+		await logout(dispatch)
 		history.push(location.pathname)
 		window.location.reload()
 	}
-	const [weare, setWeare] = useState([])
-	const [tadyaechilij, setTadyaechilij] = useState(true)
-	const wegesha = async (chnke) => {
+	// const [weare, setWeare] = useState([])
+	// const [tadyaechilij, setTadyaechilij] = useState(true)
+	/* const wegesha = async (chnke) => {
 		// console.log("fiker alrgn " +chnke.length)
 
-		if (chnke.length == 0) {
+		if (chnke.length === 0) {
 			// console.log("lemr ynegen maenger")
 			setWeare([])
 			setTadyaechilij(true)
@@ -69,13 +68,10 @@ export default function Nav() {
 			catch (e) {
 				console.log(e)
 			}
-		}
+		} 
+	}*/
 
-
-
-	}
 	useEffect(() => {
-
 
 	}, [lbetenestwal])
 	if (people) {
