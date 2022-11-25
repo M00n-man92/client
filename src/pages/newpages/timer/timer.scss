@@ -36,12 +36,12 @@
         flex-direction:column;
         align-items: center;
         justify-content: center;
-        height: 80%;
-        width: 40%;
+        height: 100%;
+        width: 50%;
         background-color: white;
         margin-right: 10%;
         h3{
-          font-size: 48px;
+          font-size: 38px;
           font-family: "Lato-Bold";
 
         }
@@ -55,7 +55,8 @@
       color: white;
       font-size: 18px;
       width: 70%;
-      height: 30%;
+      height: 40%;
+      padding: 2%;
       border: none;
     }
   }

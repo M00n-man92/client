@@ -1,5 +1,5 @@
 import './navi.scss'
-import { ShoppingBag, FavoriteBorder, Person, ShoppingCartOutlined, SearchOutlined, MessageOutlined, ArrowForwardIosOutlined, ArrowBackIosNewOutlined, ShoppingBagOutlined } from '@mui/icons-material';
+import { ArrowForwardIosOutlined, ArrowBackIosNewOutlined, ShoppingBagOutlined } from '@mui/icons-material';
 import { Badge } from '@mui/material';
 import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
@@ -161,7 +161,7 @@ export default function Nav() {
 					<Link className="link" to="/cart">
 						<div className={`image ${lovelokedown ? "likeido" : ""}`}>
 
-							<Badge badgeContent={quantity} anchorOrigin={{ horizontal: 'left', vertical: "top" }} overlap="circular" color="primary" className='image' >
+							<Badge badgeContent={quantity} max={10} anchorOrigin={{ horizontal: 'right', vertical: "top", marginLeft:"10%" }}  color="error" className='image' >
 								<div className="star">
 									<ShoppingBagOutlined className="belhidatenager" />
 								</div>

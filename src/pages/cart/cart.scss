@@ -9,13 +9,21 @@
 	display: flex;
 	flex-direction: column;
 	height: inherit;
-	// background-color: red;
-	.footers {
+	@media (max-width:40em){
+		
 		// background-color: red;
-		@include mobile {
+	}
+	// background-color: red;
+	
+	
+	.footers {
+
+		// display: flex;
+		margin-top: 3%;
+		// background-color: red;
+		@media (max-width:40em) {
 			display: none;
-		}
-		.booje {
+			
 		}
 	}
 	.cart {

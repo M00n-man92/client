@@ -107,7 +107,7 @@ export default function Cart() {
 			<div className="wehadarule">
 				<div className="headers">
 
-					<Nav />
+					<Nav className="head"/>
 				</div>
 				<div className="cart">
 					<div className="wrapper">
@@ -120,7 +120,7 @@ export default function Cart() {
 							</div></Link>
 							<div className="text">
 								<span>Shopping Bag({cart.quantity})</span>
-								<span>Your WishList</span>
+								{/* <span>Your WishList</span> */}
 							</div>
 							<div className="butt " >
 								<button className={"but " + ("r")}>Chekout Now</button>
@@ -216,10 +216,10 @@ export default function Cart() {
 					</div>
 
 				</div>
-				{/* <div className="footers"> */}
+				<div className="footers">
 				{/* we were poppping whtn there was sone dtrama */}
 				<Footer className="booje" />
-				{/* </div> */}
+				</div>
 
 			</div>
 

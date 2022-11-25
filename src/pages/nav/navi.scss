@@ -48,6 +48,7 @@
 		text-align: center;
 		justify-content: center;
 		// background-color: red;
+		// background-color: red;
 		// margin-right: 80px;
 		@include mobile {
 			//  min-width: 10em;
@@ -68,6 +69,7 @@
 				display: none;
 
 				@include mobile {
+					// background-color: red;
 					display: flex;
 					width: 10px;
 					height: 10px;
@@ -100,25 +102,32 @@
 		}
 
 		.killakilla {
-			margin-right: 60px;
-			margin-left: 20px;
+			margin-right: 10px;
+			// margin-left: 20px;
 			width: 60vw;
 			//  background-color:blue;
 			display: flex;
-			overflow: hidden;
+			overflow-x: scroll;
 			align-items: center;
 			justify-content: center;
+			scrollbar-width: none;
+
+        &::-webkit-scrollbar {
+            display: none
+        }
+
 			@include mobile {
 				// width: 30vw;
 				// background-color: red;
 				margin-right: 0px;
 				margin-left: 0px;
+				
 			}
 
 			.mneyeserahnew {
 				transition: all 0.5s ease;
 				// margin-left: 20px;
-
+// background-color: red;
 				width: 30vw;
 				display: flex;
 				align-items: center;
@@ -155,10 +164,12 @@
 			// background-color: blue;
 
 			@media (max-width: 40em) {
+
 				margin-left: 0px;
 
 				padding: 0 1em;
 			}
+			
 
 			span {
 				font-size: 20px;
@@ -174,6 +185,12 @@
 				&:hover {
 					font-weight: 500;
 				}
+			}
+		}
+		.navigatoe:nth-child(1){
+			// background-color: red;
+			@media (max-width:40em) {
+				margin-left: -20%;
 			}
 		}
 	}
@@ -289,12 +306,12 @@
 			height: 20px;
 			margin-left: 10px;
 			display: flex;
-
+// background-color: red;
 			align-items: center;
 			// background-color: red;
 			@include mobile {
 				height: 20px;
-				margin-left: 0px;
+				margin-left: 100px;
 			}
 			.star {
 				margin-top: 7px;
@@ -394,13 +411,22 @@
 			h3 {
 				font-family: "FrankRuhlLibre-Black";
 				font-size: 40px;
+				@media (max-width:40em) {
+					font-size: 22px;
+				}
 			}
 		}
 		.lower{
 			margin-top: -7%;
+			@media (max-width:40em) {
+					margin-top: -9%;
+			}
 			span{
 				font-family: "Lato-Light";
 				font-size: 24px;
+				@media (max-width:40em) {
+					font-size: 16px;
+				}
 			}
 		}
 		@include mobile {
