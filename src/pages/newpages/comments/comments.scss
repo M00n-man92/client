@@ -10,10 +10,16 @@
   h3{
     font-size: 48px;
       font-family: "FrankRuhlLibre-Bold";
+      @media (max-width:40em) {
+        font-size: 22px;
+      }
   }
   span{
     margin-top: 1%;
     font-size: 20px;
+    @media (max-width:40em) {
+      font-size: 14px;
+    }
   }
   .slider{
     width: 100%;
@@ -22,12 +28,17 @@
 
     // background-color: blue;
     // display: flex;
-    overflow: scroll;
-    scrollbar-width : none;
+    overflow: hidden;
+   
     // background-color: red;
 
-    &::-webkit-scrollbar {
-        display: none
+    
+    @media (max-width:40em) {
+      overflow: scroll;
+    //   scrollbar-width : none;
+    //   &::-webkit-scrollbar {
+    //     display: none
+    // }
     }
     .slidercomponenet{
       display: flex;
@@ -47,6 +58,9 @@
        display: flex;
        align-items: center;
        justify-content: center;
+       @media (max-width:40em) {
+        width: 11%;
+       }
         .indi{
           display: flex;
           flex-direction: column;
@@ -55,25 +69,42 @@
           margin-left: 10%;
           margin-right: 10%;
           height: 70%;
+          @media (max-width:40em) {
+            height: 90%;
+          }
           // background-color: red;
           h3{
             font-family: "Lato-Black";
             font-size: 18px; 
             text-align: center;
+            @media (max-width:40em) {
+              font-size: 14px;
+            }
            }
            span{
             text-align: center;
              font-size: 14px;
+             @media (max-width:40em) {
+              margin-top: 1%;
+              font-size: 12px;
+            }
            }
            img{
              height: 25%;
              width:20%;
              border-radius: 50%;
              object-fit: cover;
+             @media (max-width:40em) {
+              width: 50%;
+             }
            }
            h2{
              font-family: "Lato-Black";
+             text-align: center;
             font-size: 16px; 
+            @media (max-width:40em) {
+              font-size: 14px;
+            }
            }
         }
         
@@ -81,6 +112,9 @@
     }
   }
   .sliderbuttons{
+    @media (max-width:40em) {
+      display: none;
+    }
     height: 5%;
     align-items: center;
     justify-content: center;
