@@ -2,13 +2,13 @@ import './register.scss'
 import { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { register } from '../../redux/apiCall'
-import { publicRequest } from '../../requestMethods'
+// import { publicRequest } from '../../requestMethods'
 import { Link } from 'react-router-dom'
 export default function Register() {
     const [name, setName] = useState("")
     const [password, setPassword] = useState("")
     const [email, setEmail] = useState("")
-    const { isFetching, error, currentUser } = useSelector(state => state.user)
+    const { isFetching, error } = useSelector(state => state.user)
     
 
     const user = { name, email, password }

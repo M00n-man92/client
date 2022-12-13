@@ -1,4 +1,4 @@
-import { Add, Minimize, Shop, ShopOutlined, ShoppingBagOutlined, DeleteForeverOutlined, DeleteOutlineOutlined, DeleteOutlineRounded, DeleteOutline } from '@mui/icons-material'
+import { DeleteOutlineOutlined } from '@mui/icons-material'
 import { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
@@ -17,7 +17,7 @@ export default function Cart() {
 	const Key = 'pk_test_51JkB96G4aeogyTY8BarC9GXHT8gsGMeaYlVFyvX1kq4lO14pyTa0FEiMp50PELe8C8Fpf40XJB5sfQeqoe5iVtyc00THIuMYoi'
 	// console.log(cart)
 	// console.log(cart)
-	const pro = cart.products
+	// const pro = cart.products
 	const dispatch = useDispatch()
 	const dropzoneStyle = (isPreview) => ({
 
@@ -27,17 +27,16 @@ export default function Cart() {
 	});
 	// console.log(cart)
 	// console.log(hol)
-	const despatch = useDispatch()
 	const [quantity, setQuantity] = useState(1)
 
 	// setQuantity(cart.quantity)
 	const [stripeToken, setStripeToken] = useState(null)
-	const count = (type, pro_id) => {
+	/* const count = (type, pro_id) => {
 		if (type === "dec") {
 
 
 
-			pro.map((item) => {
+			pro.forEach((item) => {
 				if (pro_id === item._id) {
 					setQuantity(item.quantity - 1)
 					item.quantity = quantity
@@ -50,7 +49,7 @@ export default function Cart() {
 		}
 		else if (type === "acc") {
 			setQuantity(quantity + 1)
-			pro.map((item) => {
+			pro.ForEach((item) => {
 				if (pro_id === item._id) {
 					setQuantity(item.quantity + 1)
 					item.quantity = quantity
@@ -61,7 +60,7 @@ export default function Cart() {
 				}
 			})
 		}
-	}
+	} */
 	const thatsjusthowitgo = (i, price, quantity) => {
 		// const pio={astaws}
 		// console.log(pio)
@@ -69,7 +68,7 @@ export default function Cart() {
 	}
 	const onToken = (token) => {
 		setStripeToken(token)
-		// console.log(setStripeToken)
+		console.log(setStripeToken)
 	}
 	const makeRequest = async () => {
 

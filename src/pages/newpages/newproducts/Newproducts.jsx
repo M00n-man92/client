@@ -1,11 +1,9 @@
 import React, { useState } from 'react'
 import "./newproducts.scss"
 import Products from '../../products/Products'
-import Product from '../../products/product/Product'
-import { fontWeight } from '@mui/system'
+// import Product from '../../products/product/Product'
 export default function NewProducts() {
   const nav =["Hot", "On SALE","Trending Now", "New Arrival"]
-  const navPointer = [0,1,2,3];
   const [isLined, setIsLined] = useState(0);
   return (
     

@@ -3,22 +3,21 @@ import './login.scss'
 import { useDispatch, useSelector } from 'react-redux'
 import { update } from '../../redux/apiCall'
 import { login } from '../../redux/apiCall'
-import { useLocation, useHistory } from 'react-router'
+import { useHistory } from 'react-router'
 
-import { Route, Switch, BrowserRouter as Router, Redirect } from 'react-router-dom'
-import Forgot from '../forgot/Forgot'
+// import { Route, Switch, BrowserRouter as Router, Redirect } from 'react-router-dom'
+// import Forgot from '../forgot/Forgot'
 import { Link } from 'react-router-dom'
 export default function Login() {
      const [email, setUserName] = useState(null)
     const [password, setPassport] = useState(null)
-    const { isFetching, error, currentUser } = useSelector(state => state.user)
+    const { isFetching, error } = useSelector(state => state.user)
     const dispatch = useDispatch()
     const userr = { email, password }
     const [success, setSuccess] = useState()
-    const [status, setStatus] = useState()
     const [message, setMessage] = useState('')
     const history = useHistory()
-    const location=useLocation()
+    // const location=useLocation()
     const forgot = async (e) => {
         e.preventDefault()
         if (email === null) { setMessage("please fill in your email") }
@@ -29,8 +28,6 @@ export default function Login() {
                     // console.log(reply)
                     setSuccess(reply.success)
                     setMessage(reply.msg)
-                    setStatus(reply.status)
-
                 }
                 else {
 
@@ -68,7 +65,6 @@ export default function Login() {
                     // console.log(res)
                     setSuccess(res.success)
                     setMessage(res.msg)
-                    setStatus(res.status)
                     if (success === true) {
                         history.push("/")
 

@@ -1,8 +1,6 @@
 @import '../../global.scss';
 @media (max-width:40em) {
-    .message{
-
-    }
+  
     
 }
 .message {
@@ -115,7 +113,6 @@
 @include mobile{
     // background-color: rgb(46, 8, 8);
     display: flex;
-    // justify-content: start;
     align-items: center;
     justify-content: flex-start;
     margin-top: 100px;
@@ -170,9 +167,7 @@
                 border-radius: 10px;
             }
 
-            ::-webkit-scrollbar-thumb:hover {
-                // background:rgb(54, 56, 58); 
-            }
+            
 
             .whatitreallymeans {
 

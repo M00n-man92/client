@@ -1,11 +1,11 @@
-import Nav from './pages/nav/Navigation'
-import Sliders from './pages/slider/Sliders'
+/* import Nav from './pages/nav/Navigation'
+import Sliders from './pages/slider/Sliders' */
 import './app.scss'
 // import Catagories from './pages/catgories/MaleCatagories';
 import FemaleCat from './pages/catgories/femalecat/FemaleCat'
 import MaleCat from './pages/catgories/malecatagory/MaleCat'
-import Products from './pages/products/Products';
-import Footer from './pages/footer/Footer';
+/* import Products from './pages/products/Products';
+import Footer from './pages/footer/Footer'; */
 import ProductList from './pages/products/productsList/ProductList';
 import Item from './pages/item/Item';
 import Login from './pages/signin/Login';
@@ -15,7 +15,7 @@ import Home from './pages/home/Home';
 // import Message from './pages/message/Message'
 import Like from './pages/like/Like';
 import Forgot from './pages/forgot/Forgot'
-import Stripe from './pages/stripe/Stripe';
+// import Stripe from './pages/stripe/Stripe'; 
 import { Route, Switch, BrowserRouter as Router, Redirect } from 'react-router-dom'
 import Accessory from './pages/catgories/accessories/Accessory';
 // import Product from './pages/products/product/Product';
@@ -24,7 +24,7 @@ import Accessory from './pages/catgories/accessories/Accessory';
 // import {useEffect} from 'react'
 import "./app.css";
 function App() {
-  const user = false
+  // const user = false
   const people = localStorage.getItem("persist:root")
   var como
   var commonPeople

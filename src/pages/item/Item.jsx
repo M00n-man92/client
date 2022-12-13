@@ -1,12 +1,12 @@
-import { Add, Minimize, Shop, ShopOutlined, ShoppingBagOutlined } from '@mui/icons-material'
+import { Add, Minimize, ShoppingBagOutlined } from '@mui/icons-material'
 import { useEffect, useState } from 'react'
 import { useLocation } from 'react-router'
 import Footer from '../footer/Footer'
 import Nav from '../nav/Navigation'
 import './item.scss'
-import { useDispatch, useSelector } from 'react-redux'
+import { useDispatch } from 'react-redux'
 import { addProduct } from '../../redux/cartRedux'
-import { publicRequest, userRequest } from '../../requestMethods'
+import { publicRequest } from '../../requestMethods'
 import { Link } from 'react-router-dom'
 
 export default function Item() {
@@ -29,7 +29,7 @@ export default function Item() {
         deispatch(addProduct({ ...individualItem, quantity, usedColor, usedSize }))
         // console.log(usedColor)
     }
-    const cart = useSelector(state => state.cart)
+    // const cart = useSelector(state => state.cart)
     // console.log(cart)
     const location = useLocation()
     const id = location.pathname.split("/")[2]

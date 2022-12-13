@@ -5,11 +5,11 @@ import { useSelector } from 'react-redux'
 import { Link } from 'react-router-dom'
 // import { logoutSuccess } from '../../redux/userRedux';
 import { LogoutOutlined } from '@mui/icons-material';
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { logout } from '../../redux/apiCall'
 import { useHistory } from 'react-router-dom';
-import { publicRequest } from '../../requestMethods'
+// import { publicRequest } from '../../requestMethods'
 import { useLocation } from 'react-router'
 // import { Link } from 'react-router-dom'
 // import {useNavigate}
@@ -71,9 +71,9 @@ export default function Nav() {
 		} 
 	}*/
 
-	useEffect(() => {
+	// useEffect(() => {
 
-	}, [lbetenestwal])
+	// }, [lbetenestwal])
 	if (people) {
 		its_my_jam = JSON.parse(people).user
 		keepittrue = JSON.parse(its_my_jam).currentUser

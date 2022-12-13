@@ -15,7 +15,7 @@ console.log(likes.products)
 likes&&likes.products&&setProducts(likes.products)
 
 
- },[])
+ },[likes])
     return (
         <>
 

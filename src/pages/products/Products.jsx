@@ -1,6 +1,5 @@
 import './products.scss'
-import axios from 'axios'
-import { filteredproducts } from '../../data'
+// import { filteredproducts } from '../../data'
 import Product from './product/Product'
 import { useEffect, useState, useRef } from 'react'
 import { publicRequest } from '../../requestMethods'
@@ -10,7 +9,7 @@ export default function Products({ cat, sex, sort, filter }) {
 	const [products, setProducts] = useState([])
 	const [filters, setFilters] = useState([])
 	// console.log(sex)
-	const socartis = {
+	/* const socartis = {
 		g: ["/assets/logo.jpg", "/assets/kanye1.jpg",
 			"/assets/kanye2.jpg",
 			"/assets/kanye3.jpg"
@@ -24,11 +23,11 @@ export default function Products({ cat, sex, sort, filter }) {
 		key: function (n) {
 			return this[Object.keys(this)[n]];
 		}
-	}
-	const [problesm, setProblesm] = useState(0)
+	} */
+	/* const [problesm, setProblesm] = useState(0)
 	const hello = (hundi) => {
 		return socartis.key(hundi - 1)
-	}
+	} */
 	// const interval = setInterval(() => {
 
 	//     setProblesm(problesm+1)
@@ -51,14 +50,14 @@ export default function Products({ cat, sex, sort, filter }) {
 			autoPlay.current()
 		}
 		// andle()
-		const interval = setInterval(andle, 4000)
+	  setInterval(andle, 4000)
 
 	}, [])
 
 	const heandler = () => {
 
 		// else if (digits == "r") {
-		itemm != 3 ? setitemm(itemm + 1) : setitemm(0)
+		itemm !== 3 ? setitemm(itemm + 1) : setitemm(0)
 		// console.log(itemm)
 		// }
 	}
@@ -75,7 +74,7 @@ export default function Products({ cat, sex, sort, filter }) {
 		}
 		fun()
 
-	}, [cat])
+	}, [cat, sex])
 	useEffect(() => {
 		cat && setFilters(products.filter(item =>
 			Object.entries(filter).every(([key, value]) =>

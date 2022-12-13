@@ -1,5 +1,5 @@
-import styled from "styled-components"
-import { RadioButtonChecked } from '@mui/icons-material'
+// import styled from "styled-components"
+// import { RadioButtonChecked } from '@mui/icons-material'
 import Nav from '../../nav/Navigation'
 import './productlist.scss'
 import Products from '../../products/Products';
@@ -38,7 +38,7 @@ console.log("cat= "+cata)
                 <h2>{sexa} {cata}</h2>
             </div>
             <div className="containerrr">
-                <div className={"filter " + ("l")}>
+                <div className={"filter " + "l"}>
                     <span> Filter :</span>
                     <select name="color" onChange={changeHnadler}>
                         <option value=""  >Colour</option>
@@ -64,7 +64,7 @@ console.log("cat= "+cata)
                     </select>
 
                 </div>
-                <div className={"filter " + ("r")}>
+                <div className={"filter " + "r"}>
                     <span>Sort :</span>
                     <select name="price" onChange={(e)=>setSort(e.target.value)}>
                         <option value="newest"  >Newest</option>

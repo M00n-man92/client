@@ -7,12 +7,11 @@ export const login = async (dispatch, user) => {
         const reply = await publicRequest.post("/user/login", user)
         // console.log(reply)
         if (reply.data) {
-            const res = reply.data
             dispatch(loginSuccess(reply.data))
             return reply.data
         }
         else {
-            return "fuck"
+            return "error"
 
         }
 
@@ -40,7 +39,9 @@ export const register = async (dispatch, user) => {
             // console.log(reply.data)
             return reply.data
         }
-        else { }
+        else {
+            return " error "
+         }
     }
     catch (e) {
         // console.log(e.response.data)

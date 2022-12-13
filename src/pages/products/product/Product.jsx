@@ -1,20 +1,20 @@
-import { FavoriteBorderOutlined, ShoppingBagOutlined, TrendingUpOutlined } from '@mui/icons-material'
+// import { TrendingUpOutlined } from '@mui/icons-material'
 import { Link } from 'react-router-dom'
-import { useDispatch, useSelector } from 'react-redux'
+import { useSelector } from 'react-redux'
 import './product.scss'
-import { addProduct, removeProduct } from '../../../redux/likeredux'
-import { useEffect } from 'react'
+// import { addProduct, removeProduct } from '../../../redux/likeredux'
+// import { useEffect } from 'react'
 import StarIcon from '@mui/icons-material/Star'; 
 
 export default function Product({ items, toss }) {
 	//   console.log(toss)
-	const dispatch = useDispatch()
+	// const dispatch = useDispatch()
 	const likes = useSelector(state => state.like)
 	//    console.log(likes)
 	// console.log(likes.products)
 	const products = likes.products
 
-	const handleClick = async () => {
+	/* const handleClick = async () => {
 		let quantity = likes.quantity
 		let outofline = TrendingUpOutlined
 		for (let pro of products) {
@@ -36,9 +36,24 @@ export default function Product({ items, toss }) {
 		outofline && await dispatch(addProduct(items))
 		// console.log(products)
 
-	}
+	} */
 
 	// useEffect(()=>{console.log(likes.products)},[handleClick])
+
+	/* <div className="product" key={toss}>
+            <img src={items.img} alt="" />
+
+            <div className="display">
+                <FavoriteBorderOutlined className="icon" onClick={handleClick}/>
+                <Link className="link" to={`/product/${items._id}`}><ShoppingBagOutlined className="icon" /></Link>
+
+            </div>
+            <div className="price">
+                <span>$ {items.price}</span>
+            </div>
+
+
+        </div> */
 	console.log(products)
 	return (
 		<div className="slidercontainer">
@@ -80,17 +95,3 @@ export default function Product({ items, toss }) {
 		
 	)
 }
-{/* <div className="product" key={toss}>
-            <img src={items.img} alt="" />
-
-            <div className="display">
-                <FavoriteBorderOutlined className="icon" onClick={handleClick}/>
-                <Link className="link" to={`/product/${items._id}`}><ShoppingBagOutlined className="icon" /></Link>
-
-            </div>
-            <div className="price">
-                <span>$ {items.price}</span>
-            </div>
-
-
-        </div> */}

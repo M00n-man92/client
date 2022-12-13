@@ -1,6 +1,7 @@
 import React from 'react'
 import "./intro.scss"
-
+//  "node-sass": "^6.0.1",
+// "node-sass": "^7.0.3",
 export default function Into() {
   return (
     <div className="intro">
