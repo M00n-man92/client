@@ -81,7 +81,7 @@ export default function Item() {
                    
                 </div>
                 <div className="imgg">
-                    {individualItem.img ? image ? <img src={image} alt="" /> : <img src={individualItem.img[0]} alt="" /> : <img src={individualItem.img} alt="" />}
+                    {individualItem.img ? image ? <a target="_blank" href={image}><img src={image} alt="" /></a> : <a target="_blank" href={individualItem.img[0]}><img src={individualItem.img[0]} alt="" /></a> : <a target="_blank" href={individualItem.img}><img src={individualItem.img} alt="" /></a>}
                 </div>
                 <div className="info">
                     <div className="title">
