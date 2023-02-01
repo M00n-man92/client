@@ -3,11 +3,13 @@ import './products.scss'
 import Product from './product/Product'
 import { useEffect, useState, useRef } from 'react'
 import { publicRequest } from '../../requestMethods'
-
+import { fetchProducts } from '../../redux/apiCall'
+import { useDispatch } from 'react-redux'
 export default function Products({ cat, sex, sort, filter }) {
 	// console.log(sex)
 	const [products, setProducts] = useState([])
 	const [filters, setFilters] = useState([])
+	const dispatch = useDispatch();
 	// console.log(sex)
 	/* const socartis = {
 		g: ["/assets/logo.jpg", "/assets/kanye1.jpg",
@@ -64,6 +66,9 @@ export default function Products({ cat, sex, sort, filter }) {
 	useEffect(() => {
 		const fun = async () => {
 			try {
+				console.log(sex,cat)
+				// const reply = await fetchProducts(dispatch,sex,cat)
+				// console.log(reply)
 				const reply = await publicRequest.get(sex && cat ? `product/find?sex=${sex}&catagory=${cat}` : sex ? `product/find?sex=${sex}` : cat ? `product/find?catagory=${cat}` : 'product/find')
 				const res = reply.data
 				setProducts(res.data)

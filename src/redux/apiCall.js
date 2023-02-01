@@ -87,3 +87,22 @@ export const forgot = async (dispatch, token, password) => {
 
     }
 }
+export const fetchProducts = async (dispatch, sex, cat) => {
+    dispatch(loginStart());
+    try{
+        const reply = await publicRequest.get(sex && cat ? `product/find?sex=${sex}&catagory=${cat}` : sex ? `product/find?sex=${sex}` : cat ? `product/find?catagory=${cat}` : 'product/find')
+        console.log(reply);
+        if (reply) {
+            dispatch(updateSuccess())
+            return reply;
+        }
+        else {
+            return "error"
+
+        }
+    }
+    catch(e){
+        dispatch(loginError());
+        return e.response.data;
+    }
+}

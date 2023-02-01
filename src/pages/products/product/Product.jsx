@@ -54,7 +54,7 @@ export default function Product({ items, toss }) {
 
 
         </div> */
-	console.log(products)
+	// console.log(products)
 	return (
 		<div className="slidercontainer">
              <Link className="link" to={`/product/${items._id}`}>

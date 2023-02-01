@@ -5,13 +5,13 @@ import axios from 'axios'
 // require('dotenv').config()
 
 // const baseUrl=process.env.REACT_APP_API_URL
-// console.log(process.env.REACT_APP_API_URL);
+console.log(process.env.REACT_APP_API_URL);
 // const otherUrl=process.env.REACT_APP_LOCAL_URL
 
 const baseUrl = "https://api-production-b6bc.up.railway.app/api/"
-// const otherUrl = "http://localhost:5000/api/"
+// const baseUrl = "http://localhost:5000/api/"
 
-
+console.log(process.env.NODE_ENV)
 // console.log(require('dotenv').config())
 // console.log(process.env.REACT_APP_LOCAL_URL)
 var people=JSON.parse(localStorage.getItem("persist:root"))

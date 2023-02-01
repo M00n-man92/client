@@ -22,7 +22,7 @@ import Accessory from './pages/catgories/accessories/Accessory';
 // import {useSelector} from 'react-redux'
 // import { useHistory } from 'react-router-dom';
 // import {useEffect} from 'react'
-import "./app.css";
+// import "./app.css";
 function App() {
   // const user = false
   const people = localStorage.getItem("persist:root")
