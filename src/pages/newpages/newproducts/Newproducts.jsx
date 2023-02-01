@@ -12,8 +12,7 @@ export default function NewProducts() {
   const isFetching = user.isFetching
 
   console.log(isFetching)
-  const [cat, setCat] = useState("dress");
-  const [sex, setSex] = useState("");
+  const [cat, setCat] = useState("men");
   // const nav =["Hot", "On SALE","Trending Now", "New Arrival"]
   const nav =["men", "women","short", "shoes"]
   const [isLined, setIsLined] = useState(0);
