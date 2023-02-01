@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from 'react'
 import { CircularProgress } from '@mui/material';
 import "./newproducts.scss"
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import Products from '../../products/Products'
 import Product from '../../products/product/Product';
 import { publicRequest } from '../../../requestMethods';
+import { fetchProducts } from '../../../redux/apiCall';
 // import Product from '../../products/product/Product'
 export default function NewProducts() {
   const user = useSelector(state => state.user)
@@ -17,29 +18,30 @@ export default function NewProducts() {
   const nav =["men", "women","short", "shoes"]
   const [isLined, setIsLined] = useState(0);
   const [products, setProducts] = useState([]);
+  const dispatch = useDispatch();
   useEffect(() => {
 		const fun = async () => {
       console.log(isFetching)
-			/* try {
-				const reply = await publicRequest.get(sex && cat ? `product/find?sex=${sex}&catagory=${cat}` : sex ? `product/find?sex=${sex}` : cat ? `product/find?catagory=${cat}` : 'product/find')
+			try {
+        const reply = await fetchProducts(dispatch,sex,cat)
+				// const reply = await publicRequest.get(sex && cat ? `product/find?sex=${sex}&catagory=${cat}` : sex ? `product/find?sex=${sex}` : cat ? `product/find?catagory=${cat}` : 'product/find')
 				const res = reply.data
 				setProducts(res.data)
 			}
 			catch (e) {
 				console.log(e)
-			} */
+			}
 		}
 		fun()
 
-	}, [cat, sex, isLined, isFetching])
+	}, [cat])
   return (
     
     <div className='newproducts'>
       <h3>Our Product</h3>
       <div className="container">
         {nav.map((item,index)=>(
-          <span
-            onClick={(e)=>{
+          <span onClick={(e)=>{
               setIsLined(index)
               setCat(item)
              }
