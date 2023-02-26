@@ -8,8 +8,8 @@ import axios from 'axios'
 console.log(process.env.REACT_APP_API_URL);
 // const otherUrl=process.env.REACT_APP_LOCAL_URL
 
-const baseUrl = "https://api-production-b6bc.up.railway.app/api/"
-// const baseUrl = "http://localhost:5000/api/"
+// const baseUrl = "https://api-production-b6bc.up.railway.app/api/"
+const baseUrl = "https://idkitsjustaservice.onrender.com/api/"
 
 console.log(process.env.NODE_ENV)
 // console.log(require('dotenv').config())
