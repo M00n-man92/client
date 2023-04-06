@@ -5,11 +5,7 @@ import "./intro.scss"
 export default function Into() {
   return (
     <div className="intro">
-      <img
-        src="/assets/coming soon 10.png"
-        alt=""
-        style={{ width: "100dvw", height: "100dvh", objectFit: "cover" }}
-      />
+      <img className="image" src="/assets/coming soon 10.png" alt="" />
       {/* <div className="container"> */}
       {/*      <div className="header">
            <h3>Discover your ideal Ethiopian fashion look.</h3>
